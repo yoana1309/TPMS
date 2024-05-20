@@ -1,0 +1,62 @@
+[
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\g++.exe -IC:/diplomna/TPMS/googletest/googlemock/include -IC:/diplomna/TPMS/googletest/googlemock -isystem C:/diplomna/TPMS/googletest/googletest/include -isystem C:/diplomna/TPMS/googletest/googletest -g -std=c++14 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o googletest\\googlemock\\CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c C:\\diplomna\\TPMS\\googletest\\googlemock\\src\\gmock-all.cc",
+  "file": "C:\\diplomna\\TPMS\\googletest\\googlemock\\src\\gmock-all.cc",
+  "output": "googletest\\googlemock\\CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\g++.exe -isystem C:/diplomna/TPMS/googletest/googlemock/include -isystem C:/diplomna/TPMS/googletest/googlemock -isystem C:/diplomna/TPMS/googletest/googletest/include -isystem C:/diplomna/TPMS/googletest/googletest -g -std=c++14 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o googletest\\googlemock\\CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c C:\\diplomna\\TPMS\\googletest\\googlemock\\src\\gmock_main.cc",
+  "file": "C:\\diplomna\\TPMS\\googletest\\googlemock\\src\\gmock_main.cc",
+  "output": "googletest\\googlemock\\CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\g++.exe -IC:/diplomna/TPMS/googletest/googletest/include -IC:/diplomna/TPMS/googletest/googletest -g -std=c++14 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o googletest\\googletest\\CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c C:\\diplomna\\TPMS\\googletest\\googletest\\src\\gtest-all.cc",
+  "file": "C:\\diplomna\\TPMS\\googletest\\googletest\\src\\gtest-all.cc",
+  "output": "googletest\\googletest\\CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\g++.exe -isystem C:/diplomna/TPMS/googletest/googletest/include -isystem C:/diplomna/TPMS/googletest/googletest -g -std=c++14 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o googletest\\googletest\\CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c C:\\diplomna\\TPMS\\googletest\\googletest\\src\\gtest_main.cc",
+  "file": "C:\\diplomna\\TPMS\\googletest\\googletest\\src\\gtest_main.cc",
+  "output": "googletest\\googletest\\CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\TPMS\\CMakeFiles\\TPMSComponent.dir\\TPMS.c.obj -c C:\\diplomna\\TPMS\\src\\TPMS\\TPMS.c",
+  "file": "C:\\diplomna\\TPMS\\src\\TPMS\\TPMS.c",
+  "output": "src\\TPMS\\CMakeFiles\\TPMSComponent.dir\\TPMS.c.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\PressureMonitor\\CMakeFiles\\PressureMonitor.dir\\PressureMonitor.c.obj -c C:\\diplomna\\TPMS\\src\\PressureMonitor\\PressureMonitor.c",
+  "file": "C:\\diplomna\\TPMS\\src\\PressureMonitor\\PressureMonitor.c",
+  "output": "src\\PressureMonitor\\CMakeFiles\\PressureMonitor.dir\\PressureMonitor.c.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\MCUWakeUp\\CMakeFiles\\MCUWakeUp.dir\\MCUWakeUp.c.obj -c C:\\diplomna\\TPMS\\src\\MCUWakeUp\\MCUWakeUp.c",
+  "file": "C:\\diplomna\\TPMS\\src\\MCUWakeUp\\MCUWakeUp.c",
+  "output": "src\\MCUWakeUp\\CMakeFiles\\MCUWakeUp.dir\\MCUWakeUp.c.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\OS\\CMakeFiles\\OS.dir\\OS.c.obj -c C:\\diplomna\\TPMS\\src\\OS\\OS.c",
+  "file": "C:\\diplomna\\TPMS\\src\\OS\\OS.c",
+  "output": "src\\OS\\CMakeFiles\\OS.dir\\OS.c.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\Timer\\CMakeFiles\\Timer.dir\\Timer.c.obj -c C:\\diplomna\\TPMS\\src\\Timer\\Timer.c",
+  "file": "C:\\diplomna\\TPMS\\src\\Timer\\Timer.c",
+  "output": "src\\Timer\\CMakeFiles\\Timer.dir\\Timer.c.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\g++.exe -isystem C:/diplomna/TPMS/googletest/googletest/include -isystem C:/diplomna/TPMS/googletest/googletest -g -std=gnu++14 -o test\\CMakeFiles\\TPMSTest.dir\\TPMSTests.cpp.obj -c C:\\diplomna\\TPMS\\test\\TPMSTests.cpp",
+  "file": "C:\\diplomna\\TPMS\\test\\TPMSTests.cpp",
+  "output": "test\\CMakeFiles\\TPMSTest.dir\\TPMSTests.cpp.obj"
+}
+]

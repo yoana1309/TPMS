@@ -1,0 +1,138 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc/x86_64-w64-mingw32/8.4.0/include",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc/x86_64-w64-mingw32/8.4.0/include-fixed",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/x86_64-w64-mingw32/include"
+					],
+					"linkDirectories" : 
+					[
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc/x86_64-w64-mingw32/8.4.0",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/x86_64-w64-mingw32/lib",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"mingw32",
+						"gcc",
+						"moldname",
+						"mingwex",
+						"pthread",
+						"advapi32",
+						"shell32",
+						"user32",
+						"kernel32",
+						"iconv",
+						"mingw32",
+						"gcc",
+						"moldname",
+						"mingwex"
+					]
+				},
+				"path" : "C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/bin/gcc.exe",
+				"version" : "8.4.0"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc/x86_64-w64-mingw32/8.4.0/include/c++",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc/x86_64-w64-mingw32/8.4.0/include/c++/x86_64-w64-mingw32",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc/x86_64-w64-mingw32/8.4.0/include/c++/backward",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc/x86_64-w64-mingw32/8.4.0/include",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc/x86_64-w64-mingw32/8.4.0/include-fixed",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/x86_64-w64-mingw32/include"
+					],
+					"linkDirectories" : 
+					[
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc/x86_64-w64-mingw32/8.4.0",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib/gcc",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/x86_64-w64-mingw32/lib",
+						"C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"stdc++",
+						"mingw32",
+						"gcc_s",
+						"gcc",
+						"moldname",
+						"mingwex",
+						"pthread",
+						"advapi32",
+						"shell32",
+						"user32",
+						"kernel32",
+						"iconv",
+						"mingw32",
+						"gcc_s",
+						"gcc",
+						"moldname",
+						"mingwex"
+					]
+				},
+				"path" : "C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/bin/g++.exe",
+				"version" : "8.4.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"implicit" : {},
+				"path" : "C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/bin/windres.exe"
+			},
+			"language" : "RC",
+			"sourceFileExtensions" : 
+			[
+				"rc",
+				"RC"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

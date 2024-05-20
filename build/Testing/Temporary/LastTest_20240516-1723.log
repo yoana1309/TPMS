@@ -1,0 +1,22 @@
+Start testing: May 16 20:50 E. Europe Daylight Time
+----------------------------------------------------------
+1/1 Testing: TPMSTest
+1/1 Test: TPMSTest
+Command: "C:/diplomna/TPMS/build/test/TPMSTest.exe"
+Directory: C:/diplomna/TPMS/build/test
+"TPMSTest" start time: May 16 20:50 E. Europe Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:/diplomna/TPMS/googletest/googletest/src/gtest_main.cc
+[==========] Running 0 tests from 0 test suites.
+[==========] 0 tests from 0 test suites ran. (0 ms total)
+[  PASSED  ] 0 tests.
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"TPMSTest" end time: May 16 20:50 E. Europe Daylight Time
+"TPMSTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 16 20:50 E. Europe Daylight Time
