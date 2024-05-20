@@ -3,32 +3,25 @@
 
 #include "C:\diplomna\TPMS\src\common\Types.h"
 
-// Macro for Timer_TimerStruct initialization
-#define TICK_TIMER_INIT(T) \
-(T).startTs = 0; \
-(T).value = 0; \
-(T).inverseStartTs = (T).startTs ^ 0xffffu; \
-(T).inverseValue = (T).value ^ 0xffffu; \
-
 typedef struct Timer_TimerStruct
 {
-    uint16 startTs;
+    uint16 start;
     uint16 value;
-    uint16 inverseStartTs;
+    uint16 inverseStart;
     uint16 inverseValue;
 } Timer_TimerType;
 
 typedef enum Timer_TimerStateEnum
 {
-    TickTimer_Uninitialized = 0u,
-    TickTimer_Expired,
-    TickTimer_Running
+    Timer_Uninitialized = 0u,
+    Timer_Expired,
+    Timer_Running
 }Timer_TimerStateType;
 
 /**
- * Init TickTimer component
+ * Init Timer component
  *
- * Shall be called before component usage.
+ * Shall be called before using the component
  *
  * @return standard return
  *
