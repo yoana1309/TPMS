@@ -69,14 +69,6 @@ C:/diplomna/TPMS/build/src/MCUWakeUp/CMakeFiles/list_install_components.dir
 C:/diplomna/TPMS/build/src/MCUWakeUp/CMakeFiles/install.dir
 C:/diplomna/TPMS/build/src/MCUWakeUp/CMakeFiles/install/local.dir
 C:/diplomna/TPMS/build/src/MCUWakeUp/CMakeFiles/install/strip.dir
-C:/diplomna/TPMS/build/src/OS/CMakeFiles/OS.dir
-C:/diplomna/TPMS/build/src/OS/CMakeFiles/test.dir
-C:/diplomna/TPMS/build/src/OS/CMakeFiles/edit_cache.dir
-C:/diplomna/TPMS/build/src/OS/CMakeFiles/rebuild_cache.dir
-C:/diplomna/TPMS/build/src/OS/CMakeFiles/list_install_components.dir
-C:/diplomna/TPMS/build/src/OS/CMakeFiles/install.dir
-C:/diplomna/TPMS/build/src/OS/CMakeFiles/install/local.dir
-C:/diplomna/TPMS/build/src/OS/CMakeFiles/install/strip.dir
 C:/diplomna/TPMS/build/src/Timer/CMakeFiles/Timer.dir
 C:/diplomna/TPMS/build/src/Timer/CMakeFiles/test.dir
 C:/diplomna/TPMS/build/src/Timer/CMakeFiles/edit_cache.dir

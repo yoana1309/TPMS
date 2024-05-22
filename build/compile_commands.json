@@ -43,12 +43,6 @@
 },
 {
   "directory": "C:/diplomna/TPMS/build",
-  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\OS\\CMakeFiles\\OS.dir\\OS.c.obj -c C:\\diplomna\\TPMS\\src\\OS\\OS.c",
-  "file": "C:\\diplomna\\TPMS\\src\\OS\\OS.c",
-  "output": "src\\OS\\CMakeFiles\\OS.dir\\OS.c.obj"
-},
-{
-  "directory": "C:/diplomna/TPMS/build",
   "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\Timer\\CMakeFiles\\Timer.dir\\Timer.c.obj -c C:\\diplomna\\TPMS\\src\\Timer\\Timer.c",
   "file": "C:\\diplomna\\TPMS\\src\\Timer\\Timer.c",
   "output": "src\\Timer\\CMakeFiles\\Timer.dir\\Timer.c.obj"
