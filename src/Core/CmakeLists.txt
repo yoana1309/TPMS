@@ -1,0 +1,11 @@
+set(This Core)
+
+set(Headers
+    Core.h
+)
+
+set(Sources
+    Core.c
+)
+
+add_library(${This} STATIC ${Headers} ${Sources})

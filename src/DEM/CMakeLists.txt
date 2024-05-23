@@ -1,11 +1,11 @@
-set(This PressureMonitor)
+set(This DEM)
 
 set(Headers
-    PressureMonitor.h
+    DEM.h
 )
 
 set(Sources
-    PressureMonitor.c
+    DEM.c
 )
 
 add_library(${This} STATIC ${Headers} ${Sources})

@@ -1,17 +1,17 @@
 #include "Timer.h"
 
-static boolean TickTimer_initialized = FALSE;
+static boolean Timer_initialized = FALSE;
 static uint16 counter;
 
-returnType TickTimer_Init( void )
+returnType Timer_Init( void )
 {
     // TODO: init other variables
     counter = 0;
-    TickTimer_initialized = TRUE;
+    Timer_initialized = TRUE;
     return E_OK;
 }
 
-returnType TickTimer_SetTimer( Timer_TimerType *timer, const uint16 valueMs )
+returnType Timer_SetTimer( Timer_TimerType *timer, const uint16 valueMs )
 {
     returnType ret = E_NOT_OK;
 
@@ -25,7 +25,7 @@ returnType TickTimer_SetTimer( Timer_TimerType *timer, const uint16 valueMs )
         return E_NOT_OK;
     }
 
-    if ( TRUE == TickTimer_initialized )
+    if ( TRUE == Timer_initialized )
     {
         timer->start = counter;
         timer->value = valueMs;
@@ -37,7 +37,7 @@ returnType TickTimer_SetTimer( Timer_TimerType *timer, const uint16 valueMs )
     return ret;
 }
 
-returnType TickTimer_CheckTimer( Timer_TimerType *timer, Timer_TimerStateType *state )
+returnType Timer_CheckTimer( Timer_TimerType *timer, Timer_TimerStateType *state )
 {
     returnType ret = E_NOT_OK;
 
@@ -50,7 +50,7 @@ returnType TickTimer_CheckTimer( Timer_TimerType *timer, Timer_TimerStateType *s
         return E_NOT_OK;
     }
 
-    if ( TRUE == TickTimer_initialized )
+    if ( TRUE == Timer_initialized )
     {
         //TODO: wtf? remove inverse shit??
         if ( ( ( timer->start ^ timer->inverseStart ) != 0xffffu ) || ( ( timer->value ^ timer->inverseValue ) != 0xffffu ) ) 
@@ -73,11 +73,11 @@ returnType TickTimer_CheckTimer( Timer_TimerType *timer, Timer_TimerStateType *s
     return ret;
 }
 
-returnType TickTimer_Tick( void )
+returnType Timer_Tick( void )
 {
     returnType ret = E_NOT_OK;
 
-    if ( TRUE == TickTimer_initialized )
+    if ( TRUE == Timer_initialized )
     {
         counter += 1u;
         ret = E_OK;

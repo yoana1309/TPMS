@@ -6,6 +6,9 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("TPMS")
 subdirs("common")
-subdirs("PressureMonitor")
 subdirs("MCUWakeUp")
+subdirs("Core")
+subdirs("DEM")
 subdirs("Timer")
+subdirs("Sensors")
+subdirs("SignalReceiver")

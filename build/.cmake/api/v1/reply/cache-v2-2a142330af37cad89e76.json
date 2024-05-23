@@ -151,10 +151,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/bin/g++.exe"
 		},
 		{
@@ -295,10 +295,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/bin/gcc.exe"
 		},
 		{
@@ -1063,7 +1063,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "11"
+			"value" : "14"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",

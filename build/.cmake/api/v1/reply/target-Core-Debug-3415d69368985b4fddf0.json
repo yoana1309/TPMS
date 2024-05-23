@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "src/PressureMonitor/libPressureMonitor.a"
+			"path" : "src/Core/libCore.a"
 		}
 	],
 	"backtrace" : 1,
@@ -15,7 +15,7 @@
 		],
 		"files" : 
 		[
-			"src/PressureMonitor/CMakeLists.txt"
+			"src/Core/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -54,13 +54,13 @@
 			]
 		}
 	],
-	"id" : "PressureMonitor::@140fe5fee21447c84805",
-	"name" : "PressureMonitor",
-	"nameOnDisk" : "libPressureMonitor.a",
+	"id" : "Core::@2b0c95fd366a9f5c3552",
+	"name" : "Core",
+	"nameOnDisk" : "libCore.a",
 	"paths" : 
 	{
-		"build" : "src/PressureMonitor",
-		"source" : "src/PressureMonitor"
+		"build" : "src/Core",
+		"source" : "src/Core"
 	},
 	"sourceGroups" : 
 	[
@@ -83,13 +83,13 @@
 	[
 		{
 			"backtrace" : 1,
-			"path" : "src/PressureMonitor/PressureMonitor.h",
+			"path" : "src/Core/Core.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/PressureMonitor/PressureMonitor.c",
+			"path" : "src/Core/Core.c",
 			"sourceGroupIndex" : 1
 		}
 	],

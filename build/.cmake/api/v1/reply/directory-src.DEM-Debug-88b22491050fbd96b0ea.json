@@ -8,7 +8,7 @@
 	"installers" : [],
 	"paths" : 
 	{
-		"build" : "src/PressureMonitor",
-		"source" : "src/PressureMonitor"
+		"build" : "src/DEM",
+		"source" : "src/DEM"
 	}
 }

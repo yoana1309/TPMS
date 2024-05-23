@@ -10,7 +10,7 @@
 					[
 						1,
 						4,
-						10
+						13
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
@@ -44,7 +44,7 @@
 						3
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-googletest.googlemock-Debug-04c5424aeb8a26908b82.json",
+					"jsonFile" : "directory-googletest.googlemock-Debug-23772cad221412506cda.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.13"
@@ -54,14 +54,14 @@
 					"source" : "googletest/googlemock",
 					"targetIndexes" : 
 					[
-						6,
-						7
+						9,
+						10
 					]
 				},
 				{
 					"build" : "googletest/googletest",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-googletest.googletest-Debug-fd4ca16fc7031d9f69dd.json",
+					"jsonFile" : "directory-googletest.googletest-Debug-8ff843a41652da25ed1a.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.13"
@@ -71,8 +71,8 @@
 					"source" : "googletest/googletest",
 					"targetIndexes" : 
 					[
-						8,
-						9
+						11,
+						12
 					]
 				},
 				{
@@ -83,7 +83,10 @@
 						6,
 						7,
 						8,
-						9
+						9,
+						10,
+						11,
+						12
 					],
 					"jsonFile" : "directory-src-Debug-c94b7c2814d5a21df52c.json",
 					"minimumCMakeVersion" : 
@@ -106,7 +109,7 @@
 					"source" : "src/TPMS",
 					"targetIndexes" : 
 					[
-						2
+						5
 					]
 				},
 				{
@@ -121,22 +124,7 @@
 					"source" : "src/common",
 					"targetIndexes" : 
 					[
-						5
-					]
-				},
-				{
-					"build" : "src/PressureMonitor",
-					"jsonFile" : "directory-src.PressureMonitor-Debug-dfa5ec66eb6af16e54c7.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.18.0"
-					},
-					"parentIndex" : 4,
-					"projectIndex" : 0,
-					"source" : "src/PressureMonitor",
-					"targetIndexes" : 
-					[
-						1
+						8
 					]
 				},
 				{
@@ -151,7 +139,37 @@
 					"source" : "src/MCUWakeUp",
 					"targetIndexes" : 
 					[
+						2
+					]
+				},
+				{
+					"build" : "src/Core",
+					"jsonFile" : "directory-src.Core-Debug-d9729710ba011115df3c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/Core",
+					"targetIndexes" : 
+					[
 						0
+					]
+				},
+				{
+					"build" : "src/DEM",
+					"jsonFile" : "directory-src.DEM-Debug-88b22491050fbd96b0ea.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/DEM",
+					"targetIndexes" : 
+					[
+						1
 					]
 				},
 				{
@@ -164,6 +182,36 @@
 					"parentIndex" : 4,
 					"projectIndex" : 0,
 					"source" : "src/Timer",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "src/Sensors",
+					"jsonFile" : "directory-src.Sensors-Debug-602c0ef5fed3b5bfdebf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/Sensors",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/SignalReceiver",
+					"jsonFile" : "directory-src.SignalReceiver-Debug-cc013b484e4c99d65850.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/SignalReceiver",
 					"targetIndexes" : 
 					[
 						4
@@ -181,7 +229,7 @@
 					"source" : "test",
 					"targetIndexes" : 
 					[
-						3
+						6
 					]
 				}
 			],
@@ -202,7 +250,10 @@
 						7,
 						8,
 						9,
-						10
+						10,
+						11,
+						12,
+						13
 					],
 					"name" : "Var",
 					"targetIndexes" : 
@@ -212,7 +263,10 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6,
+						7,
+						8
 					]
 				},
 				{
@@ -240,8 +294,8 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						6,
-						7
+						9,
+						10
 					]
 				},
 				{
@@ -253,8 +307,8 @@
 					"parentIndex" : 2,
 					"targetIndexes" : 
 					[
-						8,
-						9
+						11,
+						12
 					]
 				}
 			],
@@ -262,16 +316,37 @@
 			[
 				{
 					"directoryIndex" : 8,
+					"id" : "Core::@2b0c95fd366a9f5c3552",
+					"jsonFile" : "target-Core-Debug-3415d69368985b4fddf0.json",
+					"name" : "Core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DEM::@572f87890f1e286655eb",
+					"jsonFile" : "target-DEM-Debug-f708c51253d076fabbc1.json",
+					"name" : "DEM",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
 					"id" : "MCUWakeUp::@49aa9335ef6c410e3d53",
 					"jsonFile" : "target-MCUWakeUp-Debug-cfd11eb6aab2e2c22583.json",
 					"name" : "MCUWakeUp",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 7,
-					"id" : "PressureMonitor::@140fe5fee21447c84805",
-					"jsonFile" : "target-PressureMonitor-Debug-12e2e3263ec9e939f24f.json",
-					"name" : "PressureMonitor",
+					"directoryIndex" : 11,
+					"id" : "Sensors::@f5d6cc82afb34fe36b3a",
+					"jsonFile" : "target-Sensors-Debug-be9c1dd9cd1eb2103b0e.json",
+					"name" : "Sensors",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "SignalReceiver::@f5df34a9b11395458654",
+					"jsonFile" : "target-SignalReceiver-Debug-655bdad4b0f2b73866df.json",
+					"name" : "SignalReceiver",
 					"projectIndex" : 0
 				},
 				{
@@ -282,14 +357,14 @@
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 10,
+					"directoryIndex" : 13,
 					"id" : "TPMSTest::@36f028580bb02cc8272a",
 					"jsonFile" : "target-TPMSTest-Debug-81b5723f83d4c729c8ef.json",
 					"name" : "TPMSTest",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 9,
+					"directoryIndex" : 10,
 					"id" : "Timer::@b4dde0cfc420a511fee4",
 					"jsonFile" : "target-Timer-Debug-cb88841345de1151127b.json",
 					"name" : "Timer",

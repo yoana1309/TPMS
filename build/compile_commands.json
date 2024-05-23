@@ -31,21 +31,39 @@
 },
 {
   "directory": "C:/diplomna/TPMS/build",
-  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\PressureMonitor\\CMakeFiles\\PressureMonitor.dir\\PressureMonitor.c.obj -c C:\\diplomna\\TPMS\\src\\PressureMonitor\\PressureMonitor.c",
-  "file": "C:\\diplomna\\TPMS\\src\\PressureMonitor\\PressureMonitor.c",
-  "output": "src\\PressureMonitor\\CMakeFiles\\PressureMonitor.dir\\PressureMonitor.c.obj"
-},
-{
-  "directory": "C:/diplomna/TPMS/build",
   "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\MCUWakeUp\\CMakeFiles\\MCUWakeUp.dir\\MCUWakeUp.c.obj -c C:\\diplomna\\TPMS\\src\\MCUWakeUp\\MCUWakeUp.c",
   "file": "C:\\diplomna\\TPMS\\src\\MCUWakeUp\\MCUWakeUp.c",
   "output": "src\\MCUWakeUp\\CMakeFiles\\MCUWakeUp.dir\\MCUWakeUp.c.obj"
 },
 {
   "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\Core\\CMakeFiles\\Core.dir\\Core.c.obj -c C:\\diplomna\\TPMS\\src\\Core\\Core.c",
+  "file": "C:\\diplomna\\TPMS\\src\\Core\\Core.c",
+  "output": "src\\Core\\CMakeFiles\\Core.dir\\Core.c.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\DEM\\CMakeFiles\\DEM.dir\\DEM.c.obj -c C:\\diplomna\\TPMS\\src\\DEM\\DEM.c",
+  "file": "C:\\diplomna\\TPMS\\src\\DEM\\DEM.c",
+  "output": "src\\DEM\\CMakeFiles\\DEM.dir\\DEM.c.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
   "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\Timer\\CMakeFiles\\Timer.dir\\Timer.c.obj -c C:\\diplomna\\TPMS\\src\\Timer\\Timer.c",
   "file": "C:\\diplomna\\TPMS\\src\\Timer\\Timer.c",
   "output": "src\\Timer\\CMakeFiles\\Timer.dir\\Timer.c.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\Sensors\\CMakeFiles\\Sensors.dir\\Sensors.c.obj -c C:\\diplomna\\TPMS\\src\\Sensors\\Sensors.c",
+  "file": "C:\\diplomna\\TPMS\\src\\Sensors\\Sensors.c",
+  "output": "src\\Sensors\\CMakeFiles\\Sensors.dir\\Sensors.c.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -o src\\SignalReceiver\\CMakeFiles\\SignalReceiver.dir\\SignalReceiver.c.obj -c C:\\diplomna\\TPMS\\src\\SignalReceiver\\SignalReceiver.c",
+  "file": "C:\\diplomna\\TPMS\\src\\SignalReceiver\\SignalReceiver.c",
+  "output": "src\\SignalReceiver\\CMakeFiles\\SignalReceiver.dir\\SignalReceiver.c.obj"
 },
 {
   "directory": "C:/diplomna/TPMS/build",

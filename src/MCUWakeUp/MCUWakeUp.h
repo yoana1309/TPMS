@@ -1,6 +1,15 @@
 #ifndef MCU_WAKE_UP_H
 #define MCU_WAKE_UP_H
 
+/***********************************************************************************************************************
+Type definitions
+***********************************************************************************************************************/
+typedef enum
+{
+    MCUWakeUpState_Enable = 0,
+    MCUWakeUpState_Disable
+} TPMSActivityStateType;
+
 //defs
 typedef enum
 {
@@ -12,11 +21,7 @@ typedef enum
 
 typedef enum
 {
-   IO_CONTROL_NO_ERROR = 0
-} MCUWakeUpErrorCodesType;
-
-typedef enum
-{
+    MCUWakeUp_State_Undefined = 0,
     MCUWakeUp_State_Active,
     MCUWakeUp_State_LowPower,
 
@@ -32,7 +37,7 @@ typedef struct
 //Data
 typedef struct
 {
-    uint8 WakeUpCircuitTriggered;
+    uint8 Initialized;
     MCUWakeUpStatesType State;
 }MCUWakeUpDataType;
 
@@ -45,7 +50,7 @@ Function prototypes
 extern void           MCUWakeUp_RequestSet             ( MCUWakeUpRequestsType   request );
 extern void           MCUWakeUp_RequestReset           ( MCUWakeUpRequestsType   request );
 extern boolean        MCUWakeUp_RequestIsSet           ( MCUWakeUpRequestsType   request );
-extern void           MCUWakeUp_Error                  ( MCUWakeUpErrorCodesType errCode );
-extern returnType     MCUWakeUp_CheckExternalConditions();
+// extern void           MCUWakeUp_Error                  ( MCUWakeUpErrorCodesType errCode );
+// extern returnType     MCUWakeUp_CheckExternalConditions();
 
 #endif /* MCU_WAKE_UP_H */
