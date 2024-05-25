@@ -8,4 +8,15 @@ set(Sources
     Core.c
 )
 
-add_library(${This} STATIC ${Headers} ${Sources})
+#add_library(${This} STATIC ${Headers} ${Sources})
+
+add_executable(${This} ${Headers} ${Sources})
+target_link_libraries(${This} PUBLIC
+    gtest_main
+    gmock
+    MCUWakeUp
+    COM
+    Sensors
+    Timer
+    TPMSComponent
+)

@@ -37,3 +37,13 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "C:/Users/ZHY2SF/AppData/Local/mambaforge/envs/863a5fa33b0bb1078b088cda715bcdf3/Library/bin/objdump.exe")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/diplomna/TPMS/build/test/components/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/diplomna/TPMS/build/test/resources/cmake_install.cmake")
+endif()
+

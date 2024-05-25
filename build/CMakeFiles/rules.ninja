@@ -144,11 +144,11 @@ rule C_COMPILER__Core_unscanned_Debug
 
 
 #############################################
-# Rule for linking C static library.
+# Rule for linking CXX executable.
 
-rule C_STATIC_LIBRARY_LINKER__Core_Debug
-  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && "C:\Program Files\CMake\bin\cmake.exe" -E rm -f $TARGET_FILE && C:\Users\ZHY2SF\AppData\Local\mambaforge\envs\863a5fa33b0bb1078b088cda715bcdf3\Library\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Users\ZHY2SF\AppData\Local\mambaforge\envs\863a5fa33b0bb1078b088cda715bcdf3\Library\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
-  description = Linking C static library $TARGET_FILE
+rule CXX_EXECUTABLE_LINKER__Core_Debug
+  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\Users\ZHY2SF\AppData\Local\mambaforge\envs\863a5fa33b0bb1078b088cda715bcdf3\Library\bin\g++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 
 
@@ -212,7 +212,7 @@ rule C_STATIC_LIBRARY_LINKER__Sensors_Debug
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__SignalReceiver_unscanned_Debug
+rule C_COMPILER__COM_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Users\ZHY2SF\AppData\Local\mambaforge\envs\863a5fa33b0bb1078b088cda715bcdf3\Library\bin\gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -222,7 +222,7 @@ rule C_COMPILER__SignalReceiver_unscanned_Debug
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__SignalReceiver_Debug
+rule C_STATIC_LIBRARY_LINKER__COM_Debug
   command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && "C:\Program Files\CMake\bin\cmake.exe" -E rm -f $TARGET_FILE && C:\Users\ZHY2SF\AppData\Local\mambaforge\envs\863a5fa33b0bb1078b088cda715bcdf3\Library\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Users\ZHY2SF\AppData\Local\mambaforge\envs\863a5fa33b0bb1078b088cda715bcdf3\Library\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT

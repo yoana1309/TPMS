@@ -1,4 +1,3 @@
-#include "C:\diplomna\TPMS\src\common\Types.h"
 #include "MCUWakeUp.h"
 
 /***********************************************************************************************************************
@@ -7,8 +6,6 @@ Static function prototypes
 
 // void    MCUWakeUp_CheckWakeUpSignal();
 // boolean WakeUpCircuitTriggered     ();
-// void    ActivateSystem             ();
-// void    EnterLowPowerState         ();
 
 static void MCUWakeUp_StateHandler_Undefined();
 static void MCUWakeUp_StateHandler_Active();
@@ -25,8 +22,13 @@ extern MCUWakeUpDataType MCUWakeUpData;
 /***********************************************************************************************************************
 Implementation
 ***********************************************************************************************************************/
+void MCUWakeUpInit()
+{
+    MCUWakeUpData.Initialized = MCU_WAKE_UP_INITIALIZED;
+    MCUWakeUpData.State = MCUWakeUp_State_Undefined;
+    MCUWakeUpData.RequestLowPower = TRUE;
+}
 
-//TODO: Fix this function - make a state machine
 void MCUWakeUp_Run() 
 {
     switch ( MCUWakeUpData.State )
@@ -52,51 +54,66 @@ void MCUWakeUp_Run()
 //     // Code to check wake-up circuit signal (callback; can return returnType)
 // }
 
-// void ActivateSystem() 
-// {
-//     // Code to transition system from low-power to active state
-// }
-
-// void EnterLowPowerState() 
-// {
-//     // Code to put system into low-power state (callback; can return returnType)
-// }
-
 static void MCUWakeUp_StateHandler_Undefined()
 {
-    if( MCUWakeUp_RequestIsSet( MCU_WAKE_UP_REQ_ENABLE ) ) //TODO: vmesto tova proverqvame taimer
+    if( MCU_WAKE_UP_INITIALIZED == MCUWakeUpData.Initialized ) //i ako veche imame izprateni danni ot senzorite
     {
         MCUWakeUp_StateTrigger_Active();
     }
-    else if( MCUWakeUp_RequestIsSet( MCU_WAKE_UP_REQ_DISABLE ) ) //TODO: vmesto tova proverqvame taimer
+    else if( MCU_WAKE_UP_INITIALIZED == MCUWakeUpData.Initialized )
     {
         MCUWakeUp_StateTrigger_LowPower();
+    }
+    else
+    {
+        MCUWakeUp_SignalError( MCUWAKEUP_ERR_UNINITIALIZED );
     }
 }
 
 static void MCUWakeUp_StateHandler_Active()
 {
-    //TODO: call TPMS API functions to measure pressure in each tire
-    if( MCUWakeUp_RequestIsSet( MCU_WAKE_UP_REQ_ENABLE ) ) //TODO: vmesto tova proverqvame taimer
+    if( TRUE == MCUWakeUpData.RequestLowPower )
     {
-        MCUWakeUp_StateTrigger_Active();
-    }
+        MCUWakeUp_StateTrigger_LowPower();
+        MCUWakeUpData.RequestLowPower = FALSE;
+    }  
 }
 static void MCUWakeUp_StateHandler_LowPower()
 {
-    //TODO: read from sensors and store info in nvm
-    if( MCUWakeUp_RequestIsSet( MCU_WAKE_UP_REQ_DISABLE ) )
+    Timer_TimerStateType timerState;
+
+    if( E_OK == Timer_CheckTimer( &MCUWakeUpData.LowPowerTimer, &timerState ) )
     {
-        MCUWakeUp_StateTrigger_LowPower();
+        if( Timer_Expired == timerState )
+        {
+            MCUWakeUp_StateTrigger_Active();
+        }
+    }
+    else
+    {
+        MCUWakeUp_SignalError( MCUWAKEUP_ERR_TIMER_ERROR );
     }
 }
 
 static void MCUWakeUp_StateTrigger_Active()
 {
-    MCUWakeUpData.State = MCUWakeUp_State_Active;
+    if( E_OK == Timer_SetTimer( &MCUWakeUpData.LowPowerTimer, 500 ) )
+    {
+        MCUWakeUpData.State = MCUWakeUp_State_Active;
+    }
+    else 
+    {
+        MCUWakeUp_SignalError( MCUWAKEUP_ERR_TIMER_ERROR );
+    }
 }
 
 static void MCUWakeUp_StateTrigger_LowPower()
 {
     MCUWakeUpData.State = MCUWakeUp_State_LowPower;
+}
+
+//API
+returnType MCUWakeUp_RequestLowPower()
+{
+    MCUWakeUpData.RequestLowPower = TRUE;
 }

@@ -1,4 +1,0 @@
-#ifndef SIGNAL_RECEIVER_H
-#define SIGNAL_RECEIVER_H
-
-#endif /* SIGNAL_RECEIVER_H */

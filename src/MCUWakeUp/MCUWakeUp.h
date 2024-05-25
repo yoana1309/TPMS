@@ -1,23 +1,23 @@
 #ifndef MCU_WAKE_UP_H
 #define MCU_WAKE_UP_H
 
+#include "C:\diplomna\TPMS\src\common\Types.h"
+#include "C:\diplomna\TPMS\src\Timer\Timer.h"
+
+#define MCU_WAKE_UP_INITIALIZED 1u
+
 /***********************************************************************************************************************
 Type definitions
 ***********************************************************************************************************************/
-typedef enum
-{
-    MCUWakeUpState_Enable = 0,
-    MCUWakeUpState_Disable
-} TPMSActivityStateType;
 
 //defs
+
 typedef enum
 {
-   MCU_WAKE_UP_REQ_ENABLE = 0x0000,
-   MCU_WAKE_UP_REQ_DISABLE = 0x0000,
-
-   MCU_WAKE_UP_REQ_ALL = 0xFFFF
-} MCUWakeUpRequestsType;
+    MCUWAKEUP_NO_ERROR = 0,
+    MCUWAKEUP_ERR_UNINITIALIZED,
+    MCUWAKEUP_ERR_TIMER_ERROR
+} MCUWakeUpStatesType;
 
 typedef enum
 {
@@ -26,19 +26,16 @@ typedef enum
     MCUWakeUp_State_LowPower,
 
     MCUWakeUp_State_Count
-} MCUWakeUpStatesType;
+} MCUWakeUpErrorType;
 
-//Params
-typedef struct 
-{
-    
-}MCUWakeUpParametersType;
 
 //Data
 typedef struct
 {
     uint8 Initialized;
     MCUWakeUpStatesType State;
+    Timer_TimerType LowPowerTimer;
+    boolean RequestLowPower;
 }MCUWakeUpDataType;
 
 //cfg
@@ -46,11 +43,10 @@ typedef struct
 /***********************************************************************************************************************
 Function prototypes
 ***********************************************************************************************************************/
+extern void MCUWakeUpRun();
+extern void MCUWakeUpInit();
 
-extern void           MCUWakeUp_RequestSet             ( MCUWakeUpRequestsType   request );
-extern void           MCUWakeUp_RequestReset           ( MCUWakeUpRequestsType   request );
-extern boolean        MCUWakeUp_RequestIsSet           ( MCUWakeUpRequestsType   request );
-// extern void           MCUWakeUp_Error                  ( MCUWakeUpErrorCodesType errCode );
-// extern returnType     MCUWakeUp_CheckExternalConditions();
+//callbacks
+extern void MCUWakeUp_SignalError( MCUWakeUpErrorType error );
 
 #endif /* MCU_WAKE_UP_H */
