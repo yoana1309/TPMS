@@ -16,17 +16,7 @@ static returnType TPMS_ReceiveTemperatureSignal( uint8 index );
 Implementation
 ***********************************************************************************************************************/
 
-enum TPMS_Instances //in test resources (.h)
-{
-    TPMS_FRONT_LEFT_TIRE = 0,
-    TPMS_FRONT_RIGHT_TIRE,
-    TPMS_REAR_LEFT_TIRE,
-    TPMS_REAR_RIGHT_TIRE,
-
-    TPMS_COUNT
-};
-
-TPMSDataType TPMSData[ TPMS_COUNT ]; //In test resources (.c)
+TPMSDataType TPMSData[ TPMS_Tire_Count ]; //In test resources (.c)
 
 
 
@@ -36,7 +26,7 @@ void TPMS_Init( uint8 index )
     TPMSData[ index ].LastMeasuredTemperature = 0;
 }
 
-void TPMS_Run( uint8 index )
+void TPMS_Run()
 {
     int tireNumber = 0;
     for(tireNumber; tireNumber < TPMS_Tire_Count; tireNumber++)
@@ -76,7 +66,7 @@ static returnType TPMS_ReceivePressureSignal( uint8 index )
     uint16 rawSignal = 0;
 
 
-    if( E_OK == TPMS_ReadSignal( index, TPMS_Signal_Pressure, &rawSignal ) )
+    if( E_OK == Sensors_GetSignal( index, Sensors_Signal_Pressure, &rawSignal ) )
     {
         TPMSData[ index ].LastMeasuredPressure = rawSignal; //TODO: formula to transform the raw signal; maybe use another function
         ret = E_OK;
@@ -95,7 +85,7 @@ static returnType TPMS_ReceiveTemperatureSignal( uint8 index )
     returnType ret = E_NOT_OK;
     uint16 rawSignal = 0;
 
-    if( E_OK == TPMS_ReadSignal( index, TPMS_Signal_Temperature, &rawSignal ) )
+    if( E_OK == Sensors_GetSignal( index, Sensors_Signal_Temperature, &rawSignal ) )
     {
         TPMSData[ index ].LastMeasuredTemperature = rawSignal; //TODO: formula to transform the raw signal
         ret = E_OK;

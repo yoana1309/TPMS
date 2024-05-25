@@ -2,6 +2,7 @@
 #define TPMS_H
 
 #include "C:\diplomna\TPMS\src\common\Types.h"
+#include "C:\diplomna\TPMS\src\Sensors\Sensors.h"
 
 #define MIN_PRESSURE_THRESHOLD 20u //TODO: define metrics; define min threshold
 #define MAX_PRESSURE_THRESHOLD 30u //TODO: define metrics; define min threshold
@@ -20,14 +21,6 @@ typedef enum
 
     TPMS_Tire_Count
 } TPMSTireType;
-
-typedef enum
-{
-    TPMS_Signal_Pressure = 0,
-    TPMS_Signal_Temperature,
-
-    TPMS_Signal_Count
-} TPMSSignalType;
 
 typedef enum
 {
@@ -60,10 +53,9 @@ Function prototypes
 ***********************************************************************************************************************/
 
 extern void TPMS_Init( uint8 index );
-extern void TPMS_Run( uint8 index );
+extern void TPMS_Run();
 
 //callbacks
-extern returnType TPMS_ReadSignal( uint8 index, TPMSSignalType signalType, uint16* signal );
 extern void TPMS_SignalError( uint8 index, TPMSErrorType error );
 
 #endif /* TPMS_H */

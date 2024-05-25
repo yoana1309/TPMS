@@ -1709,6 +1709,40 @@ build test/components/install/strip: phony test/components/CMakeFiles/install/st
 # C:/diplomna/TPMS/test/CMakeLists.txt
 # =============================================================================
 
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target Resources
+
+
+#############################################
+# Order-only phony target for Resources
+
+build cmake_object_order_depends_target_Resources: phony || .
+
+build test/resources/CMakeFiles/Resources.dir/Resources.c.obj: C_COMPILER__Resources_unscanned_Debug C$:/diplomna/TPMS/test/resources/Resources.c || cmake_object_order_depends_target_Resources
+  DEP_FILE = test\resources\CMakeFiles\Resources.dir\Resources.c.obj.d
+  FLAGS = -g -std=gnu99 -fprofile-abs-path
+  OBJECT_DIR = test\resources\CMakeFiles\Resources.dir
+  OBJECT_FILE_DIR = test\resources\CMakeFiles\Resources.dir
+  TARGET_COMPILE_PDB = test\resources\CMakeFiles\Resources.dir\Resources.pdb
+  TARGET_PDB = test\resources\libResources.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target Resources
+
+
+#############################################
+# Link the static library test\resources\libResources.a
+
+build test/resources/libResources.a: C_STATIC_LIBRARY_LINKER__Resources_Debug test/resources/CMakeFiles/Resources.dir/Resources.c.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = test\resources\CMakeFiles\Resources.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = test\resources\CMakeFiles\Resources.dir\Resources.pdb
+  TARGET_FILE = test\resources\libResources.a
+  TARGET_PDB = test\resources\libResources.pdb
+
 
 #############################################
 # Utility command for test
@@ -1800,6 +1834,8 @@ build DEM: phony src/DEM/libDEM.a
 
 build MCUWakeUp: phony src/MCUWakeUp/libMCUWakeUp.a
 
+build Resources: phony test/resources/libResources.a
+
 build Sensors: phony src/Sensors/libSensors.a
 
 build TPMSComponent: phony src/TPMS/libTPMSComponent.a
@@ -1825,6 +1861,8 @@ build libCOM.a: phony src/COM/libCOM.a
 build libDEM.a: phony src/DEM/libDEM.a
 
 build libMCUWakeUp.a: phony src/MCUWakeUp/libMCUWakeUp.a
+
+build libResources.a: phony test/resources/libResources.a
 
 build libSensors.a: phony src/Sensors/libSensors.a
 
@@ -1953,7 +1991,7 @@ build test/components/all: phony test/components/TPMSTest.exe
 #############################################
 # Folder: C:/diplomna/TPMS/build/test/resources
 
-build test/resources/all: phony
+build test/resources/all: phony test/resources/libResources.a
 
 # =============================================================================
 # Built-in targets

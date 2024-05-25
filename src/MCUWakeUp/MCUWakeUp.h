@@ -17,7 +17,7 @@ typedef enum
     MCUWAKEUP_NO_ERROR = 0,
     MCUWAKEUP_ERR_UNINITIALIZED,
     MCUWAKEUP_ERR_TIMER_ERROR
-} MCUWakeUpStatesType;
+} MCUWakeUpErrorType;
 
 typedef enum
 {
@@ -26,7 +26,7 @@ typedef enum
     MCUWakeUp_State_LowPower,
 
     MCUWakeUp_State_Count
-} MCUWakeUpErrorType;
+} MCUWakeUpStatesType;
 
 
 //Data
@@ -45,6 +45,11 @@ Function prototypes
 ***********************************************************************************************************************/
 extern void MCUWakeUpRun();
 extern void MCUWakeUpInit();
+
+//api
+extern returnType MCUWakeUp_GetState( MCUWakeUpStatesType *state );
+
+extern returnType MCUWakeUp_RequestLowPower();
 
 //callbacks
 extern void MCUWakeUp_SignalError( MCUWakeUpErrorType error );

@@ -248,6 +248,25 @@ rule CXX_EXECUTABLE_LINKER__TPMSTest_Debug
 
 
 #############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__Resources_unscanned_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ${LAUNCHER}${CODE_CHECK}C:\Users\ZHY2SF\AppData\Local\mambaforge\envs\863a5fa33b0bb1078b088cda715bcdf3\Library\bin\gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__Resources_Debug
+  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && "C:\Program Files\CMake\bin\cmake.exe" -E rm -f $TARGET_FILE && C:\Users\ZHY2SF\AppData\Local\mambaforge\envs\863a5fa33b0bb1078b088cda715bcdf3\Library\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Users\ZHY2SF\AppData\Local\mambaforge\envs\863a5fa33b0bb1078b088cda715bcdf3\Library\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE

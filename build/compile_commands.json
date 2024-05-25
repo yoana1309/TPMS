@@ -70,5 +70,11 @@
   "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\g++.exe -isystem C:/diplomna/TPMS/googletest/googletest/include -isystem C:/diplomna/TPMS/googletest/googletest -isystem C:/diplomna/TPMS/googletest/googlemock/include -isystem C:/diplomna/TPMS/googletest/googlemock -g -std=gnu++14 -fprofile-abs-path -o test\\components\\CMakeFiles\\TPMSTest.dir\\TPMSTests.cpp.obj -c C:\\diplomna\\TPMS\\test\\components\\TPMSTests.cpp",
   "file": "C:\\diplomna\\TPMS\\test\\components\\TPMSTests.cpp",
   "output": "test\\components\\CMakeFiles\\TPMSTest.dir\\TPMSTests.cpp.obj"
+},
+{
+  "directory": "C:/diplomna/TPMS/build",
+  "command": "C:\\Users\\ZHY2SF\\AppData\\Local\\mambaforge\\envs\\863a5fa33b0bb1078b088cda715bcdf3\\Library\\bin\\gcc.exe -g -std=gnu99 -fprofile-abs-path -o test\\resources\\CMakeFiles\\Resources.dir\\Resources.c.obj -c C:\\diplomna\\TPMS\\test\\resources\\Resources.c",
+  "file": "C:\\diplomna\\TPMS\\test\\resources\\Resources.c",
+  "output": "test\\resources\\CMakeFiles\\Resources.dir\\Resources.c.obj"
 }
 ]

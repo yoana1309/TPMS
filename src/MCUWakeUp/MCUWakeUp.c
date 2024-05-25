@@ -113,6 +113,11 @@ static void MCUWakeUp_StateTrigger_LowPower()
 }
 
 //API
+returnType MCUWakeUp_GetState( MCUWakeUpStatesType *state )
+{
+    *state = MCUWakeUpData.State;
+}
+
 returnType MCUWakeUp_RequestLowPower()
 {
     MCUWakeUpData.RequestLowPower = TRUE;

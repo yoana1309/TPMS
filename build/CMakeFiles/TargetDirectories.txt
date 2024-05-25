@@ -116,6 +116,7 @@ C:/diplomna/TPMS/build/test/components/CMakeFiles/list_install_components.dir
 C:/diplomna/TPMS/build/test/components/CMakeFiles/install.dir
 C:/diplomna/TPMS/build/test/components/CMakeFiles/install/local.dir
 C:/diplomna/TPMS/build/test/components/CMakeFiles/install/strip.dir
+C:/diplomna/TPMS/build/test/resources/CMakeFiles/Resources.dir
 C:/diplomna/TPMS/build/test/resources/CMakeFiles/test.dir
 C:/diplomna/TPMS/build/test/resources/CMakeFiles/edit_cache.dir
 C:/diplomna/TPMS/build/test/resources/CMakeFiles/rebuild_cache.dir
