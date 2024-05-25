@@ -56,13 +56,9 @@ void MCUWakeUp_Run()
 
 static void MCUWakeUp_StateHandler_Undefined()
 {
-    if( MCU_WAKE_UP_INITIALIZED == MCUWakeUpData.Initialized ) //i ako veche imame izprateni danni ot senzorite
+    if( MCU_WAKE_UP_INITIALIZED == MCUWakeUpData.Initialized )
     {
         MCUWakeUp_StateTrigger_Active();
-    }
-    else if( MCU_WAKE_UP_INITIALIZED == MCUWakeUpData.Initialized )
-    {
-        MCUWakeUp_StateTrigger_LowPower();
     }
     else
     {

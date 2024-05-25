@@ -2,11 +2,15 @@
 
 SensorsDataType SensorsData[ Sensors_Count ];
 
-void Sensors_Init( uint8 index )
+void Sensors_Init()
 {
-    SensorsData[ index ].tireID = Sensors_Count;
-    SensorsData[ index ].signalType = Sensors_Signal_Count;
-    SensorsData[ index ].reading = 0;   
+    uint8 index = 0;
+    for( index; index < Sensors_Count; index++ )
+    {
+        SensorsData[ index ].tireID = Sensors_Count;
+        SensorsData[ index ].signalType = Sensors_Signal_Count;
+        SensorsData[ index ].reading = 0;
+    } 
 }
 
 returnType Sensors_Run()

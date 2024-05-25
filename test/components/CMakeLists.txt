@@ -10,10 +10,13 @@ add_executable(${This} ${Sources})
 target_link_libraries(${This} PUBLIC
     gtest_main
     gmock_main
+    COM
+    MCUWakeUp
+    Sensors
+    Timer
     TPMSComponent
 )
 
-add_test(
-    NAME ${This}
-    COMMAND ${This}
-)
+
+
+gtest_discover_tests(${This} DISCOVERY_MODE POST_BUILD)

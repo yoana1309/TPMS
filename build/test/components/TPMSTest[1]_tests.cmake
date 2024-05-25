@@ -1,0 +1,5 @@
+add_test([=[TPMS.Test_Demo]=]  C:/diplomna/TPMS/build/test/components/TPMSTest.exe [==[--gtest_filter=TPMS.Test_Demo]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[TPMS.Test_Demo]=]  PROPERTIES WORKING_DIRECTORY C:/diplomna/TPMS/build/test/components SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[TPMS.Test_COM_TriggerWarning_Negative]=]  C:/diplomna/TPMS/build/test/components/TPMSTest.exe [==[--gtest_filter=TPMS.Test_COM_TriggerWarning_Negative]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[TPMS.Test_COM_TriggerWarning_Negative]=]  PROPERTIES WORKING_DIRECTORY C:/diplomna/TPMS/build/test/components SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  TPMSTest_TESTS TPMS.Test_Demo TPMS.Test_COM_TriggerWarning_Negative)

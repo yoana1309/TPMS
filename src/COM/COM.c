@@ -1,5 +1,4 @@
 #include "COM.h"
-#include "C:\diplomna\TPMS\src\TPMS\TPMS.h"
 
 //API
 

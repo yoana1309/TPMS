@@ -1,0 +1,463 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4,
+						13
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "googletest",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-googletest-Debug-294c64d4885f2a55f3f7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "googletest"
+				},
+				{
+					"build" : "googletest/googlemock",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-googletest.googlemock-Debug-66038e6c8438d69dfca0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "googletest/googlemock",
+					"targetIndexes" : 
+					[
+						10,
+						11
+					]
+				},
+				{
+					"build" : "googletest/googletest",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-googletest.googletest-Debug-a849d8a92579f6c5f65d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : "googletest/googletest",
+					"targetIndexes" : 
+					[
+						12,
+						13
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"jsonFile" : "directory-src-Debug-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/TPMS",
+					"jsonFile" : "directory-src.TPMS-Debug-19d6389b65df1d6d3c28.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/TPMS",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "src/common",
+					"jsonFile" : "directory-src.common-Debug-1d412c5c23197603dd39.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/common",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/MCUWakeUp",
+					"jsonFile" : "directory-src.MCUWakeUp-Debug-637f1cd474a4e7c22808.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/MCUWakeUp",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/Core",
+					"jsonFile" : "directory-src.Core-Debug-d9729710ba011115df3c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/Core",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/DEM",
+					"jsonFile" : "directory-src.DEM-Debug-88b22491050fbd96b0ea.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/DEM",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/Timer",
+					"jsonFile" : "directory-src.Timer-Debug-8e4eb02cc507d507238d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/Timer",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "src/Sensors",
+					"jsonFile" : "directory-src.Sensors-Debug-602c0ef5fed3b5bfdebf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/Sensors",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/COM",
+					"jsonFile" : "directory-src.COM-Debug-4c78f49dd2bd96cc4d1c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/COM",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "test",
+					"childIndexes" : 
+					[
+						14,
+						15
+					],
+					"jsonFile" : "directory-test-Debug-f18be1977b403cfd1a50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test"
+				},
+				{
+					"build" : "test/components",
+					"jsonFile" : "directory-test.components-Debug-4c28928be12fa155d2f6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 13,
+					"projectIndex" : 0,
+					"source" : "test/components",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "test/resources",
+					"jsonFile" : "directory-test.resources-Debug-74126409c313923ac49e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.0"
+					},
+					"parentIndex" : 13,
+					"projectIndex" : 0,
+					"source" : "test/resources",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					],
+					"name" : "Var",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "gmock",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "gtest",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						12,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 12,
+					"id" : "COM::@4b63eed6cef4ac4a59e1",
+					"jsonFile" : "target-COM-Debug-cebc09f97ef4b5ceccda.json",
+					"name" : "COM",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "Core::@2b0c95fd366a9f5c3552",
+					"jsonFile" : "target-Core-Debug-5ae464207f700869fc14.json",
+					"name" : "Core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DEM::@572f87890f1e286655eb",
+					"jsonFile" : "target-DEM-Debug-a4920093a7c0b8feca6d.json",
+					"name" : "DEM",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "MCUWakeUp::@49aa9335ef6c410e3d53",
+					"jsonFile" : "target-MCUWakeUp-Debug-a4148988cdf00260cc53.json",
+					"name" : "MCUWakeUp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "Resources::@be10e1238c0161770ebc",
+					"jsonFile" : "target-Resources-Debug-49d4ff76f310df850da5.json",
+					"name" : "Resources",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "Sensors::@f5d6cc82afb34fe36b3a",
+					"jsonFile" : "target-Sensors-Debug-6d1cef554cd3f3fd5f72.json",
+					"name" : "Sensors",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "TPMSComponent::@95e3d21298a2f64e0010",
+					"jsonFile" : "target-TPMSComponent-Debug-0a02bf294ae9e85a2b1a.json",
+					"name" : "TPMSComponent",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "TPMSTest::@4368e7657c3006f208a0",
+					"jsonFile" : "target-TPMSTest-Debug-bf7df3ff2cebbf1ffeb8.json",
+					"name" : "TPMSTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "Timer::@b4dde0cfc420a511fee4",
+					"jsonFile" : "target-Timer-Debug-55c3b361213b19f8d463.json",
+					"name" : "Timer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "common::@af79f3804eddddbfa7f1",
+					"jsonFile" : "target-common-Debug-898af1b4c293c2620c0a.json",
+					"name" : "common",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gmock::@d68da25237a7ca2351af",
+					"jsonFile" : "target-gmock-Debug-ab7ca317de3e4d7a12ae.json",
+					"name" : "gmock",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gmock_main::@d68da25237a7ca2351af",
+					"jsonFile" : "target-gmock_main-Debug-750c0fb70d2b8d0aa510.json",
+					"name" : "gmock_main",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gtest::@f95b5c00bd49b3b4698d",
+					"jsonFile" : "target-gtest-Debug-21fb3d186afca5f80add.json",
+					"name" : "gtest",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gtest_main::@f95b5c00bd49b3b4698d",
+					"jsonFile" : "target-gtest_main-Debug-9101e95c33bafa73d883.json",
+					"name" : "gtest_main",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/diplomna/TPMS/build",
+		"source" : "C:/diplomna/TPMS"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -43,7 +43,7 @@ typedef struct
     uint16 reading;
 }SensorsDataType;
 
-extern void Sensors_Init( uint8 index );
+extern void Sensors_Init();
 extern returnType Sensors_Run();
 
 //api

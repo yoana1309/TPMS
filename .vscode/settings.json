@@ -2,6 +2,7 @@
     "files.associations": {
         "tpms.h": "c",
         "signalreceiver.h": "c",
-        "variant": "cpp"
+        "variant": "cpp",
+        "new": "cpp"
     }
 }

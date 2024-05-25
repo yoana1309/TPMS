@@ -4,5 +4,4 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-add_test(TPMSTest "C:/diplomna/TPMS/build/test/components/TPMSTest.exe")
-set_tests_properties(TPMSTest PROPERTIES  _BACKTRACE_TRIPLES "C:/diplomna/TPMS/test/components/CMakeLists.txt;16;add_test;C:/diplomna/TPMS/test/components/CMakeLists.txt;0;")
+include("C:/diplomna/TPMS/build/test/components/TPMSTest[1]_include.cmake")

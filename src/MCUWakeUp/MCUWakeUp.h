@@ -43,8 +43,9 @@ typedef struct
 /***********************************************************************************************************************
 Function prototypes
 ***********************************************************************************************************************/
-extern void MCUWakeUpRun();
+
 extern void MCUWakeUpInit();
+extern void MCUWakeUpRun();
 
 //api
 extern returnType MCUWakeUp_GetState( MCUWakeUpStatesType *state );
