@@ -11,6 +11,7 @@ target_link_libraries(${This} PUBLIC
     gtest_main
     gmock_main
     COM
+    Resources
     MCUWakeUp
     Sensors
     Timer

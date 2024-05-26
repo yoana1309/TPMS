@@ -17,16 +17,16 @@ static void MCUWakeUp_StateTrigger_LowPower();
 /***********************************************************************************************************************
 Variables
 ***********************************************************************************************************************/
-extern MCUWakeUpDataType MCUWakeUpData;
+MCUWakeUpDataType MCUWakeUpData;
 
 /***********************************************************************************************************************
 Implementation
 ***********************************************************************************************************************/
-void MCUWakeUpInit()
+void MCUWakeUp_Init()
 {
     MCUWakeUpData.Initialized = MCU_WAKE_UP_INITIALIZED;
     MCUWakeUpData.State = MCUWakeUp_State_Undefined;
-    MCUWakeUpData.RequestLowPower = TRUE;
+    MCUWakeUpData.RequestLowPower = FALSE;
 }
 
 void MCUWakeUp_Run() 
@@ -44,7 +44,7 @@ void MCUWakeUp_Run()
             break;
 
         default:
-            //TODO: Exception/error
+            MCUWakeUp_SignalError( MCUWAKEUP_ERR_UNHANDLED_STATE );
             break;
     }
 }
@@ -111,10 +111,50 @@ static void MCUWakeUp_StateTrigger_LowPower()
 //API
 returnType MCUWakeUp_GetState( MCUWakeUpStatesType *state )
 {
-    *state = MCUWakeUpData.State;
+    returnType ret;
+
+    if( MCU_WAKE_UP_INITIALIZED == MCUWakeUpData.Initialized )
+    {
+        if( MCUWakeUpData.State != MCUWakeUp_State_SafeState ) //to be removed? - and exchanged with state check
+        {
+            *state = MCUWakeUpData.State;
+            ret = E_OK;
+        }
+        else
+        {
+            ret = E_NOT_OK;
+        } 
+    }
+    else
+    {
+        MCUWakeUp_SignalError( MCUWAKEUP_ERR_UNINITIALIZED );
+        ret = E_NOT_OK;
+    }
+
+    return ret;
 }
 
 returnType MCUWakeUp_RequestLowPower()
-{
-    MCUWakeUpData.RequestLowPower = TRUE;
+{ 
+    returnType ret = E_NOT_OK;
+
+    if( MCU_WAKE_UP_INITIALIZED == MCUWakeUpData.Initialized )
+    {
+        if( MCUWakeUpData.State != MCUWakeUp_State_LowPower )
+        {
+            MCUWakeUpData.RequestLowPower = TRUE;
+            ret = E_OK;
+        }
+        else
+        {
+            ret = E_NOT_OK;
+        }
+    }
+    else
+    {
+        MCUWakeUp_SignalError( MCUWAKEUP_ERR_UNINITIALIZED );
+        ret = E_NOT_OK;
+    }
+
+    return ret;
 }

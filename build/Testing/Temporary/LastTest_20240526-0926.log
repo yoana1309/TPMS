@@ -1,0 +1,131 @@
+Start testing: May 26 18:35 E. Europe Daylight Time
+----------------------------------------------------------
+14/16 Testing: Sensors.Test_Run_Negative
+14/16 Test: Sensors.Test_Run_Negative
+Command: "C:/diplomna/TPMS/build/test/components/TPMSTest.exe" "--gtest_filter=Sensors.Test_Run_Negative" "--gtest_also_run_disabled_tests"
+Directory: C:/diplomna/TPMS/build/test/components
+"Sensors.Test_Run_Negative" start time: May 26 18:35 E. Europe Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:/diplomna/TPMS/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = Sensors.Test_Run_Negative
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Sensors
+[ RUN      ] Sensors.Test_Run_Negative
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:410: Failure
+Expected equality of these values:
+  ret
+    Which is: '\xE0' (224)
+  (1u)
+    Which is: 1
+
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:416: Failure
+Expected equality of these values:
+  ret
+    Which is: '\xE0' (224)
+  (1u)
+    Which is: 1
+
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:421: Failure
+Expected equality of these values:
+  ret
+    Which is: '\xE0' (224)
+  (1u)
+    Which is: 1
+
+unknown file: Failure
+
+Unexpected mock function call - returning directly.
+    Function call: MCUWakeUp_SignalError(2)
+Google Mock tried the following 2 expectations, but none matched:
+
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:391: tried expectation #0: EXPECT_CALL(*MockPtr, MCUWakeUp_SignalError(MCUWAKEUP_ERR_UNINITIALIZED))...
+         Expected: the expectation is active
+           Actual: it is retired
+         Expected: to be called once
+           Actual: called once - saturated and retired
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:402: tried expectation #1: EXPECT_CALL(*MockPtr, MCUWakeUp_SignalError(MCUWAKEUP_ERR_UNINITIALIZED))...
+         Expected: all pre-requisites are satisfied
+           Actual: the following immediate pre-requisites are not satisfied:
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:401: pre-requisite #0
+                   (end of pre-requisites)
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+unknown file: Failure
+
+Unexpected mock function call - returning directly.
+    Function call: Sensors_SignalError('\b' (8), 5)
+Google Mock tried the following 5 expectations, but none matched:
+
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:392: tried expectation #0: EXPECT_CALL(*MockPtr, Sensors_SignalError(Sensors_Count, SENSORS_MCUWAKEUP_GETSTATE_ERROR))...
+         Expected: the expectation is active
+           Actual: it is retired
+         Expected: to be called once
+           Actual: called once - saturated and retired
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:394: tried expectation #1: EXPECT_CALL(*MockPtr, Sensors_SignalError(Sensors_Count, SENSORS_MCUWAKEUP_GETSTATE_ERROR))...
+         Expected: the expectation is active
+           Actual: it is retired
+         Expected: to be called once
+           Actual: called once - saturated and retired
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:396: tried expectation #2: EXPECT_CALL(*MockPtr, Sensors_SignalError(_, SENSORS_INVALID_INIT_FLAG_ERROR))...
+         Expected: the expectation is active
+           Actual: it is retired
+         Expected: to be called once
+           Actual: called once - saturated and retired
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:399: tried expectation #3: EXPECT_CALL(*MockPtr, Sensors_SignalError(Sensors_Count, SENSORS_TPMS_RUN_ERROR))...
+  Expected arg #1: is equal to 7
+           Actual: 5
+         Expected: to be called once
+           Actual: called once - saturated and active
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:403: tried expectation #4: EXPECT_CALL(*MockPtr, Sensors_SignalError(Sensors_Count, SENSORS_MCUWAKEUP_REQLOWPOWER_ERROR))...
+  Expected arg #1: is equal to 6
+           Actual: 5
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:429: Failure
+Expected equality of these values:
+  ret
+    Which is: '\xE0' (224)
+  (1u)
+    Which is: 1
+
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:403: Failure
+Actual function call count doesn't match EXPECT_CALL(*MockPtr, Sensors_SignalError(Sensors_Count, SENSORS_MCUWAKEUP_REQLOWPOWER_ERROR))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:401: Failure
+Actual function call count doesn't match EXPECT_CALL(*MockPtr, Sensors_ReadSignal(_, _ , _))...
+         Expected: to be called 8 times
+           Actual: never called - unsatisfied and active
+
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:402: Failure
+Actual function call count doesn't match EXPECT_CALL(*MockPtr, MCUWakeUp_SignalError(MCUWAKEUP_ERR_UNINITIALIZED))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+
+GMOCK WARNING:
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:401: Too few actions specified in EXPECT_CALL(*MockPtr, Sensors_ReadSignal(_, _ , _))...
+Expected to be called 8 times, but has only 1 WillOnce().[  FAILED  ] Sensors.Test_Run_Negative (1 ms)
+[----------] 1 test from Sensors (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Sensors.Test_Run_Negative
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.25 sec
+----------------------------------------------------------
+Test Failed.
+"Sensors.Test_Run_Negative" end time: May 26 18:35 E. Europe Daylight Time
+"Sensors.Test_Run_Negative" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 26 18:35 E. Europe Daylight Time

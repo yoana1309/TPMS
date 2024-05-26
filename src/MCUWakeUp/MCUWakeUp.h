@@ -15,6 +15,7 @@ Type definitions
 typedef enum
 {
     MCUWAKEUP_NO_ERROR = 0,
+    MCUWAKEUP_ERR_UNHANDLED_STATE,
     MCUWAKEUP_ERR_UNINITIALIZED,
     MCUWAKEUP_ERR_TIMER_ERROR
 } MCUWakeUpErrorType;
@@ -24,6 +25,7 @@ typedef enum
     MCUWakeUp_State_Undefined = 0,
     MCUWakeUp_State_Active,
     MCUWakeUp_State_LowPower,
+    MCUWakeUp_State_SafeState, //to be removed?
 
     MCUWakeUp_State_Count
 } MCUWakeUpStatesType;
@@ -39,13 +41,14 @@ typedef struct
 }MCUWakeUpDataType;
 
 //cfg
+extern MCUWakeUpDataType MCUWakeUpData;
 
 /***********************************************************************************************************************
 Function prototypes
 ***********************************************************************************************************************/
 
-extern void MCUWakeUpInit();
-extern void MCUWakeUpRun();
+extern void MCUWakeUp_Init();
+extern void MCUWakeUp_Run();
 
 //api
 extern returnType MCUWakeUp_GetState( MCUWakeUpStatesType *state );

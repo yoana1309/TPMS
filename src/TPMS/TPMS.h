@@ -27,7 +27,11 @@ typedef enum
     TPMS_NO_ERROR = 0,
     TPMS_ERR_PRESSURE_READING,
     TPMS_ERR_TEMPERATURE_READING,
-    TPMS_ERR_COM_TRIGGERWARNING_ERROR
+    TPMS_ERR_COM_TRIGGERWARNING_ERROR,
+    TPMS_ERR_RECEIVE_PRESSURE_SIGNAL,
+    TPMS_ERR_RECEIVE_TEMPERATURE_SIGNAL,
+    TPMS_ERR_EVALUATE_PRESSURE,
+    TPMS_ERR_EVALUATE_TEMPERATURE,
 } TPMSErrorType;
 
 typedef enum
@@ -53,8 +57,8 @@ typedef struct
 Function prototypes
 ***********************************************************************************************************************/
 
-extern void TPMS_Init( uint8 index );
-extern void TPMS_Run();
+extern void TPMS_Init();
+extern returnType TPMS_Run();
 
 //callbacks
 extern void TPMS_SignalError( uint8 index, TPMSErrorType error );

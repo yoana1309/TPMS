@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20240526-0926-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.29.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="SF4-C-000K7"
+	OSRelease=" Professional"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="12"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="37335"
+	TotalPhysicalMemory="32471"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2995"
+	>
+	<Testing>
+		<StartDateTime>May 26 18:35 E. Europe Daylight Time</StartDateTime>
+		<StartTestTime>1716737725</StartTestTime>
+		<TestList>
+			<Test>./test/components/Sensors.Test_Run_Negative</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>Sensors.Test_Run_Negative</Name>
+			<Path>./test/components</Path>
+			<FullName>./test/components/Sensors.Test_Run_Negative</FullName>
+			<FullCommandLine>C:\diplomna\TPMS\build\test\components\TPMSTest.exe "--gtest_filter=Sensors.Test_Run_Negative" "--gtest_also_run_disabled_tests"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.254654</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\diplomna\TPMS\build\test\components\TPMSTest.exe "--gtest_filter=Sensors.Test_Run_Negative" "--gtest_also_run_disabled_tests"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJztmOtv4jgQwL/nrxjpPpScSgr0sdtI+wHRFKGlwIWwnK5bRSYxYDXYrO202//+xgnPXrotFa2qu7OEhJLJPH4z45efcs74BGaE8ZINYylm0HCPYjZPxIyTo6B31T+aCDFJqKZKb/5VMjqamH+h+diJIqsjNHWhmYlAgG9gzBJNJXyBPuVKSOWYp6Gf8rBDJ0SzO2pdf1mNG/AX7lRBZ58bdxb/Vco0dazr8mrcQDMRI5Lk7ym/Y1LwGeUoS3U5nT8S3tS5cMe6Bn/QgWzc/MLHfxDJAERiNhcc7ansoflMOdF87p5UKy5cEpakklrezzmNNI2B/khJwvQDiDHoKVUU7kiSUuVaAJJqyzgxnLJoCky5cPD9p1c5gFKtdmLjq1I1tR9JVK3d/Tr7mH7Vqu/jV8pvubjnpizp2qI14HRpdCaiWxinPNJMcIhIkkDZWEtlVpcxkyiXPDiZ7stNOReuGoMhuaWDedhnE04ST0ohSzXbWnTEldGtJUMzGA+MRZKIe6O1Brl9YpSpQxilGjiSwq7U0ZTG7s5Ej8+RaG5qQzX8hnXp/dnzGkHYqLfbpd+NSz0tD5/w3Tytf/UGvdDz/XDQaXVaQavebv3lXdi24+QUsrHMmpuFtmmTKSBR1kWwHvVIY3JdYNq8R77INS7UJmBEM74YiuBRoZaN15gtRTBbxCST8Hile9eSrNQKAVbfHqCpubmkZYkNwBROeghQUhMWU2O2iWlNYLue2GxGY4YIivRwode63N25IIEtrVhUmx4tR4kifOzcbQ/sV+eY0ztcSBZCZUj5KoYszYsSe+MOX6wQWyk++D7CaeezfQinz3f66Rt0enGhPtnpRTEsnzVEyjWKeJ1+1++H6+ptekE/qAeeKeOu/y/v/ePzk916/3+kzyM9K0Ra2wVpuMbY6nzDWfQiNPNpeNmuN/8jFM8LKR7voTCNpRA3w9sgV5sxIidZAyCYbF9mGHwqCvv0TYAtkrXzYnVcyOtkr43se3+0u8Ned+j5O8A72y+8Fy6PO2/Mzz/mgcEkdulXjuDRkh6ZbEEsqOIHOl9d3yXnHyp7lereKfmUxDkpMx2HgL+Xhf4ZNJtR9Z7R1/YW/R5PR3ssB6t51W18hWHdR9PN123lAyFgTO8znbgjBYWOsswS468thdVEUVQA+Z53ShRGnzxAFYYsSboIomQ717jhrrfa3sUvb2NwCoEZniSeu9zJ5dAJTRLbetnFkaZElmM8QGxfSz11HQWScAentg07GEOv3u/nMVQyWeVYW5HlGg4hYcpQGlE8HLjWy4K3LPx8IRd4/cD6G2YYUKo=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>May 26 18:35 E. Europe Daylight Time</EndDateTime>
+		<EndTestTime>1716737725</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

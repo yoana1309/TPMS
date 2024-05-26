@@ -18,29 +18,61 @@ Implementation
 
 TPMSDataType TPMSData[ TPMS_Tire_Count ]; //In test resources (.c)
 
-void TPMS_Init( uint8 index )
-{
-    TPMSData[ index ].LastMeasuredPressure = 0;
-    TPMSData[ index ].LastMeasuredTemperature = 0;
-}
-
-void TPMS_Run()
+void TPMS_Init()
 {
     int tireNumber = 0;
+
     for(tireNumber; tireNumber < TPMS_Tire_Count; tireNumber++)
     {
-        TPMS_ReceivePressureSignal( tireNumber );
-        TPMS_ReceiveTemperatureSignal( tireNumber );
-        TPMS_EvaluatePressure( tireNumber );
-        TPMS_EvaluateTemperature( tireNumber );
+        TPMSData[ tireNumber ].LastMeasuredPressure = 0;
+        TPMSData[ tireNumber ].LastMeasuredTemperature = 0;
     }
+}
+
+returnType TPMS_Run()
+{
+    returnType ret;
+    int tireNumber = 0;
+
+    for(tireNumber; tireNumber < TPMS_Tire_Count; tireNumber++)
+    {
+        ret = TPMS_ReceivePressureSignal( tireNumber );
+        if(E_NOT_OK == ret)
+        {
+            TPMS_SignalError( tireNumber, TPMS_ERR_RECEIVE_PRESSURE_SIGNAL );
+            return ret;
+        }
+
+        ret = TPMS_ReceiveTemperatureSignal( tireNumber );
+        if(E_NOT_OK == ret)
+        {
+            TPMS_SignalError( tireNumber, TPMS_ERR_RECEIVE_TEMPERATURE_SIGNAL );
+            return ret;
+        }
+        ret = TPMS_EvaluatePressure( tireNumber );
+        if(E_NOT_OK == ret)
+        {
+            TPMS_SignalError( tireNumber, TPMS_ERR_EVALUATE_PRESSURE );
+            return ret;
+        }
+
+        ret = TPMS_EvaluateTemperature( tireNumber );
+        if(E_NOT_OK == ret)
+        {
+            TPMS_SignalError( tireNumber, TPMS_ERR_EVALUATE_TEMPERATURE );
+            return ret;
+        }
+        ret = E_OK;
+    }
+
+    return ret;
 }
 
 //Static functions
 
 static returnType TPMS_EvaluatePressure( uint8 index )
 {
-    uint8 ret = E_NOT_OK;
+    uint8 ret;
 
     if ( TPMSData[ index ].LastMeasuredPressure < MIN_PRESSURE_THRESHOLD ) 
     {
@@ -57,6 +89,10 @@ static returnType TPMS_EvaluatePressure( uint8 index )
     else if( TPMSData[ index ].LastMeasuredPressure > MAX_PRESSURE_THRESHOLD )
     {
         COM_TriggerWarning( index, TPMS_WARNING_HIGH_PRESSURE ); 
+    }
+    else
+    {
+        ret = E_OK;
     }
 
     return ret;
@@ -83,9 +119,8 @@ static returnType TPMS_EvaluateTemperature( uint8 index )
 
 static returnType TPMS_ReceivePressureSignal( uint8 index )
 {
-    returnType ret = E_NOT_OK;
+    returnType ret;
     uint16 rawSignal = 0;
-
 
     if( E_OK == Sensors_GetSignal( index, Sensors_Signal_Pressure, &rawSignal ) )
     {

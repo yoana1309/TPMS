@@ -2,5 +2,24 @@ VarTest 1 0.175132
 TPMSTest 11 0.282403
 TPMS.Test_COM_TriggerWarning_Negative 1 0.341353
 TPMS.Test_Demo 2 0.327281
+COM.Test_COM_TriggerWarning_Negative 3 0.356594
+COM.Test_COM_TriggerWarning_Positive 2 0.223181
+Demo.Test_Demo 2 0.264181
+COM.Test_TriggerWarning_Negative 3 0.281588
+COM.Test_TriggerWarning_Positive 3 0.249782
+MCUWakeUp.Test_Init_Positive 3 0.329792
+MCUWakeUp.Test_Uninitialized 3 0.248335
+MCUWakeUp.Test_GetState_Negative 3 0.326969
+MCUWakeUp.Test_GetState_Positive 3 0.238983
+MCUWakeUp.Test_RequestLowPower_Negative 4 0.221705
+MCUWakeUp.Test_RequestLowPower_Positive 3 0.391543
+MCUWakeUp.Test_Run_Negative 3 0.266891
+MCUWakeUp.Test_Run_Positive 3 0.269116
+Sensors.Test_Init_Positive 6 0.314813
+Sensors.Test_Uninitialized 3 0.406192
+Sensors.Test_GetSignal_Negative 1 0.432381
+Sensors.Test_GetSignal_Positive 3 0.428016
+Sensors.Test_Run_Negative 1 0.331353
+Sensors.Test_Run_Positive 1 0.474601
 ---
-TPMS.Test_Demo
+Sensors.Test_Run_Negative
