@@ -1,0 +1,30 @@
+Start testing: Jun 09 13:49 E. Europe Daylight Time
+----------------------------------------------------------
+22/22 Testing: SignalProcessor.Test_GetError_Positive
+22/22 Test: SignalProcessor.Test_GetError_Positive
+Command: "C:/diplomna/TPMS/build/test/components/TPMSTest.exe" "--gtest_filter=SignalProcessor.Test_GetError_Positive" "--gtest_also_run_disabled_tests" "--gtest_output=xml:C:/diplomna/TPMS/build/report.xml"
+Directory: C:/diplomna/TPMS/build
+"SignalProcessor.Test_GetError_Positive" start time: Jun 09 13:49 E. Europe Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:/diplomna/TPMS/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = SignalProcessor.Test_GetError_Positive
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SignalProcessor
+[ RUN      ] SignalProcessor.Test_GetError_Positive
+[       OK ] SignalProcessor.Test_GetError_Positive (0 ms)
+[----------] 1 test from SignalProcessor (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"SignalProcessor.Test_GetError_Positive" end time: Jun 09 13:49 E. Europe Daylight Time
+"SignalProcessor.Test_GetError_Positive" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 09 13:49 E. Europe Daylight Time

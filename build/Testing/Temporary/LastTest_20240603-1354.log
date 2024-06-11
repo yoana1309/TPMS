@@ -1,0 +1,24 @@
+Start testing: Jun 03 21:29 E. Europe Daylight Time
+----------------------------------------------------------
+15/15 Testing: Demo.Test_Demo
+15/15 Test: Demo.Test_Demo
+Command: "C:/diplomna/TPMS/build/test/components/TPMSTest.exe" "--gtest_filter=Demo.Test_Demo" "--gtest_also_run_disabled_tests" "--gtest_output=xml:C:/diplomna/TPMS/build/report.xml"
+Directory: C:/diplomna/TPMS/build
+"Demo.Test_Demo" start time: Jun 03 21:29 E. Europe Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:/diplomna/TPMS/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = Demo.Test_Demo
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Demo
+[ RUN      ] Demo.Test_Demo
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Failed.
+"Demo.Test_Demo" end time: Jun 03 21:29 E. Europe Daylight Time
+"Demo.Test_Demo" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 03 21:29 E. Europe Daylight Time

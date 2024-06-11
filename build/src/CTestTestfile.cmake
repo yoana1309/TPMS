@@ -4,11 +4,9 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-subdirs("TPMS")
 subdirs("common")
-subdirs("MCUWakeUp")
-subdirs("Core")
-subdirs("DEM")
-subdirs("Timer")
-subdirs("Sensors")
-subdirs("COM")
+subdirs("SignalProcessor")
+subdirs("MessageSender")
+subdirs("MessageReceiver")
+subdirs("Monitor")
+subdirs("E2E")

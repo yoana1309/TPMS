@@ -3,11 +3,12 @@
 
 extern "C"
 {
-#include "C:\diplomna\TPMS\src\COM\COM.h"
-#include "C:\diplomna\TPMS\src\MCUWakeUp\MCUWakeUp.h"
-#include "C:\diplomna\TPMS\src\Sensors\Sensors.h"
-#include "C:\diplomna\TPMS\src\Timer\Timer.h"
-#include "C:\diplomna\TPMS\src\TPMS\TPMS.h"
+#include "C:\diplomna\TPMS\src\common\Types.h"
+#include "C:\diplomna\TPMS\src\E2E\E2E.h"
+#include "C:\diplomna\TPMS\src\MessageReceiver\MessageReceiver.h"
+#include "C:\diplomna\TPMS\src\MessageSender\MessageSender.h"
+#include "C:\diplomna\TPMS\src\Monitor\Monitor.h"
+#include "C:\diplomna\TPMS\src\SignalProcessor\SignalProcessor.h"
 }
 
 #define PRETEST()                         \
@@ -18,10 +19,7 @@ extern "C"
     delete MockPtr; \
 
 using ::testing::_;
-using ::testing::Args;
-using ::testing::ElementsAre;
 using ::testing::Return;
-using ::testing::Invoke;
 using ::testing::InSequence;
 using ::testing::DoAll;
 using ::testing::SetArgPointee;
@@ -32,493 +30,653 @@ public:
     virtual ~Mock() {}
 
     /* mock api */
-    MOCK_METHOD( returnType, COM_WarnDiag, ( uint8 tireIndex, TPMSWarningType warning ) );
-    MOCK_METHOD( returnType, COM_RequestLEDOn, ( TPMSWarningType warning ) );    
-    MOCK_METHOD( void, COM_SignalError, ( COMErrorType error ) );
+    MOCK_METHOD( returnType, E2E_P01Protect, ( const E2E_P01ConfigType* ConfigPtr, E2E_P01ProtectStateType* StatePtr, uint8* DataPtr ) );
+    MOCK_METHOD( returnType, E2E_P01Check, ( const E2E_P01ConfigType* Config, E2E_P01CheckStateType* State, const uint8* Data ) );
 
-    MOCK_METHOD( void, MCUWakeUp_SignalError, ( MCUWakeUpErrorType error ) );
+    MOCK_METHOD( returnType, MessageReceiver_ReadMessage, ( uint8* msg ) );
+    MOCK_METHOD( returnType, MessageReceiver_AlertTPMSOK, ( uint8 tireID ) );
+    MOCK_METHOD( returnType, MessageReceiver_AlertTPMSWarning, ( uint8 tireID ) );
+    MOCK_METHOD( returnType, MessageReceiver_AlertTPMSSystemError, ( uint8 tireID ) );
 
-    MOCK_METHOD( returnType, Sensors_ReadSignal, ( uint8 index, SensorsSignalType signalType, uint16* reading ) );
-    MOCK_METHOD( void, Sensors_SignalError, ( uint8 index, SensorsErrorType error ) );
+    MOCK_METHOD( returnType, MessageSender_SendMessage, () );
     
-    MOCK_METHOD( returnType, Timer_Init, () );
-    MOCK_METHOD( returnType, Timer_SetTimer, ( Timer_TimerType *timer, const uint16 valueMs ) );
-    MOCK_METHOD( returnType, Timer_CheckTimer, ( Timer_TimerType *timer, Timer_TimerStateType *state ) );
-    MOCK_METHOD( returnType, Timer_Tick, () );
-
-    MOCK_METHOD( void, TPMS_SignalError, ( uint8 index, TPMSErrorType error ) );
+    MOCK_METHOD( returnType, Monitor_SaveErrors, ( MonitorErrorCodesType ErrorBuffer[ ERROR_BUFFER_LEN ] ) );
+    
+    MOCK_METHOD( returnType, SignalProcessor_ReadPressureSensorData, ( uint16* reading, uint8* id ) );
+    MOCK_METHOD( returnType, SignalProcessor_ReadTemperatureSensorData, ( uint16* reading, uint8* id ) );
 };
 
 Mock *MockPtr = nullptr;
 
 extern "C"
 {
-    returnType COM_WarnDiag( uint8 tireIndex, TPMSWarningType warning )
+    returnType E2E_P01Protect( const E2E_P01ConfigType* ConfigPtr, E2E_P01ProtectStateType* StatePtr, uint8* DataPtr )
     {
-        return MockPtr->COM_WarnDiag( tireIndex, warning );
+        return MockPtr->E2E_P01Protect( ConfigPtr, StatePtr, DataPtr );
     }
 
-    returnType COM_RequestLEDOn( TPMSWarningType warning )
+    returnType E2E_P01Check( const E2E_P01ConfigType* Config, E2E_P01CheckStateType* State, const uint8* Data )
     {
-        return MockPtr->COM_RequestLEDOn( warning );
+        return MockPtr->E2E_P01Check( Config, State, Data );
     }
 
-    void COM_SignalError( COMErrorType error )
+    returnType MessageReceiver_ReadMessage( uint8* msg )
     {
-        MockPtr->COM_SignalError( error );
+        return MockPtr->MessageReceiver_ReadMessage( msg );
     }
 
-    void MCUWakeUp_SignalError( MCUWakeUpErrorType error )
+    returnType MessageReceiver_AlertTPMSOK( uint8 tireID )
     {
-        MockPtr->MCUWakeUp_SignalError( error );
+        return MockPtr->MessageReceiver_AlertTPMSOK( tireID );
     }
 
-    returnType Sensors_ReadSignal( uint8 index, SensorsSignalType signalType, uint16* reading )
+    returnType MessageReceiver_AlertTPMSWarning( uint8 tireID )
     {
-        return MockPtr->Sensors_ReadSignal( index, signalType, reading );
+        return MockPtr->MessageReceiver_AlertTPMSWarning( tireID );
     }
 
-    void Sensors_SignalError( uint8 index, SensorsErrorType error )
+    returnType MessageReceiver_AlertTPMSSystemError( uint8 tireID )
     {
-        MockPtr->Sensors_SignalError( index, error );
+        return MockPtr->MessageReceiver_AlertTPMSSystemError( tireID );
     }
 
-    returnType Timer_Init()
+    returnType MessageSender_SendMessage()
     {
-        return MockPtr->Timer_Init();
+        return MockPtr->MessageSender_SendMessage();
     }
 
-    returnType Timer_SetTimer( Timer_TimerType *timer, const uint16 valueMs )
+    returnType Monitor_SaveErrors( MonitorErrorCodesType ErrorBuffer[ ERROR_BUFFER_LEN ] )
     {
-        return MockPtr->Timer_SetTimer( timer, valueMs );
+        return MockPtr->Monitor_SaveErrors( ErrorBuffer );
     }
-
-    returnType Timer_CheckTimer( Timer_TimerType *timer, Timer_TimerStateType *state )
+    
+    returnType SignalProcessor_ReadPressureSensorData( uint16* reading, uint8* id )
     {
-        return MockPtr->Timer_CheckTimer( timer, state );
+        return MockPtr->SignalProcessor_ReadPressureSensorData( reading, id );
     }
-
-    returnType Timer_Tick()
+    
+    returnType SignalProcessor_ReadTemperatureSensorData( uint16* reading, uint8* id )
     {
-        return MockPtr->Timer_Tick();
-    }
-
-    void TPMS_SignalError( uint8 index, TPMSErrorType error )
-    {
-        MockPtr->TPMS_SignalError( index, error );
+        return MockPtr->SignalProcessor_ReadTemperatureSensorData( reading, id );
     }
 }
 
-TEST(Demo, Test_Demo)
+TEST(MessageReceiver, Test_Init_Positive)
 {
-    returnType ret;
-}
-
-TEST(COM, Test_TriggerWarning_Negative)
-{
-    returnType ret;
-    uint8 tireIndex = TPMS_Tire_FrontLeft; //initialize
-    TPMSWarningType warning = TPMS_WARNING_LOW_PRESSURE; //initialize 
-
     PRETEST();
 
-    {
-        InSequence s;
-
-        //Case 1: COM_RequestLEDOn returning E_NOT_OK
-        EXPECT_CALL(*MockPtr, COM_RequestLEDOn(warning)).WillOnce(Return(E_NOT_OK));
-        EXPECT_CALL(*MockPtr, COM_SignalError(COM_ERR_LED_ON_REQUEST)).WillOnce(Return());
-
-        //Case 2: COM_WarnDiag returning E_NOT_OK
-        EXPECT_CALL(*MockPtr, COM_RequestLEDOn(warning)).WillOnce(Return(E_OK));
-        EXPECT_CALL(*MockPtr, COM_WarnDiag(tireIndex, warning)).WillOnce(Return(E_NOT_OK));
-        EXPECT_CALL(*MockPtr, COM_SignalError(COM_ERR_DIAG_WARNING)).WillOnce(Return());
-    }
-
-    //Case 1: COM_RequestLEDOn returning E_NOT_OK
-    ret = COM_TriggerWarning( tireIndex, warning );
-    EXPECT_EQ(ret, E_NOT_OK);
-
-    //Case 2: COM_WarnDiag returning E_NOT_OK
-    ret = COM_TriggerWarning( tireIndex, warning );
-    EXPECT_EQ(ret, E_NOT_OK);
+    MessageReceiver_Init();
+    EXPECT_EQ(MessageReceiverData.Initialized, MESSAGE_RECEIVER_INITIALIZED);
+    EXPECT_EQ(MessageReceiverData.TireID, 0);
+    EXPECT_EQ(MessageReceiverData.MessageType, 0);
+    EXPECT_EQ(MessageReceiverData.Data, 0);
 
     POSTTEST();
 }
 
-TEST(COM, Test_TriggerWarning_Positive)
+TEST(MessageReceiver, Test_Run_Negative)
 {
-    returnType ret;
-    uint8 tireIndex = TPMS_Tire_FrontLeft;
-    TPMSWarningType warning = TPMS_WARNING_LOW_PRESSURE;
+    uint8 invalidInitFlag = 0;
 
     PRETEST();
 
     {
         InSequence s;
 
-        EXPECT_CALL(*MockPtr, COM_RequestLEDOn(warning)).WillOnce(Return(E_OK));
-        EXPECT_CALL(*MockPtr, COM_WarnDiag(tireIndex, warning)).WillOnce(Return(E_OK));
+        //MessageReceiver is uninitialized
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSSystemError).WillOnce(Return(E_OK));
+        //MessageReceiver_ReadMessage returns E_NOT_OK
+        EXPECT_CALL(*MockPtr, MessageReceiver_ReadMessage).WillOnce(Return(E_NOT_OK));
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSSystemError).WillOnce(Return(E_OK));
+        //MessageSender_CheckMessage returns E_NOT_OK
+        EXPECT_CALL(*MockPtr, MessageReceiver_ReadMessage).WillOnce(Return(E_OK));
+        EXPECT_CALL(*MockPtr, E2E_P01Check).WillOnce(Return(E_NOT_OK));
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSSystemError).WillOnce(Return(E_OK));
     }
 
-    ret = COM_TriggerWarning( tireIndex, warning );
+    MessageReceiver_Init();
+
+    //MessageReceiver is uninitialized
+    MessageReceiverData.Initialized = invalidInitFlag;
+    MessageReceiver_Run();
+
+    //MessageReceiver_ReadMessage returns E_NOT_OK
+    MessageReceiver_Init();
+    MessageReceiver_Run();
+
+    //MessageSender_CheckMessage returns E_NOT_OK
+    MessageReceiver_Run();
+
+    POSTTEST();
+}
+
+TEST(MessageReceiver, Test_Run_Positive)
+{
+    uint8 OKdata = 32; //00100000 -> tire ID = 2; msg type - ok
+    uint8 TPMSWarningData = 33; //00100001 -> tire ID = 2; msg type - tpms warning
+    uint8 SysErrData = 34; //00100010 -> tire ID = 2; msg type - system error
+
+    PRETEST();
+
+    {
+        InSequence s;
+
+        EXPECT_CALL(*MockPtr, MessageReceiver_ReadMessage( &MessageReceiverData.Data )).WillOnce(DoAll(SetArgPointee<0>(OKdata),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, E2E_P01Check).WillOnce(Return(E_OK));
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSOK).WillOnce(Return(E_OK));
+        
+        EXPECT_CALL(*MockPtr, MessageReceiver_ReadMessage( &MessageReceiverData.Data )).WillOnce(DoAll(SetArgPointee<0>(TPMSWarningData),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, E2E_P01Check).WillOnce(Return(E_OK));
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSWarning).WillOnce(Return(E_OK));
+        
+        EXPECT_CALL(*MockPtr, MessageReceiver_ReadMessage( &MessageReceiverData.Data )).WillOnce(DoAll(SetArgPointee<0>(SysErrData),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, E2E_P01Check).WillOnce(Return(E_OK));
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSSystemError).WillOnce(Return(E_OK));        
+    }
+
+    MessageReceiver_Init();
+    MessageReceiver_Run();
+    EXPECT_EQ(MessageReceiverData.TireID, 2);
+    EXPECT_EQ(MessageReceiverData.MessageType, 0); //TPMS OK 
+    
+    MessageReceiver_Run();
+    EXPECT_EQ(MessageReceiverData.TireID, 2);
+    EXPECT_EQ(MessageReceiverData.MessageType, 1); //TPMS Warning
+    
+    MessageReceiver_Run();
+    EXPECT_EQ(MessageReceiverData.TireID, 2);
+    EXPECT_EQ(MessageReceiverData.MessageType, 2); //TPMS System error
+
+    POSTTEST();
+}
+
+TEST(MessageSender, Test_Uninitialized)
+{
+    returnType ret;
+    uint8 errorCode = 0;
+    MessageSenderErrorType err;
+
+    PRETEST();
+
+    ret = MessageSender_TriggerSafeState();
+    EXPECT_EQ(ret, E_NOT_OK);
+       
+    ret = MessageSender_GetError( &err );
+    EXPECT_EQ(ret, E_NOT_OK); 
+
+    POSTTEST();
+}
+
+TEST(MessageSender, Test_Init_Positive)
+{
+    PRETEST();
+
+    MessageSender_Init();
+    EXPECT_EQ(MessageSenderData.Initialized, MESSAGE_SENDER_INITIALIZED);
+    EXPECT_EQ(MessageSenderData.TireID, 0);
+    EXPECT_EQ(MessageSenderData.MessageType, MessageSender_Message_OK);
+    EXPECT_EQ(MessageSenderData.Data, 0);
+    EXPECT_EQ(MessageSenderData.SafeState, FALSE);
+    EXPECT_EQ(MessageSenderData.Error, MESSAGE_SENDER_NO_ERROR);
+
+    POSTTEST();
+}
+
+TEST(MessageSender, Test_Run_Negative)
+{
+    uint8 invalidInitFlag = 0;
+    uint8 signalProcTireId = 1;
+
+    PRETEST();
+
+    {
+        InSequence s;
+
+        //MessageSender_ProtectMessage returns E_NOT_OK
+        EXPECT_CALL(*MockPtr, E2E_P01Protect( _,_,_ )).WillOnce(Return(E_NOT_OK));
+        //MessageSender_SendMessage returns E_NOT_OK
+        EXPECT_CALL(*MockPtr, E2E_P01Protect( _,_,_ )).WillOnce(Return(E_OK));
+        EXPECT_CALL(*MockPtr, MessageSender_SendMessage).WillOnce(Return(E_NOT_OK));
+    }
+
+    MessageSender_Init();
+    SignalProcessor_Init();
+
+    //MessageSender not initialized
+    MessageSenderData.Initialized = invalidInitFlag;
+    MessageSender_Run();
+    EXPECT_EQ(MessageSenderData.Error, MESSAGE_SENDER_ERR_UNINITIALIZED);
+
+    //SignalProcessor_GetOutputMessage returns E_NOT_OK
+    MessageSender_Init();
+    SignalProcessorData.Initialized = invalidInitFlag;
+    MessageSender_Run();
+    EXPECT_EQ(MessageSenderData.TireID, 0);
+    EXPECT_EQ(MessageSenderData.Data, 0);
+    EXPECT_EQ(MessageSenderData.Error, MESSAGE_SENDER_ERR_GET_SIGNAL_PROCESSOR_OUTPUT_ERROR);
+
+    //MessageSender_ProtectMessage returns E_NOT_OK
+    SignalProcessor_Init();
+    SignalProcessorData.OutputMessage = SIGNAL_PROCESSOR_TPMS_WARNING;
+    SignalProcessorData.TireID = signalProcTireId;
+    MessageSender_Run();
+    EXPECT_EQ(MessageSenderData.MessageType, MessageSender_Message_TPMSWarning);
+    EXPECT_EQ(MessageSenderData.TireID, signalProcTireId);
+    EXPECT_EQ(MessageSenderData.Error, MESSAGE_SENDER_ERR_E2E_PROTECTION_ERROR);
+
+    //MessageSender_SendMessage returns E_NOT_OK
+    MessageSender_Run();
+    EXPECT_EQ(MessageSenderData.MessageType, MessageSender_Message_TPMSWarning);
+    EXPECT_EQ(MessageSenderData.TireID, signalProcTireId);
+    EXPECT_EQ(MessageSenderData.Error, MESSAGE_SENDER_ERR_SEND_MESSAGE_ERROR);
+
+    POSTTEST();
+}
+
+TEST(MessageSender, Test_Run_Positive)
+{
+    uint8 signalProcTireId = 1;
+
+    PRETEST();
+
+    ON_CALL(*MockPtr, E2E_P01Protect).WillByDefault(Return(E_OK));
+    ON_CALL(*MockPtr, MessageSender_SendMessage).WillByDefault(Return(E_OK));
+
+    //MessageSender_Message_OK
+    MessageSender_Init();
+    SignalProcessor_Init();
+    SignalProcessorData.OutputMessage = SIGNAL_PROCESSOR_TPMS_OK;
+    SignalProcessorData.TireID = signalProcTireId;
+    MessageSender_Run();
+    EXPECT_EQ(MessageSenderData.MessageType, MessageSender_Message_OK);
+    EXPECT_EQ(MessageSenderData.TireID, signalProcTireId);
+    EXPECT_EQ(MessageSenderData.Data, 16);
+    EXPECT_EQ(MessageSenderData.Error, MESSAGE_SENDER_NO_ERROR);
+
+    //MessageSender_Message_TPMSWarning
+    MessageSender_Init();
+    SignalProcessor_Init();
+    SignalProcessorData.OutputMessage = SIGNAL_PROCESSOR_TPMS_WARNING;
+    SignalProcessorData.TireID = signalProcTireId;
+    MessageSender_Run();
+    EXPECT_EQ(MessageSenderData.MessageType, MessageSender_Message_TPMSWarning);
+    EXPECT_EQ(MessageSenderData.TireID, signalProcTireId);
+    EXPECT_EQ(MessageSenderData.Data, 17);
+    EXPECT_EQ(MessageSenderData.Error, MESSAGE_SENDER_NO_ERROR);
+
+    //MessageSender_Message_SystemError
+    MessageSender_Init();
+    SignalProcessor_Init();
+    SignalProcessorData.OutputMessage = SIGNAL_PROCESSOR_TPMS_WARNING;
+    SignalProcessorData.TireID = signalProcTireId;
+    MessageSenderData.SafeState = TRUE;
+    MessageSender_Run();
+    EXPECT_EQ(MessageSenderData.MessageType, MessageSender_Message_SystemError);
+    EXPECT_EQ(MessageSenderData.TireID, signalProcTireId);
+    EXPECT_EQ(MessageSenderData.Data, 18);
+    EXPECT_EQ(MessageSenderData.Error, MESSAGE_SENDER_NO_ERROR);
+
+    POSTTEST();
+}
+
+TEST(MessageSender, Test_TriggerSafeState_Negative)
+{
+    returnType ret;
+    uint8 invalidInitFlag = 0;
+
+    PRETEST();
+
+    MessageSender_Init();
+    MessageSenderData.Initialized = invalidInitFlag;
+    ret = MessageSender_TriggerSafeState();
+    EXPECT_EQ(ret, E_NOT_OK);
+    EXPECT_EQ(MessageSenderData.SafeState, FALSE);
+
+    POSTTEST();
+}
+
+TEST(MessageSender, Test_TriggerSafeState_Positive)
+{
+    returnType ret;
+
+    PRETEST();
+
+    MessageSender_Init();
+    ret = MessageSender_TriggerSafeState();
     EXPECT_EQ(ret, E_OK);
+    EXPECT_EQ(MessageSenderData.SafeState, TRUE);
 
     POSTTEST();
 }
 
-TEST(MCUWakeUp, Test_Init_Positive)
-{
-    PRETEST();
-
-    MCUWakeUp_Init();
-    EXPECT_EQ(MCUWakeUpData.Initialized, MCU_WAKE_UP_INITIALIZED);
-    EXPECT_EQ(MCUWakeUpData.State, MCUWakeUp_State_Undefined);
-    EXPECT_EQ(MCUWakeUpData.RequestLowPower, FALSE);
-
-    POSTTEST();
-}
-
-TEST(MCUWakeUp, Test_Uninitialized)
+TEST(MessageSender, Test_GetError_Negative)
 {
     returnType ret;
-    MCUWakeUpStatesType state;
+    MessageSenderErrorType err = MESSAGE_SENDER_NO_ERROR;
+    uint8 invalidInitFlag = 0;
 
     PRETEST();
 
-    //Running API functions without initializing the component
-
-    ret = MCUWakeUp_GetState( &state );
+    MessageSender_Init();
+    MessageSenderData.Initialized = invalidInitFlag;
+    MessageSenderData.Error = MESSAGE_SENDER_ERR_SEND_MESSAGE_ERROR;
+    ret = MessageSender_GetError( &err );
     EXPECT_EQ(ret, E_NOT_OK);
-
-    ret = MCUWakeUp_RequestLowPower();
-    EXPECT_EQ(ret, E_NOT_OK);
+    EXPECT_EQ(err, MESSAGE_SENDER_NO_ERROR);
 
     POSTTEST();
 }
 
-TEST(MCUWakeUp, Test_Run_Negative)
+TEST(MessageSender, Test_GetError_Positive)
 {
     returnType ret;
+    MessageSenderErrorType err;
 
     PRETEST();
 
-    {
-        InSequence s;
-        EXPECT_CALL(*MockPtr, MCUWakeUp_SignalError(MCUWAKEUP_ERR_UNHANDLED_STATE));
-    }
-
-    //Case: Unhandled state
-    MCUWakeUp_Init();
-    MCUWakeUpData.State = MCUWakeUp_State_Count;
-    MCUWakeUp_Run();
-
-    POSTTEST();
-}
-
-TEST(MCUWakeUp, Test_Run_Positive)
-{
-    returnType ret;
-
-    PRETEST();
-
-    {
-        InSequence s;
-        EXPECT_CALL(*MockPtr, Timer_SetTimer(_, 500)).WillOnce(Return(E_OK));
-        EXPECT_CALL(*MockPtr, Timer_CheckTimer(_,_)).WillOnce(DoAll(SetArgPointee<1>(Timer_Running),Return(E_OK)));
-        EXPECT_CALL(*MockPtr, Timer_CheckTimer(_,_)).WillOnce(DoAll(SetArgPointee<1>(Timer_Expired),Return(E_OK)));
-        EXPECT_CALL(*MockPtr, Timer_SetTimer(_, 500)).WillOnce(Return(E_OK));
-    }
-
-    MCUWakeUp_Init(); // MCUWakeUp_State_Undefined
-    EXPECT_EQ(MCUWakeUpData.State, MCUWakeUp_State_Undefined);
-    MCUWakeUp_Run(); // MCUWakeUp_State_Undefined -> MCUWakeUp_State_Active
-    EXPECT_EQ(MCUWakeUpData.State, MCUWakeUp_State_Active);
-    MCUWakeUp_Run(); // MCUWakeUp_State_Active -> MCUWakeUp_State_Active (Timer still running)
-    EXPECT_EQ(MCUWakeUpData.State, MCUWakeUp_State_Active);
-    ret = MCUWakeUp_RequestLowPower();
+    MessageSender_Init();
+    MessageSenderData.Error = MESSAGE_SENDER_ERR_SEND_MESSAGE_ERROR;
+    ret = MessageSender_GetError( &err );
     EXPECT_EQ(ret, E_OK);
-    MCUWakeUp_Run(); // MCUWakeUp_State_Active -> MCUWakeUp_State_LowPower
-    EXPECT_EQ(MCUWakeUpData.State, MCUWakeUp_State_LowPower);
-    MCUWakeUp_Run(); // MCUWakeUp_State_LowPower -> MCUWakeUp_State_LowPower
-    EXPECT_EQ(MCUWakeUpData.State, MCUWakeUp_State_LowPower);
-    MCUWakeUp_Run(); // MCUWakeUp_State_LowPower -> MCUWakeUp_State_Active
-    EXPECT_EQ(MCUWakeUpData.State, MCUWakeUp_State_Active);
+    EXPECT_EQ(err, MESSAGE_SENDER_ERR_SEND_MESSAGE_ERROR);
 
     POSTTEST();
 }
 
-TEST(MCUWakeUp, Test_GetState_Negative)
-{
-    returnType ret;
-    MCUWakeUpStatesType state;
-
-    PRETEST();
-
-    {
-        InSequence s;
-        EXPECT_CALL(*MockPtr, MCUWakeUp_SignalError(MCUWAKEUP_ERR_UNINITIALIZED));
-    }
-
-    //Case 1: Invalid initialization flag
-    MCUWakeUp_Init();
-    MCUWakeUpData.Initialized = 0;
-    ret = MCUWakeUp_GetState( &state );
-    EXPECT_EQ(ret, E_NOT_OK);
-
-    //Case 2: Safe state???
-    MCUWakeUp_Init();
-    MCUWakeUpData.State = MCUWakeUp_State_SafeState;
-    ret = MCUWakeUp_GetState( &state );
-    EXPECT_EQ(ret, E_NOT_OK);
-
-    POSTTEST();
-}
-
-TEST(MCUWakeUp, Test_GetState_Positive)
-{
-    returnType ret;
-    MCUWakeUpStatesType state;
-
-    PRETEST();
-
-    MCUWakeUp_Init();
-    ret = MCUWakeUp_GetState( &state );
-    EXPECT_EQ(state, MCUWakeUp_State_Undefined);
-    EXPECT_EQ(ret, E_OK);
-
-    POSTTEST();
-}
-
-TEST(MCUWakeUp, Test_RequestLowPower_Negative)
-{
-    returnType ret;
-
-    PRETEST();
-
-    {
-        InSequence s;
-        EXPECT_CALL(*MockPtr, MCUWakeUp_SignalError(MCUWAKEUP_ERR_UNINITIALIZED));
-    }
-
-    //Case 1: Invalid initialization flag
-    MCUWakeUp_Init();
-    MCUWakeUpData.Initialized = 0;
-    ret = MCUWakeUp_RequestLowPower();
-    EXPECT_EQ(ret, E_NOT_OK);
-
-    //Case 2: Already in low power state
-    MCUWakeUp_Init();
-    MCUWakeUpData.State = MCUWakeUp_State_LowPower;
-    ret = MCUWakeUp_RequestLowPower();
-    EXPECT_EQ(ret, E_NOT_OK);
-
-    POSTTEST();
-}
-
-TEST(MCUWakeUp, Test_RequestLowPower_Positive)
-{
-    returnType ret;
-
-    PRETEST();
-
-    MCUWakeUp_Init();
-    ret = MCUWakeUp_RequestLowPower();
-    EXPECT_EQ(MCUWakeUpData.RequestLowPower, TRUE);
-    EXPECT_EQ(ret, E_OK);
-
-    POSTTEST();
-}
-
-TEST(Sensors, Test_Init_Positive)
+TEST(Monitor, Test_Init_Positive)
 {
     uint8 index = 0;
-
     PRETEST();
 
-    //Check if all sensors are initialized properly
-    Sensors_Init();
-    for( index; index < 4; index++ )
+    Monitor_Init();
+    for( index; index < ERROR_BUFFER_LEN; index++ )
     {
-        EXPECT_EQ(SensorsData[ index ].Initialized, SENSORS_INITIALIZED);
-        EXPECT_EQ(SensorsData[ index ].tireID, index);
-        EXPECT_EQ(SensorsData[ index ].signalType, Sensors_Signal_Pressure);
-        EXPECT_EQ(SensorsData[ index ].reading, 0);
-    }
-    for( index; index < Sensors_Count; index++ )
-    {
-        EXPECT_EQ(SensorsData[ index ].Initialized, SENSORS_INITIALIZED);
-        EXPECT_EQ(SensorsData[ index ].tireID, (index)%2);
-        EXPECT_EQ(SensorsData[ index ].signalType, Sensors_Signal_Temperature);
-        EXPECT_EQ(SensorsData[ index ].reading, 0);
+        EXPECT_EQ(MonitorData.ErrorBuffer[ index ], 0);
     }
 
     POSTTEST();
 }
 
-TEST(Sensors, Test_Uninitialized)
+TEST(Monitor, Test_Run_Negative)
 {
-    returnType ret;
-    uint8 index = Sensors_Pressure_FL;
-    SensorsSignalType signalType = Sensors_Signal_Pressure;
-    uint16 reading;
+    uint8 invalidInitFlag = 0;
 
     PRETEST();
 
     {
         InSequence s;
-        EXPECT_CALL(*MockPtr, Sensors_SignalError(index, SENSORS_INVALID_INIT_FLAG_ERROR));
+
+        EXPECT_CALL(*MockPtr, Monitor_SaveErrors( MonitorData.ErrorBuffer )).Times(2).WillOnce(Return(E_OK));
+
+        //Monitor_SaveErrors returns E_NOT_OK
+        EXPECT_CALL(*MockPtr, Monitor_SaveErrors( MonitorData.ErrorBuffer )).WillOnce(Return(E_NOT_OK));
+    
+        EXPECT_CALL(*MockPtr, Monitor_SaveErrors( MonitorData.ErrorBuffer )).WillOnce(Return(E_OK));
     }
 
-    //Running API function without initializing the component
-    ret = Sensors_GetSignal(index, signalType, &reading);
-    EXPECT_EQ(ret, E_NOT_OK);
-    
+    Monitor_Init();
+    SignalProcessor_Init();
+    MessageSender_Init();
+
+    //SignalProcessor_GetError returns E_NOT_OK
+    SignalProcessorData.Initialized = invalidInitFlag;
+    SignalProcessorData.Error = SIGNAL_PROCESSOR_ERR_UNINITIALIZED;
+    MessageSenderData.Error = MESSAGE_SENDER_ERR_SEND_MESSAGE_ERROR;
+    Monitor_Run();
+    EXPECT_EQ(MonitorData.ErrorBuffer[ SIGNAL_PROCESSOR_ERROR ], NO_ERRORS);
+    EXPECT_EQ(MonitorData.ErrorBuffer[ MESSAGE_SENDER_ERROR ], NO_ERRORS);
+    EXPECT_EQ(MessageSenderData.SafeState, FALSE);
+
+    //MessageSender_GetError returns E_NOT_OK
+    Monitor_Init();
+    SignalProcessor_Init();
+    MessageSenderData.Initialized = invalidInitFlag;
+    SignalProcessorData.Error = SIGNAL_PROCESSOR_ERR_UNINITIALIZED;
+    Monitor_Run();
+    EXPECT_EQ(MonitorData.ErrorBuffer[ SIGNAL_PROCESSOR_ERROR ], SIGNAL_PROCESSOR_ERR_UNINITIALIZED);
+    EXPECT_EQ(MonitorData.ErrorBuffer[ MESSAGE_SENDER_ERROR ], NO_ERRORS);
+    EXPECT_EQ(MessageSenderData.SafeState, FALSE);
+
+    //Monitor_SaveErrors returns E_NOT_OK
+    Monitor_Init();
+    MessageSender_Init();
+    MessageSenderData.Error = MESSAGE_SENDER_ERR_SEND_MESSAGE_ERROR;
+    Monitor_Run();
+    EXPECT_EQ(MonitorData.ErrorBuffer[ SIGNAL_PROCESSOR_ERROR ], SIGNAL_PROCESSOR_ERR_UNINITIALIZED);
+    EXPECT_EQ(MonitorData.ErrorBuffer[ MESSAGE_SENDER_ERROR ], MESSAGE_SENDER_ERR_SEND_MESSAGE_ERROR);
+    EXPECT_EQ(MessageSenderData.SafeState, FALSE);
+
+    //MessageSender_TriggerSafeState returns E_NOT_OK
+    Monitor_Init();
+    MessageSenderData.Initialized = invalidInitFlag;
+    Monitor_Run();
+    EXPECT_EQ(MessageSenderData.SafeState, FALSE);
+
     POSTTEST();
 }
 
-TEST(Sensors, Test_Run_Negative)
+TEST(Monitor, Test_Run_Positive)
 {
-    returnType ret;
-    MCUWakeUpStatesType invalidWakeUpState = MCUWakeUp_State_Count;
-    MCUWakeUpStatesType activeWakeUpState = MCUWakeUp_State_Active;
-
     PRETEST();
 
     {
         InSequence s;
-        //Case 1: MCUWakeUp_GetState error
-        EXPECT_CALL(*MockPtr, MCUWakeUp_SignalError(MCUWAKEUP_ERR_UNINITIALIZED));
-        EXPECT_CALL(*MockPtr, Sensors_SignalError(Sensors_Count, SENSORS_MCUWAKEUP_GETSTATE_ERROR));
-        //Case 2: wakeUpState is not active
-        EXPECT_CALL(*MockPtr, Sensors_SignalError(Sensors_Count, SENSORS_MCUWAKEUP_GETSTATE_ERROR));
-        //Case 3: TPMS_Run error
-        EXPECT_CALL(*MockPtr, Sensors_SignalError(_, SENSORS_INVALID_INIT_FLAG_ERROR));
-        EXPECT_CALL(*MockPtr, TPMS_SignalError(_, TPMS_ERR_PRESSURE_READING));
-        EXPECT_CALL(*MockPtr, TPMS_SignalError(_, TPMS_ERR_RECEIVE_PRESSURE_SIGNAL));
-        EXPECT_CALL(*MockPtr, Sensors_SignalError(Sensors_Count, SENSORS_TPMS_RUN_ERROR));
-        //Case 4: MCUWakeUp_RequestLowPower error
-        EXPECT_CALL(*MockPtr, Sensors_ReadSignal(_, _ , _)).Times(8).WillOnce(DoAll(SetArgPointee<2>(25),Return(E_OK)));
-        EXPECT_CALL(*MockPtr, MCUWakeUp_SignalError(MCUWAKEUP_ERR_UNINITIALIZED));
-        EXPECT_CALL(*MockPtr, Sensors_SignalError(Sensors_Count, SENSORS_MCUWAKEUP_REQLOWPOWER_ERROR));
+
+        EXPECT_CALL(*MockPtr, Monitor_SaveErrors( MonitorData.ErrorBuffer )).WillOnce(Return(E_OK));
     }
 
-    //Case 1: MCUWakeUp_GetState error: e.g. uninitialized
-    MCUWakeUp_Init();
-    MCUWakeUpData.Initialized = 0;
-    ret = Sensors_Run();
-    EXPECT_EQ(ret, E_NOT_OK);
+    Monitor_Init();
+    SignalProcessor_Init();
+    MessageSender_Init();
 
-    //Case 2: wakeUpState is not active
-    MCUWakeUp_Init();
-    MCUWakeUpData.State = invalidWakeUpState;
-    ret = Sensors_Run();
-    EXPECT_EQ(ret, E_NOT_OK);
+    //SignalProcessor_GetError returns E_NOT_OK
+    SignalProcessorData.Error = SIGNAL_PROCESSOR_ERR_UNINITIALIZED;
+    MessageSenderData.Error = MESSAGE_SENDER_ERR_SEND_MESSAGE_ERROR;
+    Monitor_Run();
+    EXPECT_EQ(MonitorData.ErrorBuffer[ SIGNAL_PROCESSOR_ERROR ], SIGNAL_PROCESSOR_ERR_UNINITIALIZED);
+    EXPECT_EQ(MonitorData.ErrorBuffer[ MESSAGE_SENDER_ERROR ], MESSAGE_SENDER_ERR_SEND_MESSAGE_ERROR);
+    EXPECT_EQ(MessageSenderData.SafeState, TRUE);
 
-    //Case 3: TPMS_Run error: e.g. sensors not initialized
-    MCUWakeUpData.State = activeWakeUpState;
-    ret = Sensors_Run();
-    EXPECT_EQ(ret, E_NOT_OK);
-
-    //Case 4: MCUWakeUp_RequestLowPower error: e.g. MCUWakeUp uninitialized
-    Sensors_Init();
-    TPMS_Init();
-    MCUWakeUpData.State = activeWakeUpState;
-    MCUWakeUpData.Initialized = 0;
-    ret = Sensors_Run();
-    EXPECT_EQ(ret, E_NOT_OK);
-    
     POSTTEST();
 }
 
-// TEST(Sensors, Test_Run_Positive)
-// {
-//     returnType ret;
-//     MCUWakeUpStatesType activeWakeUpState = MCUWakeUp_State_Active;
-
-//     PRETEST();
-
-//     {
-//         InSequence s;
-//         EXPECT_CALL(*MockPtr, MCUWakeUp_GetState(_)).WillOnce(DoAll(SetArgPointee<0>(activeWakeUpState),Return(E_OK)));
-//         EXPECT_CALL(*MockPtr, TPMS_Run).WillOnce(Return(E_OK));
-//         EXPECT_CALL(*MockPtr, MCUWakeUp_RequestLowPower).WillOnce(Return(E_OK));
-//     }
-
-//     ret = Sensors_Run();
-//     EXPECT_EQ(ret, E_OK);
-    
-//     POSTTEST();
-// }
-
-TEST(Sensors, Test_GetSignal_Negative)
+TEST(SignalProcessor, Test_Uninitialized)
 {
     returnType ret;
-    uint8 index = Sensors_Pressure_FL;
-    SensorsSignalType signalType = Sensors_Signal_Pressure;
-    uint8 invalidIndex = Sensors_Count;
-    SensorsSignalType invalidSignalType = Sensors_Signal_Count;
-    uint16 reading;
+    SignalProcessorOutputMessageType outputMsg;
+    uint8 tireID;
+    SignalProcessorErrorType err;
 
     PRETEST();
 
-    {
-        InSequence s;
-        //Case 1: invalid index; Case 2: invalid signal type
-        EXPECT_CALL(*MockPtr, Sensors_SignalError(Sensors_Count, SENSORS_INVALID_INPUT_ERROR)).Times(2);
-        //Case 3: invalid initialization flag
-        EXPECT_CALL(*MockPtr, Sensors_SignalError(index, SENSORS_INVALID_INIT_FLAG_ERROR));
-        //Case 4: ReadSignal error
-        EXPECT_CALL(*MockPtr, Sensors_ReadSignal(index, signalType, &reading)).WillOnce(Return(E_NOT_OK));
-        EXPECT_CALL(*MockPtr, Sensors_SignalError(index, SENSORS_READ_SIGNAL_ERROR));
-        //Case 5: Invalid reading
-        EXPECT_CALL(*MockPtr, Sensors_ReadSignal(index, signalType, _)).WillOnce(DoAll(SetArgPointee<2>(2000),Return(E_OK)));
-        EXPECT_CALL(*MockPtr, Sensors_SignalError(index, SENSORS_INVALID_READING_ERROR));
-    }
-
-    //Case 1: invalid index
-    Sensors_Init();
-    ret = Sensors_GetSignal( invalidIndex, signalType, &reading);
+    ret = SignalProcessor_GetOutputMessage( &outputMsg, &tireID );
     EXPECT_EQ(ret, E_NOT_OK);
 
-    //Case 2: invalid signal type
-    ret = Sensors_GetSignal( index, invalidSignalType, &reading);
+    ret = SignalProcessor_GetError( &err );
     EXPECT_EQ(ret, E_NOT_OK);
 
-    //Case 3: invalid initialization flag
-    SensorsData[ index ].Initialized = 0;
-    ret = Sensors_GetSignal( index, signalType, &reading);
-    EXPECT_EQ(ret, E_NOT_OK);
-
-    //Case 4: ReadSignal error
-    Sensors_Init();
-    ret = Sensors_GetSignal( index, signalType, &reading);
-    EXPECT_EQ(ret, E_NOT_OK);
-
-    //Case 5: Invalid reading
-    ret = Sensors_GetSignal( index, signalType, &reading);
-    EXPECT_EQ(ret, E_NOT_OK);
-    
     POSTTEST();
 }
 
-TEST(Sensors, Test_GetSignal_Positive)
+TEST(SignalProcessor, Test_Init_Positive)
 {
-    returnType ret;
-    uint8 index = Sensors_Pressure_FL;
-    SensorsSignalType signalType = Sensors_Signal_Pressure;
-    uint16 reading;
+    PRETEST();
+
+    SignalProcessor_Init();
+    EXPECT_EQ(SignalProcessorData.Initialized, SIGNAL_PROCESSOR_INITIALIZED);
+    EXPECT_EQ(SignalProcessorData.TireID, 0);
+    EXPECT_EQ(SignalProcessorData.PressureReading, 0);
+    EXPECT_EQ(SignalProcessorData.TemperatureReading, 0);
+    EXPECT_EQ(SignalProcessorData.PressureKPa, 0);
+    EXPECT_EQ(SignalProcessorData.TemperatureCelsius, 0);
+    EXPECT_EQ(SignalProcessorData.OutputMessage, 0);
+    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_NO_ERROR);
+
+    POSTTEST();
+}
+
+TEST(SignalProcessor, Test_Run_Negative)
+{
+    uint8 invalidInitFlag = 0;
+    uint16 pressureReading = 512; //expected kPa = 300
+    uint16 invalidPressureReading = 2000;
+    uint8 tireId = 1;
+    uint8 invalidTireId = 0;
+    uint16 temperatureReading = 512; 
+    uint16 invalidTemperatureReading;
 
     PRETEST();
 
     {
         InSequence s;
-        EXPECT_CALL(*MockPtr, Sensors_ReadSignal(index, signalType, _)).WillOnce(DoAll(SetArgPointee<2>(500),Return(E_OK)));
+
+        //SignalProcessor_ReadPressureSensorData returns E_NOT_OK
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadPressureSensorData( &SignalProcessorData.PressureReading, &SignalProcessorData.TireID )).WillOnce(Return(E_NOT_OK));
+        //SignalProcessor_ValidateSensorData for pressure returns E_NOT_OK
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadPressureSensorData( &SignalProcessorData.PressureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(invalidPressureReading),SetArgPointee<1>(invalidTireId),Return(E_OK)));
+        //SignalProcessor_ReadTemperatureSensorData returns E_NOT_OK
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadTemperatureSensorData( &SignalProcessorData.TemperatureReading, &SignalProcessorData.TireID )).WillOnce(Return(E_NOT_OK));
+        //SignalProcessor_ValidateSensorData for temperature returns E_NOT_OK
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadPressureSensorData( &SignalProcessorData.PressureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(pressureReading),SetArgPointee<1>(tireId),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadTemperatureSensorData( &SignalProcessorData.TemperatureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(invalidTemperatureReading),SetArgPointee<1>(invalidTireId),Return(E_OK)));
     }
 
-    Sensors_Init();
-    ret = Sensors_GetSignal( index, signalType, &reading);
+    SignalProcessor_Init();
+
+    //SignalProcessor not initialized
+    SignalProcessorData.Initialized = invalidInitFlag;
+    SignalProcessor_Run();
+    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_ERR_UNINITIALIZED);
+
+    //SignalProcessor_ReadPressureSensorData returns E_NOT_OK
+    SignalProcessor_Init();
+    SignalProcessor_Run();
+    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_ERR_READ_PRESSURE_ERROR);
+
+    //SignalProcessor_ValidateSensorData for pressure returns E_NOT_OK and
+    //SignalProcessor_ReadTemperatureSensorData returns E_NOT_OK
+    SignalProcessor_Run();
+    EXPECT_EQ(SignalProcessorData.PressureKPa, 0);
+    EXPECT_EQ(SignalProcessorData.PressureReading, invalidPressureReading);
+    EXPECT_EQ(SignalProcessorData.TireID, invalidTireId);
+    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_ERR_READ_TEMPERATURE_ERROR);
+    
+    //SignalProcessor_ValidateSensorData for temperature returns E_NOT_OK
+    SignalProcessor_Run();
+    EXPECT_EQ(SignalProcessorData.PressureKPa, 300);
+    EXPECT_EQ(SignalProcessorData.PressureReading, pressureReading);
+    EXPECT_EQ(SignalProcessorData.TemperatureCelsius, 0);
+    EXPECT_EQ(SignalProcessorData.TemperatureReading, invalidTemperatureReading);
+    EXPECT_EQ(SignalProcessorData.TireID, invalidTireId);
+    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_NO_ERROR);
+    EXPECT_EQ(SignalProcessorData.OutputMessage, SIGNAL_PROCESSOR_TPMS_OK);
+
+    POSTTEST();
+}
+
+TEST(SignalProcessor, Test_Run_Positive)
+{
+    uint16 pressureReading = 512; //expected kPa = 300
+    uint8 tireId = 1;
+    uint16 temperatureReading = 512; //expected celsius = 42
+
+    PRETEST();    
+    
+    {
+        InSequence s;
+
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadPressureSensorData( &SignalProcessorData.PressureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(pressureReading),SetArgPointee<1>(tireId),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadTemperatureSensorData( &SignalProcessorData.TemperatureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(temperatureReading),SetArgPointee<1>(tireId),Return(E_OK)));
+    }
+
+    SignalProcessor_Init();
+    SignalProcessor_Run();
+    EXPECT_EQ(SignalProcessorData.PressureKPa, 300);
+    EXPECT_EQ(SignalProcessorData.PressureReading, pressureReading);
+    EXPECT_EQ(SignalProcessorData.TemperatureCelsius, 42);
+    EXPECT_EQ(SignalProcessorData.TemperatureReading, temperatureReading);
+    EXPECT_EQ(SignalProcessorData.TireID, tireId);
+    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_NO_ERROR);
+    EXPECT_EQ(SignalProcessorData.OutputMessage, SIGNAL_PROCESSOR_TPMS_OK);
+
+    POSTTEST();
+}
+
+TEST(SignalProcessor, Test_GetOutputMessage_Negative)
+{
+    returnType ret;
+    uint8 invalidInitFlag;
+    SignalProcessorOutputMessageType outputMsg = SIGNAL_PROCESSOR_TPMS_OK;
+    uint8 tireID = 0;
+
+    PRETEST();
+
+    SignalProcessor_Init();
+    SignalProcessorData.Initialized = invalidInitFlag;
+    SignalProcessorData.OutputMessage = SIGNAL_PROCESSOR_TPMS_WARNING;
+    SignalProcessorData.TireID = 3;
+    ret = SignalProcessor_GetOutputMessage( &outputMsg, &tireID);
+    EXPECT_EQ(ret, E_NOT_OK);
+    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_ERR_UNINITIALIZED);
+    EXPECT_EQ(outputMsg, SIGNAL_PROCESSOR_TPMS_OK);
+    EXPECT_EQ(tireID, 0);
+
+    POSTTEST();
+}
+
+TEST(SignalProcessor, Test_GetOutputMessage_Positive)
+{
+    returnType ret;
+    SignalProcessorOutputMessageType outputMsg = SIGNAL_PROCESSOR_TPMS_OK;
+    uint8 tireID = 0;
+
+    PRETEST();
+
+    SignalProcessor_Init();
+    SignalProcessorData.OutputMessage = SIGNAL_PROCESSOR_TPMS_WARNING;
+    SignalProcessorData.TireID = 3;
+    ret = SignalProcessor_GetOutputMessage( &outputMsg, &tireID);
     EXPECT_EQ(ret, E_OK);
-    
+    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_NO_ERROR);
+    EXPECT_EQ(outputMsg, SIGNAL_PROCESSOR_TPMS_WARNING);
+    EXPECT_EQ(tireID, 3);
+
+    POSTTEST();
+}
+
+TEST(SignalProcessor, Test_GetError_Negative)
+{
+    POSTTEST();
+
+
+    returnType ret;
+    uint8 invalidInitFlag = 0;
+    SignalProcessorErrorType err = SIGNAL_PROCESSOR_NO_ERROR;
+
+    PRETEST();
+
+    SignalProcessor_Init();
+    SignalProcessorData.Initialized = invalidInitFlag;
+    SignalProcessorData.Error = SIGNAL_PROCESSOR_ERR_INVALID_SENSOR_DATA;
+    ret = SignalProcessor_GetError( &err );
+    EXPECT_EQ(ret, E_NOT_OK);
+    EXPECT_EQ(err, SIGNAL_PROCESSOR_NO_ERROR);
+
+    POSTTEST();
+}
+
+TEST(SignalProcessor, Test_GetError_Positive)
+{
+    returnType ret;
+    SignalProcessorErrorType err;
+
+    PRETEST();
+
+    SignalProcessor_Init();
+    SignalProcessorData.Error = SIGNAL_PROCESSOR_ERR_INVALID_SENSOR_DATA;
+    ret = SignalProcessor_GetError( &err );
+    EXPECT_EQ(ret, E_OK);
+    EXPECT_EQ(err, SIGNAL_PROCESSOR_ERR_INVALID_SENSOR_DATA);
+
     POSTTEST();
 }

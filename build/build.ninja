@@ -595,123 +595,6 @@ build src/install/strip: phony src/CMakeFiles/install/strip.util
 # C:/diplomna/TPMS/src/CMakeLists.txt
 # =============================================================================
 
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target TPMSComponent
-
-
-#############################################
-# Order-only phony target for TPMSComponent
-
-build cmake_object_order_depends_target_TPMSComponent: phony || .
-
-build src/TPMS/CMakeFiles/TPMSComponent.dir/TPMS.c.obj: C_COMPILER__TPMSComponent_unscanned_Debug C$:/diplomna/TPMS/src/TPMS/TPMS.c || cmake_object_order_depends_target_TPMSComponent
-  DEP_FILE = src\TPMS\CMakeFiles\TPMSComponent.dir\TPMS.c.obj.d
-  FLAGS = -g -std=gnu99 -fprofile-abs-path
-  OBJECT_DIR = src\TPMS\CMakeFiles\TPMSComponent.dir
-  OBJECT_FILE_DIR = src\TPMS\CMakeFiles\TPMSComponent.dir
-  TARGET_COMPILE_PDB = src\TPMS\CMakeFiles\TPMSComponent.dir\TPMSComponent.pdb
-  TARGET_PDB = src\TPMS\libTPMSComponent.pdb
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target TPMSComponent
-
-
-#############################################
-# Link the static library src\TPMS\libTPMSComponent.a
-
-build src/TPMS/libTPMSComponent.a: C_STATIC_LIBRARY_LINKER__TPMSComponent_Debug src/TPMS/CMakeFiles/TPMSComponent.dir/TPMS.c.obj
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = src\TPMS\CMakeFiles\TPMSComponent.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\TPMS\CMakeFiles\TPMSComponent.dir\TPMSComponent.pdb
-  TARGET_FILE = src\TPMS\libTPMSComponent.a
-  TARGET_PDB = src\TPMS\libTPMSComponent.pdb
-
-
-#############################################
-# Utility command for test
-
-build src/TPMS/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\TPMS && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
-  DESC = Running tests...
-  pool = console
-  restat = 1
-
-build src/TPMS/test: phony src/TPMS/CMakeFiles/test.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build src/TPMS/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\TPMS && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
-  DESC = Running CMake cache editor...
-  pool = console
-  restat = 1
-
-build src/TPMS/edit_cache: phony src/TPMS/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build src/TPMS/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\TPMS && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build src/TPMS/rebuild_cache: phony src/TPMS/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build src/TPMS/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build src/TPMS/CMakeFiles/install.util: CUSTOM_COMMAND src/TPMS/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\TPMS && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build src/TPMS/install: phony src/TPMS/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build src/TPMS/CMakeFiles/install/local.util: CUSTOM_COMMAND src/TPMS/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\TPMS && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build src/TPMS/install/local: phony src/TPMS/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build src/TPMS/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/TPMS/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\TPMS && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build src/TPMS/install/strip: phony src/TPMS/CMakeFiles/install/strip.util
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# C:/diplomna/TPMS/src/CMakeLists.txt
-# =============================================================================
-
 
 #############################################
 # Utility command for common
@@ -802,116 +685,116 @@ build src/common/install/strip: phony src/common/CMakeFiles/install/strip.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target MCUWakeUp
+# Object build statements for STATIC_LIBRARY target SignalProcessor
 
 
 #############################################
-# Order-only phony target for MCUWakeUp
+# Order-only phony target for SignalProcessor
 
-build cmake_object_order_depends_target_MCUWakeUp: phony || .
+build cmake_object_order_depends_target_SignalProcessor: phony || .
 
-build src/MCUWakeUp/CMakeFiles/MCUWakeUp.dir/MCUWakeUp.c.obj: C_COMPILER__MCUWakeUp_unscanned_Debug C$:/diplomna/TPMS/src/MCUWakeUp/MCUWakeUp.c || cmake_object_order_depends_target_MCUWakeUp
-  DEP_FILE = src\MCUWakeUp\CMakeFiles\MCUWakeUp.dir\MCUWakeUp.c.obj.d
+build src/SignalProcessor/CMakeFiles/SignalProcessor.dir/SignalProcessor.c.obj: C_COMPILER__SignalProcessor_unscanned_Debug C$:/diplomna/TPMS/src/SignalProcessor/SignalProcessor.c || cmake_object_order_depends_target_SignalProcessor
+  DEP_FILE = src\SignalProcessor\CMakeFiles\SignalProcessor.dir\SignalProcessor.c.obj.d
   FLAGS = -g -std=gnu99 -fprofile-abs-path
-  OBJECT_DIR = src\MCUWakeUp\CMakeFiles\MCUWakeUp.dir
-  OBJECT_FILE_DIR = src\MCUWakeUp\CMakeFiles\MCUWakeUp.dir
-  TARGET_COMPILE_PDB = src\MCUWakeUp\CMakeFiles\MCUWakeUp.dir\MCUWakeUp.pdb
-  TARGET_PDB = src\MCUWakeUp\libMCUWakeUp.pdb
+  OBJECT_DIR = src\SignalProcessor\CMakeFiles\SignalProcessor.dir
+  OBJECT_FILE_DIR = src\SignalProcessor\CMakeFiles\SignalProcessor.dir
+  TARGET_COMPILE_PDB = src\SignalProcessor\CMakeFiles\SignalProcessor.dir\SignalProcessor.pdb
+  TARGET_PDB = src\SignalProcessor\libSignalProcessor.pdb
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target MCUWakeUp
+# Link build statements for STATIC_LIBRARY target SignalProcessor
 
 
 #############################################
-# Link the static library src\MCUWakeUp\libMCUWakeUp.a
+# Link the static library src\SignalProcessor\libSignalProcessor.a
 
-build src/MCUWakeUp/libMCUWakeUp.a: C_STATIC_LIBRARY_LINKER__MCUWakeUp_Debug src/MCUWakeUp/CMakeFiles/MCUWakeUp.dir/MCUWakeUp.c.obj
+build src/SignalProcessor/libSignalProcessor.a: C_STATIC_LIBRARY_LINKER__SignalProcessor_Debug src/SignalProcessor/CMakeFiles/SignalProcessor.dir/SignalProcessor.c.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = src\MCUWakeUp\CMakeFiles\MCUWakeUp.dir
+  OBJECT_DIR = src\SignalProcessor\CMakeFiles\SignalProcessor.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\MCUWakeUp\CMakeFiles\MCUWakeUp.dir\MCUWakeUp.pdb
-  TARGET_FILE = src\MCUWakeUp\libMCUWakeUp.a
-  TARGET_PDB = src\MCUWakeUp\libMCUWakeUp.pdb
+  TARGET_COMPILE_PDB = src\SignalProcessor\CMakeFiles\SignalProcessor.dir\SignalProcessor.pdb
+  TARGET_FILE = src\SignalProcessor\libSignalProcessor.a
+  TARGET_PDB = src\SignalProcessor\libSignalProcessor.pdb
 
 
 #############################################
 # Utility command for test
 
-build src/MCUWakeUp/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MCUWakeUp && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
+build src/SignalProcessor/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\SignalProcessor && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
   DESC = Running tests...
   pool = console
   restat = 1
 
-build src/MCUWakeUp/test: phony src/MCUWakeUp/CMakeFiles/test.util
+build src/SignalProcessor/test: phony src/SignalProcessor/CMakeFiles/test.util
 
 
 #############################################
 # Utility command for edit_cache
 
-build src/MCUWakeUp/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MCUWakeUp && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
+build src/SignalProcessor/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\SignalProcessor && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build src/MCUWakeUp/edit_cache: phony src/MCUWakeUp/CMakeFiles/edit_cache.util
+build src/SignalProcessor/edit_cache: phony src/SignalProcessor/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build src/MCUWakeUp/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MCUWakeUp && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
+build src/SignalProcessor/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\SignalProcessor && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build src/MCUWakeUp/rebuild_cache: phony src/MCUWakeUp/CMakeFiles/rebuild_cache.util
+build src/SignalProcessor/rebuild_cache: phony src/SignalProcessor/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build src/MCUWakeUp/list_install_components: phony
+build src/SignalProcessor/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build src/MCUWakeUp/CMakeFiles/install.util: CUSTOM_COMMAND src/MCUWakeUp/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MCUWakeUp && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+build src/SignalProcessor/CMakeFiles/install.util: CUSTOM_COMMAND src/SignalProcessor/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\SignalProcessor && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build src/MCUWakeUp/install: phony src/MCUWakeUp/CMakeFiles/install.util
+build src/SignalProcessor/install: phony src/SignalProcessor/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build src/MCUWakeUp/CMakeFiles/install/local.util: CUSTOM_COMMAND src/MCUWakeUp/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MCUWakeUp && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build src/SignalProcessor/CMakeFiles/install/local.util: CUSTOM_COMMAND src/SignalProcessor/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\SignalProcessor && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build src/MCUWakeUp/install/local: phony src/MCUWakeUp/CMakeFiles/install/local.util
+build src/SignalProcessor/install/local: phony src/SignalProcessor/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build src/MCUWakeUp/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/MCUWakeUp/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MCUWakeUp && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build src/SignalProcessor/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/SignalProcessor/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\SignalProcessor && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build src/MCUWakeUp/install/strip: phony src/MCUWakeUp/CMakeFiles/install/strip.util
+build src/SignalProcessor/install/strip: phony src/SignalProcessor/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -919,119 +802,116 @@ build src/MCUWakeUp/install/strip: phony src/MCUWakeUp/CMakeFiles/install/strip.
 # =============================================================================
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Core
+# Object build statements for STATIC_LIBRARY target MessageSender
 
 
 #############################################
-# Order-only phony target for Core
+# Order-only phony target for MessageSender
 
-build cmake_object_order_depends_target_Core: phony || cmake_object_order_depends_target_COM cmake_object_order_depends_target_MCUWakeUp cmake_object_order_depends_target_Sensors cmake_object_order_depends_target_TPMSComponent cmake_object_order_depends_target_Timer cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+build cmake_object_order_depends_target_MessageSender: phony || .
 
-build src/Core/CMakeFiles/Core.dir/Core.c.obj: C_COMPILER__Core_unscanned_Debug C$:/diplomna/TPMS/src/Core/Core.c || cmake_object_order_depends_target_Core
-  DEP_FILE = src\Core\CMakeFiles\Core.dir\Core.c.obj.d
+build src/MessageSender/CMakeFiles/MessageSender.dir/MessageSender.c.obj: C_COMPILER__MessageSender_unscanned_Debug C$:/diplomna/TPMS/src/MessageSender/MessageSender.c || cmake_object_order_depends_target_MessageSender
+  DEP_FILE = src\MessageSender\CMakeFiles\MessageSender.dir\MessageSender.c.obj.d
   FLAGS = -g -std=gnu99 -fprofile-abs-path
-  INCLUDES = -isystem C:/diplomna/TPMS/googletest/googletest/include -isystem C:/diplomna/TPMS/googletest/googletest -isystem C:/diplomna/TPMS/googletest/googlemock/include -isystem C:/diplomna/TPMS/googletest/googlemock
-  OBJECT_DIR = src\Core\CMakeFiles\Core.dir
-  OBJECT_FILE_DIR = src\Core\CMakeFiles\Core.dir
-  TARGET_COMPILE_PDB = src\Core\CMakeFiles\Core.dir\
-  TARGET_PDB = src\Core\Core.pdb
+  OBJECT_DIR = src\MessageSender\CMakeFiles\MessageSender.dir
+  OBJECT_FILE_DIR = src\MessageSender\CMakeFiles\MessageSender.dir
+  TARGET_COMPILE_PDB = src\MessageSender\CMakeFiles\MessageSender.dir\MessageSender.pdb
+  TARGET_PDB = src\MessageSender\libMessageSender.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Core
+# Link build statements for STATIC_LIBRARY target MessageSender
 
 
 #############################################
-# Link the executable src\Core\Core.exe
+# Link the static library src\MessageSender\libMessageSender.a
 
-build src/Core/Core.exe: CXX_EXECUTABLE_LINKER__Core_Debug src/Core/CMakeFiles/Core.dir/Core.c.obj | lib/libgtest_main.a lib/libgmock.a src/MCUWakeUp/libMCUWakeUp.a src/COM/libCOM.a src/Sensors/libSensors.a src/Timer/libTimer.a src/TPMS/libTPMSComponent.a lib/libgtest.a || lib/libgmock.a lib/libgtest.a lib/libgtest_main.a src/COM/libCOM.a src/MCUWakeUp/libMCUWakeUp.a src/Sensors/libSensors.a src/TPMS/libTPMSComponent.a src/Timer/libTimer.a
-  FLAGS = -g
-  LINK_LIBRARIES = lib/libgtest_main.a  lib/libgmock.a  src/MCUWakeUp/libMCUWakeUp.a  src/COM/libCOM.a  src/Sensors/libSensors.a  src/Timer/libTimer.a  src/TPMS/libTPMSComponent.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = src\Core\CMakeFiles\Core.dir
+build src/MessageSender/libMessageSender.a: C_STATIC_LIBRARY_LINKER__MessageSender_Debug src/MessageSender/CMakeFiles/MessageSender.dir/MessageSender.c.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src\MessageSender\CMakeFiles\MessageSender.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\Core\CMakeFiles\Core.dir\
-  TARGET_FILE = src\Core\Core.exe
-  TARGET_IMPLIB = src\Core\libCore.dll.a
-  TARGET_PDB = src\Core\Core.pdb
+  TARGET_COMPILE_PDB = src\MessageSender\CMakeFiles\MessageSender.dir\MessageSender.pdb
+  TARGET_FILE = src\MessageSender\libMessageSender.a
+  TARGET_PDB = src\MessageSender\libMessageSender.pdb
 
 
 #############################################
 # Utility command for test
 
-build src/Core/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Core && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
+build src/MessageSender/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageSender && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
   DESC = Running tests...
   pool = console
   restat = 1
 
-build src/Core/test: phony src/Core/CMakeFiles/test.util
+build src/MessageSender/test: phony src/MessageSender/CMakeFiles/test.util
 
 
 #############################################
 # Utility command for edit_cache
 
-build src/Core/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Core && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
+build src/MessageSender/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageSender && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build src/Core/edit_cache: phony src/Core/CMakeFiles/edit_cache.util
+build src/MessageSender/edit_cache: phony src/MessageSender/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build src/Core/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Core && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
+build src/MessageSender/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageSender && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build src/Core/rebuild_cache: phony src/Core/CMakeFiles/rebuild_cache.util
+build src/MessageSender/rebuild_cache: phony src/MessageSender/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build src/Core/list_install_components: phony
+build src/MessageSender/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build src/Core/CMakeFiles/install.util: CUSTOM_COMMAND src/Core/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Core && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+build src/MessageSender/CMakeFiles/install.util: CUSTOM_COMMAND src/MessageSender/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageSender && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build src/Core/install: phony src/Core/CMakeFiles/install.util
+build src/MessageSender/install: phony src/MessageSender/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build src/Core/CMakeFiles/install/local.util: CUSTOM_COMMAND src/Core/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Core && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build src/MessageSender/CMakeFiles/install/local.util: CUSTOM_COMMAND src/MessageSender/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageSender && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build src/Core/install/local: phony src/Core/CMakeFiles/install/local.util
+build src/MessageSender/install/local: phony src/MessageSender/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build src/Core/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/Core/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Core && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build src/MessageSender/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/MessageSender/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageSender && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build src/Core/install/strip: phony src/Core/CMakeFiles/install/strip.util
+build src/MessageSender/install/strip: phony src/MessageSender/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1039,116 +919,116 @@ build src/Core/install/strip: phony src/Core/CMakeFiles/install/strip.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target DEM
+# Object build statements for STATIC_LIBRARY target MessageReceiver
 
 
 #############################################
-# Order-only phony target for DEM
+# Order-only phony target for MessageReceiver
 
-build cmake_object_order_depends_target_DEM: phony || .
+build cmake_object_order_depends_target_MessageReceiver: phony || .
 
-build src/DEM/CMakeFiles/DEM.dir/DEM.c.obj: C_COMPILER__DEM_unscanned_Debug C$:/diplomna/TPMS/src/DEM/DEM.c || cmake_object_order_depends_target_DEM
-  DEP_FILE = src\DEM\CMakeFiles\DEM.dir\DEM.c.obj.d
+build src/MessageReceiver/CMakeFiles/MessageReceiver.dir/MessageReceiver.c.obj: C_COMPILER__MessageReceiver_unscanned_Debug C$:/diplomna/TPMS/src/MessageReceiver/MessageReceiver.c || cmake_object_order_depends_target_MessageReceiver
+  DEP_FILE = src\MessageReceiver\CMakeFiles\MessageReceiver.dir\MessageReceiver.c.obj.d
   FLAGS = -g -std=gnu99 -fprofile-abs-path
-  OBJECT_DIR = src\DEM\CMakeFiles\DEM.dir
-  OBJECT_FILE_DIR = src\DEM\CMakeFiles\DEM.dir
-  TARGET_COMPILE_PDB = src\DEM\CMakeFiles\DEM.dir\DEM.pdb
-  TARGET_PDB = src\DEM\libDEM.pdb
+  OBJECT_DIR = src\MessageReceiver\CMakeFiles\MessageReceiver.dir
+  OBJECT_FILE_DIR = src\MessageReceiver\CMakeFiles\MessageReceiver.dir
+  TARGET_COMPILE_PDB = src\MessageReceiver\CMakeFiles\MessageReceiver.dir\MessageReceiver.pdb
+  TARGET_PDB = src\MessageReceiver\libMessageReceiver.pdb
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target DEM
+# Link build statements for STATIC_LIBRARY target MessageReceiver
 
 
 #############################################
-# Link the static library src\DEM\libDEM.a
+# Link the static library src\MessageReceiver\libMessageReceiver.a
 
-build src/DEM/libDEM.a: C_STATIC_LIBRARY_LINKER__DEM_Debug src/DEM/CMakeFiles/DEM.dir/DEM.c.obj
+build src/MessageReceiver/libMessageReceiver.a: C_STATIC_LIBRARY_LINKER__MessageReceiver_Debug src/MessageReceiver/CMakeFiles/MessageReceiver.dir/MessageReceiver.c.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = src\DEM\CMakeFiles\DEM.dir
+  OBJECT_DIR = src\MessageReceiver\CMakeFiles\MessageReceiver.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\DEM\CMakeFiles\DEM.dir\DEM.pdb
-  TARGET_FILE = src\DEM\libDEM.a
-  TARGET_PDB = src\DEM\libDEM.pdb
+  TARGET_COMPILE_PDB = src\MessageReceiver\CMakeFiles\MessageReceiver.dir\MessageReceiver.pdb
+  TARGET_FILE = src\MessageReceiver\libMessageReceiver.a
+  TARGET_PDB = src\MessageReceiver\libMessageReceiver.pdb
 
 
 #############################################
 # Utility command for test
 
-build src/DEM/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\DEM && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
+build src/MessageReceiver/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageReceiver && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
   DESC = Running tests...
   pool = console
   restat = 1
 
-build src/DEM/test: phony src/DEM/CMakeFiles/test.util
+build src/MessageReceiver/test: phony src/MessageReceiver/CMakeFiles/test.util
 
 
 #############################################
 # Utility command for edit_cache
 
-build src/DEM/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\DEM && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
+build src/MessageReceiver/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageReceiver && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build src/DEM/edit_cache: phony src/DEM/CMakeFiles/edit_cache.util
+build src/MessageReceiver/edit_cache: phony src/MessageReceiver/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build src/DEM/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\DEM && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
+build src/MessageReceiver/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageReceiver && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build src/DEM/rebuild_cache: phony src/DEM/CMakeFiles/rebuild_cache.util
+build src/MessageReceiver/rebuild_cache: phony src/MessageReceiver/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build src/DEM/list_install_components: phony
+build src/MessageReceiver/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build src/DEM/CMakeFiles/install.util: CUSTOM_COMMAND src/DEM/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\DEM && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+build src/MessageReceiver/CMakeFiles/install.util: CUSTOM_COMMAND src/MessageReceiver/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageReceiver && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build src/DEM/install: phony src/DEM/CMakeFiles/install.util
+build src/MessageReceiver/install: phony src/MessageReceiver/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build src/DEM/CMakeFiles/install/local.util: CUSTOM_COMMAND src/DEM/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\DEM && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build src/MessageReceiver/CMakeFiles/install/local.util: CUSTOM_COMMAND src/MessageReceiver/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageReceiver && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build src/DEM/install/local: phony src/DEM/CMakeFiles/install/local.util
+build src/MessageReceiver/install/local: phony src/MessageReceiver/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build src/DEM/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/DEM/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\DEM && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build src/MessageReceiver/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/MessageReceiver/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\MessageReceiver && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build src/DEM/install/strip: phony src/DEM/CMakeFiles/install/strip.util
+build src/MessageReceiver/install/strip: phony src/MessageReceiver/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1156,350 +1036,205 @@ build src/DEM/install/strip: phony src/DEM/CMakeFiles/install/strip.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target Timer
+# Object build statements for STATIC_LIBRARY target Monitor
 
 
 #############################################
-# Order-only phony target for Timer
+# Order-only phony target for Monitor
 
-build cmake_object_order_depends_target_Timer: phony || .
+build cmake_object_order_depends_target_Monitor: phony || .
 
-build src/Timer/CMakeFiles/Timer.dir/Timer.c.obj: C_COMPILER__Timer_unscanned_Debug C$:/diplomna/TPMS/src/Timer/Timer.c || cmake_object_order_depends_target_Timer
-  DEP_FILE = src\Timer\CMakeFiles\Timer.dir\Timer.c.obj.d
+build src/Monitor/CMakeFiles/Monitor.dir/Monitor.c.obj: C_COMPILER__Monitor_unscanned_Debug C$:/diplomna/TPMS/src/Monitor/Monitor.c || cmake_object_order_depends_target_Monitor
+  DEP_FILE = src\Monitor\CMakeFiles\Monitor.dir\Monitor.c.obj.d
   FLAGS = -g -std=gnu99 -fprofile-abs-path
-  OBJECT_DIR = src\Timer\CMakeFiles\Timer.dir
-  OBJECT_FILE_DIR = src\Timer\CMakeFiles\Timer.dir
-  TARGET_COMPILE_PDB = src\Timer\CMakeFiles\Timer.dir\Timer.pdb
-  TARGET_PDB = src\Timer\libTimer.pdb
+  OBJECT_DIR = src\Monitor\CMakeFiles\Monitor.dir
+  OBJECT_FILE_DIR = src\Monitor\CMakeFiles\Monitor.dir
+  TARGET_COMPILE_PDB = src\Monitor\CMakeFiles\Monitor.dir\Monitor.pdb
+  TARGET_PDB = src\Monitor\libMonitor.pdb
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target Timer
+# Link build statements for STATIC_LIBRARY target Monitor
 
 
 #############################################
-# Link the static library src\Timer\libTimer.a
+# Link the static library src\Monitor\libMonitor.a
 
-build src/Timer/libTimer.a: C_STATIC_LIBRARY_LINKER__Timer_Debug src/Timer/CMakeFiles/Timer.dir/Timer.c.obj
+build src/Monitor/libMonitor.a: C_STATIC_LIBRARY_LINKER__Monitor_Debug src/Monitor/CMakeFiles/Monitor.dir/Monitor.c.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = src\Timer\CMakeFiles\Timer.dir
+  OBJECT_DIR = src\Monitor\CMakeFiles\Monitor.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\Timer\CMakeFiles\Timer.dir\Timer.pdb
-  TARGET_FILE = src\Timer\libTimer.a
-  TARGET_PDB = src\Timer\libTimer.pdb
+  TARGET_COMPILE_PDB = src\Monitor\CMakeFiles\Monitor.dir\Monitor.pdb
+  TARGET_FILE = src\Monitor\libMonitor.a
+  TARGET_PDB = src\Monitor\libMonitor.pdb
 
 
 #############################################
 # Utility command for test
 
-build src/Timer/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Timer && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
+build src/Monitor/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Monitor && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
   DESC = Running tests...
   pool = console
   restat = 1
 
-build src/Timer/test: phony src/Timer/CMakeFiles/test.util
+build src/Monitor/test: phony src/Monitor/CMakeFiles/test.util
 
 
 #############################################
 # Utility command for edit_cache
 
-build src/Timer/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Timer && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
+build src/Monitor/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Monitor && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build src/Timer/edit_cache: phony src/Timer/CMakeFiles/edit_cache.util
+build src/Monitor/edit_cache: phony src/Monitor/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build src/Timer/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Timer && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
+build src/Monitor/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Monitor && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build src/Timer/rebuild_cache: phony src/Timer/CMakeFiles/rebuild_cache.util
+build src/Monitor/rebuild_cache: phony src/Monitor/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build src/Timer/list_install_components: phony
+build src/Monitor/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build src/Timer/CMakeFiles/install.util: CUSTOM_COMMAND src/Timer/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Timer && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+build src/Monitor/CMakeFiles/install.util: CUSTOM_COMMAND src/Monitor/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Monitor && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build src/Timer/install: phony src/Timer/CMakeFiles/install.util
+build src/Monitor/install: phony src/Monitor/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build src/Timer/CMakeFiles/install/local.util: CUSTOM_COMMAND src/Timer/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Timer && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build src/Monitor/CMakeFiles/install/local.util: CUSTOM_COMMAND src/Monitor/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Monitor && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build src/Timer/install/local: phony src/Timer/CMakeFiles/install/local.util
+build src/Monitor/install/local: phony src/Monitor/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build src/Timer/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/Timer/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Timer && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build src/Monitor/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/Monitor/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Monitor && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build src/Timer/install/strip: phony src/Timer/CMakeFiles/install/strip.util
+build src/Monitor/install/strip: phony src/Monitor/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # C:/diplomna/TPMS/src/CMakeLists.txt
 # =============================================================================
 
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target Sensors
-
 
 #############################################
-# Order-only phony target for Sensors
+# Utility command for E2E
 
-build cmake_object_order_depends_target_Sensors: phony || .
-
-build src/Sensors/CMakeFiles/Sensors.dir/Sensors.c.obj: C_COMPILER__Sensors_unscanned_Debug C$:/diplomna/TPMS/src/Sensors/Sensors.c || cmake_object_order_depends_target_Sensors
-  DEP_FILE = src\Sensors\CMakeFiles\Sensors.dir\Sensors.c.obj.d
-  FLAGS = -g -std=gnu99 -fprofile-abs-path
-  OBJECT_DIR = src\Sensors\CMakeFiles\Sensors.dir
-  OBJECT_FILE_DIR = src\Sensors\CMakeFiles\Sensors.dir
-  TARGET_COMPILE_PDB = src\Sensors\CMakeFiles\Sensors.dir\Sensors.pdb
-  TARGET_PDB = src\Sensors\libSensors.pdb
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target Sensors
-
-
-#############################################
-# Link the static library src\Sensors\libSensors.a
-
-build src/Sensors/libSensors.a: C_STATIC_LIBRARY_LINKER__Sensors_Debug src/Sensors/CMakeFiles/Sensors.dir/Sensors.c.obj
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = src\Sensors\CMakeFiles\Sensors.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\Sensors\CMakeFiles\Sensors.dir\Sensors.pdb
-  TARGET_FILE = src\Sensors\libSensors.a
-  TARGET_PDB = src\Sensors\libSensors.pdb
+build src/E2E/E2E: phony
 
 
 #############################################
 # Utility command for test
 
-build src/Sensors/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Sensors && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
+build src/E2E/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\E2E && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
   DESC = Running tests...
   pool = console
   restat = 1
 
-build src/Sensors/test: phony src/Sensors/CMakeFiles/test.util
+build src/E2E/test: phony src/E2E/CMakeFiles/test.util
 
 
 #############################################
 # Utility command for edit_cache
 
-build src/Sensors/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Sensors && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
+build src/E2E/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\E2E && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build src/Sensors/edit_cache: phony src/Sensors/CMakeFiles/edit_cache.util
+build src/E2E/edit_cache: phony src/E2E/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build src/Sensors/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Sensors && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
+build src/E2E/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\E2E && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build src/Sensors/rebuild_cache: phony src/Sensors/CMakeFiles/rebuild_cache.util
+build src/E2E/rebuild_cache: phony src/E2E/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build src/Sensors/list_install_components: phony
+build src/E2E/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build src/Sensors/CMakeFiles/install.util: CUSTOM_COMMAND src/Sensors/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Sensors && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+build src/E2E/CMakeFiles/install.util: CUSTOM_COMMAND src/E2E/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\E2E && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build src/Sensors/install: phony src/Sensors/CMakeFiles/install.util
+build src/E2E/install: phony src/E2E/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build src/Sensors/CMakeFiles/install/local.util: CUSTOM_COMMAND src/Sensors/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Sensors && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build src/E2E/CMakeFiles/install/local.util: CUSTOM_COMMAND src/E2E/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\E2E && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build src/Sensors/install/local: phony src/Sensors/CMakeFiles/install/local.util
+build src/E2E/install/local: phony src/E2E/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build src/Sensors/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/Sensors/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\Sensors && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build src/E2E/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/E2E/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\E2E && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build src/Sensors/install/strip: phony src/Sensors/CMakeFiles/install/strip.util
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# C:/diplomna/TPMS/src/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target COM
-
-
-#############################################
-# Order-only phony target for COM
-
-build cmake_object_order_depends_target_COM: phony || .
-
-build src/COM/CMakeFiles/COM.dir/COM.c.obj: C_COMPILER__COM_unscanned_Debug C$:/diplomna/TPMS/src/COM/COM.c || cmake_object_order_depends_target_COM
-  DEP_FILE = src\COM\CMakeFiles\COM.dir\COM.c.obj.d
-  FLAGS = -g -std=gnu99 -fprofile-abs-path
-  OBJECT_DIR = src\COM\CMakeFiles\COM.dir
-  OBJECT_FILE_DIR = src\COM\CMakeFiles\COM.dir
-  TARGET_COMPILE_PDB = src\COM\CMakeFiles\COM.dir\COM.pdb
-  TARGET_PDB = src\COM\libCOM.pdb
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target COM
-
-
-#############################################
-# Link the static library src\COM\libCOM.a
-
-build src/COM/libCOM.a: C_STATIC_LIBRARY_LINKER__COM_Debug src/COM/CMakeFiles/COM.dir/COM.c.obj
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = src\COM\CMakeFiles\COM.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\COM\CMakeFiles\COM.dir\COM.pdb
-  TARGET_FILE = src\COM\libCOM.a
-  TARGET_PDB = src\COM\libCOM.pdb
-
-
-#############################################
-# Utility command for test
-
-build src/COM/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\COM && "C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process "
-  DESC = Running tests...
-  pool = console
-  restat = 1
-
-build src/COM/test: phony src/COM/CMakeFiles/test.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build src/COM/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\COM && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
-  DESC = Running CMake cache editor...
-  pool = console
-  restat = 1
-
-build src/COM/edit_cache: phony src/COM/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build src/COM/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\COM && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\diplomna\TPMS -BC:\diplomna\TPMS\build"
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build src/COM/rebuild_cache: phony src/COM/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build src/COM/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build src/COM/CMakeFiles/install.util: CUSTOM_COMMAND src/COM/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\COM && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build src/COM/install: phony src/COM/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build src/COM/CMakeFiles/install/local.util: CUSTOM_COMMAND src/COM/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\COM && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build src/COM/install/local: phony src/COM/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build src/COM/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/COM/all
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\src\COM && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build src/COM/install/strip: phony src/COM/CMakeFiles/install/strip.util
+build src/E2E/install/strip: phony src/E2E/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1596,7 +1331,7 @@ build test/install/strip: phony test/CMakeFiles/install/strip.util
 #############################################
 # Order-only phony target for TPMSTest
 
-build cmake_object_order_depends_target_TPMSTest: phony || cmake_object_order_depends_target_COM cmake_object_order_depends_target_MCUWakeUp cmake_object_order_depends_target_Resources cmake_object_order_depends_target_Sensors cmake_object_order_depends_target_TPMSComponent cmake_object_order_depends_target_Timer cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gmock_main cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+build cmake_object_order_depends_target_TPMSTest: phony || cmake_object_order_depends_target_MessageReceiver cmake_object_order_depends_target_MessageSender cmake_object_order_depends_target_Monitor cmake_object_order_depends_target_SignalProcessor cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gmock_main cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main src/E2E/E2E
 
 build test/components/CMakeFiles/TPMSTest.dir/TPMSTests.cpp.obj: CXX_COMPILER__TPMSTest_unscanned_Debug C$:/diplomna/TPMS/test/components/TPMSTests.cpp || cmake_object_order_depends_target_TPMSTest
   DEP_FILE = test\components\CMakeFiles\TPMSTest.dir\TPMSTests.cpp.obj.d
@@ -1615,13 +1350,12 @@ build test/components/CMakeFiles/TPMSTest.dir/TPMSTests.cpp.obj: CXX_COMPILER__T
 #############################################
 # Link the executable test\components\TPMSTest.exe
 
-build test/components/TPMSTest.exe test/components/TPMSTest[1]_tests.cmake | ${cmake_ninja_workdir}test/components/TPMSTest[1]_tests.cmake: CXX_EXECUTABLE_LINKER__TPMSTest_Debug test/components/CMakeFiles/TPMSTest.dir/TPMSTests.cpp.obj | lib/libgtest_main.a lib/libgmock_main.a src/COM/libCOM.a test/resources/libResources.a src/MCUWakeUp/libMCUWakeUp.a src/Sensors/libSensors.a src/Timer/libTimer.a src/TPMS/libTPMSComponent.a lib/libgmock.a lib/libgtest.a || lib/libgmock.a lib/libgmock_main.a lib/libgtest.a lib/libgtest_main.a src/COM/libCOM.a src/MCUWakeUp/libMCUWakeUp.a src/Sensors/libSensors.a src/TPMS/libTPMSComponent.a src/Timer/libTimer.a test/resources/libResources.a
+build test/components/TPMSTest.exe: CXX_EXECUTABLE_LINKER__TPMSTest_Debug test/components/CMakeFiles/TPMSTest.dir/TPMSTests.cpp.obj | lib/libgtest_main.a lib/libgmock_main.a src/MessageReceiver/libMessageReceiver.a src/MessageSender/libMessageSender.a src/SignalProcessor/libSignalProcessor.a src/Monitor/libMonitor.a lib/libgmock.a lib/libgtest.a || lib/libgmock.a lib/libgmock_main.a lib/libgtest.a lib/libgtest_main.a src/E2E/E2E src/MessageReceiver/libMessageReceiver.a src/MessageSender/libMessageSender.a src/Monitor/libMonitor.a src/SignalProcessor/libSignalProcessor.a
   FLAGS = -g
-  LINK_LIBRARIES = lib/libgtest_main.a  lib/libgmock_main.a  src/COM/libCOM.a  test/resources/libResources.a  src/MCUWakeUp/libMCUWakeUp.a  src/Sensors/libSensors.a  src/Timer/libTimer.a  src/TPMS/libTPMSComponent.a  lib/libgmock.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = lib/libgtest_main.a  lib/libgmock_main.a  src/MessageReceiver/libMessageReceiver.a  src/MessageSender/libMessageSender.a  src/SignalProcessor/libSignalProcessor.a  src/Monitor/libMonitor.a  lib/libgmock.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = test\components\CMakeFiles\TPMSTest.dir
-  POST_BUILD = C:\Windows\system32\cmd.exe /C "cd /D C:\diplomna\TPMS\build\test\components && "C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=TPMSTest -D TEST_EXECUTABLE=C:/diplomna/TPMS/build/test/components/TPMSTest.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/diplomna/TPMS/build/test/components -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=TPMSTest_TESTS -D CTEST_FILE=C:/diplomna/TPMS/build/test/components/TPMSTest[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/CMake/share/cmake-3.29/Modules/GoogleTestAddTests.cmake""
+  POST_BUILD = cd .
   PRE_LINK = cd .
-  RESTAT = 1
   TARGET_COMPILE_PDB = test\components\CMakeFiles\TPMSTest.dir\
   TARGET_FILE = test\components\TPMSTest.exe
   TARGET_IMPLIB = test\components\libTPMSTest.dll.a
@@ -1825,27 +1559,21 @@ build test/resources/install/strip: phony test/resources/CMakeFiles/install/stri
 # =============================================================================
 # Target aliases.
 
-build COM: phony src/COM/libCOM.a
+build E2E: phony src/E2E/E2E
 
-build Core: phony src/Core/Core.exe
+build MessageReceiver: phony src/MessageReceiver/libMessageReceiver.a
 
-build Core.exe: phony src/Core/Core.exe
+build MessageSender: phony src/MessageSender/libMessageSender.a
 
-build DEM: phony src/DEM/libDEM.a
-
-build MCUWakeUp: phony src/MCUWakeUp/libMCUWakeUp.a
+build Monitor: phony src/Monitor/libMonitor.a
 
 build Resources: phony test/resources/libResources.a
 
-build Sensors: phony src/Sensors/libSensors.a
-
-build TPMSComponent: phony src/TPMS/libTPMSComponent.a
+build SignalProcessor: phony src/SignalProcessor/libSignalProcessor.a
 
 build TPMSTest: phony test/components/TPMSTest.exe
 
 build TPMSTest.exe: phony test/components/TPMSTest.exe
-
-build Timer: phony src/Timer/libTimer.a
 
 build common: phony src/common/common
 
@@ -1857,19 +1585,15 @@ build gtest: phony lib/libgtest.a
 
 build gtest_main: phony lib/libgtest_main.a
 
-build libCOM.a: phony src/COM/libCOM.a
+build libMessageReceiver.a: phony src/MessageReceiver/libMessageReceiver.a
 
-build libDEM.a: phony src/DEM/libDEM.a
+build libMessageSender.a: phony src/MessageSender/libMessageSender.a
 
-build libMCUWakeUp.a: phony src/MCUWakeUp/libMCUWakeUp.a
+build libMonitor.a: phony src/Monitor/libMonitor.a
 
 build libResources.a: phony test/resources/libResources.a
 
-build libSensors.a: phony src/Sensors/libSensors.a
-
-build libTPMSComponent.a: phony src/TPMS/libTPMSComponent.a
-
-build libTimer.a: phony src/Timer/libTimer.a
+build libSignalProcessor.a: phony src/SignalProcessor/libSignalProcessor.a
 
 build libgmock.a: phony lib/libgmock.a
 
@@ -1915,56 +1639,42 @@ build googletest/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 #############################################
 # Folder: C:/diplomna/TPMS/build/src
 
-build src/all: phony src/TPMS/all src/common/all src/MCUWakeUp/all src/Core/all src/DEM/all src/Timer/all src/Sensors/all src/COM/all
+build src/all: phony src/common/all src/SignalProcessor/all src/MessageSender/all src/MessageReceiver/all src/Monitor/all src/E2E/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/diplomna/TPMS/build/src/COM
+# Folder: C:/diplomna/TPMS/build/src/E2E
 
-build src/COM/all: phony src/COM/libCOM.a
-
-# =============================================================================
-
-#############################################
-# Folder: C:/diplomna/TPMS/build/src/Core
-
-build src/Core/all: phony src/Core/Core.exe
+build src/E2E/all: phony src/E2E/E2E
 
 # =============================================================================
 
 #############################################
-# Folder: C:/diplomna/TPMS/build/src/DEM
+# Folder: C:/diplomna/TPMS/build/src/MessageReceiver
 
-build src/DEM/all: phony src/DEM/libDEM.a
-
-# =============================================================================
-
-#############################################
-# Folder: C:/diplomna/TPMS/build/src/MCUWakeUp
-
-build src/MCUWakeUp/all: phony src/MCUWakeUp/libMCUWakeUp.a
+build src/MessageReceiver/all: phony src/MessageReceiver/libMessageReceiver.a
 
 # =============================================================================
 
 #############################################
-# Folder: C:/diplomna/TPMS/build/src/Sensors
+# Folder: C:/diplomna/TPMS/build/src/MessageSender
 
-build src/Sensors/all: phony src/Sensors/libSensors.a
-
-# =============================================================================
-
-#############################################
-# Folder: C:/diplomna/TPMS/build/src/TPMS
-
-build src/TPMS/all: phony src/TPMS/libTPMSComponent.a
+build src/MessageSender/all: phony src/MessageSender/libMessageSender.a
 
 # =============================================================================
 
 #############################################
-# Folder: C:/diplomna/TPMS/build/src/Timer
+# Folder: C:/diplomna/TPMS/build/src/Monitor
 
-build src/Timer/all: phony src/Timer/libTimer.a
+build src/Monitor/all: phony src/Monitor/libMonitor.a
+
+# =============================================================================
+
+#############################################
+# Folder: C:/diplomna/TPMS/build/src/SignalProcessor
+
+build src/SignalProcessor/all: phony src/SignalProcessor/libSignalProcessor.a
 
 # =============================================================================
 
@@ -2001,14 +1711,14 @@ build test/resources/all: phony test/resources/libResources.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.29/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GoogleTest.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake C$:/diplomna/TPMS/CMakeLists.txt C$:/diplomna/TPMS/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock.pc.in C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock_main.pc.in C$:/diplomna/TPMS/googletest/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googletest/cmake/Config.cmake.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest_main.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/internal_utils.cmake C$:/diplomna/TPMS/src/CMakeLists.txt C$:/diplomna/TPMS/src/COM/CMakeLists.txt C$:/diplomna/TPMS/src/Core/CMakeLists.txt C$:/diplomna/TPMS/src/DEM/CMakeLists.txt C$:/diplomna/TPMS/src/MCUWakeUp/CMakeLists.txt C$:/diplomna/TPMS/src/Sensors/CMakeLists.txt C$:/diplomna/TPMS/src/TPMS/CMakeLists.txt C$:/diplomna/TPMS/src/Timer/CMakeLists.txt C$:/diplomna/TPMS/src/common/CMakeLists.txt C$:/diplomna/TPMS/test/CMakeLists.txt C$:/diplomna/TPMS/test/components/CMakeLists.txt C$:/diplomna/TPMS/test/resources/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.3/CMakeCCompiler.cmake CMakeFiles/3.29.3/CMakeCXXCompiler.cmake CMakeFiles/3.29.3/CMakeRCCompiler.cmake CMakeFiles/3.29.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.29/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GoogleTest.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake C$:/diplomna/TPMS/CMakeLists.txt C$:/diplomna/TPMS/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock.pc.in C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock_main.pc.in C$:/diplomna/TPMS/googletest/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googletest/cmake/Config.cmake.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest_main.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/internal_utils.cmake C$:/diplomna/TPMS/src/CMakeLists.txt C$:/diplomna/TPMS/src/E2E/CMakeLists.txt C$:/diplomna/TPMS/src/MessageReceiver/CMakeLists.txt C$:/diplomna/TPMS/src/MessageSender/CMakeLists.txt C$:/diplomna/TPMS/src/Monitor/CMakeLists.txt C$:/diplomna/TPMS/src/SignalProcessor/CMakeLists.txt C$:/diplomna/TPMS/src/common/CMakeLists.txt C$:/diplomna/TPMS/test/CMakeLists.txt C$:/diplomna/TPMS/test/components/CMakeLists.txt C$:/diplomna/TPMS/test/resources/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.3/CMakeCCompiler.cmake CMakeFiles/3.29.3/CMakeCXXCompiler.cmake CMakeFiles/3.29.3/CMakeRCCompiler.cmake CMakeFiles/3.29.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-3.29/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GoogleTest.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake C$:/diplomna/TPMS/CMakeLists.txt C$:/diplomna/TPMS/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock.pc.in C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock_main.pc.in C$:/diplomna/TPMS/googletest/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googletest/cmake/Config.cmake.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest_main.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/internal_utils.cmake C$:/diplomna/TPMS/src/CMakeLists.txt C$:/diplomna/TPMS/src/COM/CMakeLists.txt C$:/diplomna/TPMS/src/Core/CMakeLists.txt C$:/diplomna/TPMS/src/DEM/CMakeLists.txt C$:/diplomna/TPMS/src/MCUWakeUp/CMakeLists.txt C$:/diplomna/TPMS/src/Sensors/CMakeLists.txt C$:/diplomna/TPMS/src/TPMS/CMakeLists.txt C$:/diplomna/TPMS/src/Timer/CMakeLists.txt C$:/diplomna/TPMS/src/common/CMakeLists.txt C$:/diplomna/TPMS/test/CMakeLists.txt C$:/diplomna/TPMS/test/components/CMakeLists.txt C$:/diplomna/TPMS/test/resources/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.3/CMakeCCompiler.cmake CMakeFiles/3.29.3/CMakeCXXCompiler.cmake CMakeFiles/3.29.3/CMakeRCCompiler.cmake CMakeFiles/3.29.3/CMakeSystem.cmake: phony
+build C$:/Program$ Files/CMake/share/cmake-3.29/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GoogleTest.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake C$:/diplomna/TPMS/CMakeLists.txt C$:/diplomna/TPMS/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock.pc.in C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock_main.pc.in C$:/diplomna/TPMS/googletest/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googletest/cmake/Config.cmake.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest_main.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/internal_utils.cmake C$:/diplomna/TPMS/src/CMakeLists.txt C$:/diplomna/TPMS/src/E2E/CMakeLists.txt C$:/diplomna/TPMS/src/MessageReceiver/CMakeLists.txt C$:/diplomna/TPMS/src/MessageSender/CMakeLists.txt C$:/diplomna/TPMS/src/Monitor/CMakeLists.txt C$:/diplomna/TPMS/src/SignalProcessor/CMakeLists.txt C$:/diplomna/TPMS/src/common/CMakeLists.txt C$:/diplomna/TPMS/test/CMakeLists.txt C$:/diplomna/TPMS/test/components/CMakeLists.txt C$:/diplomna/TPMS/test/resources/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.3/CMakeCCompiler.cmake CMakeFiles/3.29.3/CMakeCXXCompiler.cmake CMakeFiles/3.29.3/CMakeRCCompiler.cmake CMakeFiles/3.29.3/CMakeSystem.cmake: phony
 
 
 #############################################

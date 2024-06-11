@@ -3,6 +3,13 @@
         "tpms.h": "c",
         "signalreceiver.h": "c",
         "variant": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "sensors.h": "c",
+        "signalprocessor.h": "c",
+        "messagereceiver.h": "c",
+        "messagesender.h": "c",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp"
     }
 }

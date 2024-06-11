@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20240607-2201-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.29.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="SF4-C-000K7"
+	OSRelease=" Professional"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="12"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="37335"
+	TotalPhysicalMemory="32471"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2995"
+	>
+	<Testing>
+		<StartDateTime>Jun 08 02:52 E. Europe Daylight Time</StartDateTime>
+		<StartTestTime>1717804349</StartTestTime>
+		<TestList>
+			<Test>./MessageSender.Test_ResetSafeState_Positive</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>MessageSender.Test_ResetSafeState_Positive</Name>
+			<Path>.</Path>
+			<FullName>./MessageSender.Test_ResetSafeState_Positive</FullName>
+			<FullCommandLine>C:\diplomna\TPMS\build\test\components\TPMSTest.exe "--gtest_filter=MessageSender.Test_ResetSafeState_Positive" "--gtest_also_run_disabled_tests" "--gtest_output=xml:C:/diplomna/TPMS/build/report.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.127898</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\diplomna\TPMS\build\test\components\TPMSTest.exe "--gtest_filter=MessageSender.Test_ResetSafeState_Positive" "--gtest_also_run_disabled_tests" "--gtest_output=xml:C:/diplomna/TPMS/build/report.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyVUMtqwzAQvOsr9hgfbLfXQA6lLTmUpMZKT8YY1V4LgbwK0jr5/fgRQlwoJHMamJnd2c17IkMaOmVoFUHrXQfv67QxR+s6Uukh28lUO6ctMga+p8HXqR5ZNYaTuhZ7x7iG7WSBw6BAayyjhw3sMASlUSI16JNRq3IMyFK1KFkxVpkLhs0JRbG5oYT82u8VeJo39rvy0BvGRBTxDSVsrftVdtaRTsY76pAGL3LcH/+Y72cu+okC8p89TCifqj5n4PvrqRysXqAL0YPtZjewY2Uj8dj9jMrHjTvT8rv/fRW8omS5Zzgte5Py82N8yexNxAU3trw2====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jun 08 02:52 E. Europe Daylight Time</EndDateTime>
+		<EndTestTime>1717804349</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

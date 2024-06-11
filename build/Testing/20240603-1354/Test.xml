@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20240603-1354-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.29.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="SF4-C-000K7"
+	OSRelease=" Professional"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="12"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="37335"
+	TotalPhysicalMemory="32471"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2995"
+	>
+	<Testing>
+		<StartDateTime>Jun 03 21:29 E. Europe Daylight Time</StartDateTime>
+		<StartTestTime>1717439391</StartTestTime>
+		<TestList>
+			<Test>./Demo.Test_Demo</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>Demo.Test_Demo</Name>
+			<Path>.</Path>
+			<FullName>./Demo.Test_Demo</FullName>
+			<FullCommandLine>C:\diplomna\TPMS\build\test\components\TPMSTest.exe "--gtest_filter=Demo.Test_Demo" "--gtest_also_run_disabled_tests" "--gtest_output=xml:C:/diplomna/TPMS/build/report.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>SEGFAULT</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>3221225477</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.318699</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\diplomna\TPMS\build\test\components\TPMSTest.exe "--gtest_filter=Demo.Test_Demo" "--gtest_also_run_disabled_tests" "--gtest_output=xml:C:/diplomna/TPMS/build/report.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJxdjkELgzAMhe/+ihy3g5ZdBU8beJqIcycRcS6WQptIrfv9syoivtNH3kvyiolIkQTTKrpcobds4B6Lrxo0G2pFmT9fQjJLjQ5Hd8TRdkJ6avxy1HVBxg5jSJcIlLMDvdIOLSTwQMORHzWegirZVUOxdbiBW3Z8h43HSTmMgircVUOq+dPq1Uf6KctkkOYsunAaTuHjzfUzFO8MFtXnVn9lple8====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jun 03 21:29 E. Europe Daylight Time</EndDateTime>
+		<EndTestTime>1717439392</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

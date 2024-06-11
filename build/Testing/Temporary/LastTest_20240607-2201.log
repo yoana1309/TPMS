@@ -1,0 +1,30 @@
+Start testing: Jun 08 02:52 E. Europe Daylight Time
+----------------------------------------------------------
+11/24 Testing: MessageSender.Test_ResetSafeState_Positive
+11/24 Test: MessageSender.Test_ResetSafeState_Positive
+Command: "C:/diplomna/TPMS/build/test/components/TPMSTest.exe" "--gtest_filter=MessageSender.Test_ResetSafeState_Positive" "--gtest_also_run_disabled_tests" "--gtest_output=xml:C:/diplomna/TPMS/build/report.xml"
+Directory: C:/diplomna/TPMS/build
+"MessageSender.Test_ResetSafeState_Positive" start time: Jun 08 02:52 E. Europe Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:/diplomna/TPMS/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = MessageSender.Test_ResetSafeState_Positive
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MessageSender
+[ RUN      ] MessageSender.Test_ResetSafeState_Positive
+[       OK ] MessageSender.Test_ResetSafeState_Positive (0 ms)
+[----------] 1 test from MessageSender (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"MessageSender.Test_ResetSafeState_Positive" end time: Jun 08 02:52 E. Europe Daylight Time
+"MessageSender.Test_ResetSafeState_Positive" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 08 02:52 E. Europe Daylight Time
