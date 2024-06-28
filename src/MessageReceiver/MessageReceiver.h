@@ -18,7 +18,7 @@ Enum definitions
 ***********************************************************************************************************************/
 typedef enum
 {
-    MESSAGE_RECEIVER_TIRE_FRONT_LEFT = 0,
+    MESSAGE_RECEIVER_TIRE_FRONT_LEFT = 1,
     MESSAGE_RECEIVER_TIRE_FRONT_RIGHT,
     MESSAGE_RECEIVER_TIRE_REAR_LEFT,
     MESSAGE_RECEIVER_TIRE_REAR_RIGHT

@@ -1,0 +1,41 @@
+Start testing: Jun 13 02:59 E. Europe Daylight Time
+----------------------------------------------------------
+17/22 Testing: SignalProcessor.Test_Run_Negative
+17/22 Test: SignalProcessor.Test_Run_Negative
+Command: "C:/diplomna/TPMS/build/test/components/TPMSTest.exe" "--gtest_filter=SignalProcessor.Test_Run_Negative" "--gtest_also_run_disabled_tests" "--gtest_output=xml:C:/diplomna/TPMS/build/report.xml"
+Directory: C:/diplomna/TPMS/build
+"SignalProcessor.Test_Run_Negative" start time: Jun 13 02:59 E. Europe Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:/diplomna/TPMS/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = SignalProcessor.Test_Run_Negative
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SignalProcessor
+[ RUN      ] SignalProcessor.Test_Run_Negative
+C:/diplomna/TPMS/test/components/TPMSTests.cpp:548: Failure
+Expected equality of these values:
+  SignalProcessorData.Error
+    Which is: 1
+  SIGNAL_PROCESSOR_NO_ERROR
+    Which is: 0
+
+[  FAILED  ] SignalProcessor.Test_Run_Negative (0 ms)
+[----------] 1 test from SignalProcessor (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SignalProcessor.Test_Run_Negative
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Failed.
+"SignalProcessor.Test_Run_Negative" end time: Jun 13 02:59 E. Europe Daylight Time
+"SignalProcessor.Test_Run_Negative" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 13 02:59 E. Europe Daylight Time

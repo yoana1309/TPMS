@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20240612-2155-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.29.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="SF4-C-000K7"
+	OSRelease=" Professional"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="12"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="37335"
+	TotalPhysicalMemory="32471"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2995"
+	>
+	<Testing>
+		<StartDateTime>Jun 13 02:59 E. Europe Daylight Time</StartDateTime>
+		<StartTestTime>1718236772</StartTestTime>
+		<TestList>
+			<Test>./SignalProcessor.Test_Run_Negative</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>SignalProcessor.Test_Run_Negative</Name>
+			<Path>.</Path>
+			<FullName>./SignalProcessor.Test_Run_Negative</FullName>
+			<FullCommandLine>C:\diplomna\TPMS\build\test\components\TPMSTest.exe "--gtest_filter=SignalProcessor.Test_Run_Negative" "--gtest_also_run_disabled_tests" "--gtest_output=xml:C:/diplomna/TPMS/build/report.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.165478</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\diplomna\TPMS\build\test\components\TPMSTest.exe "--gtest_filter=SignalProcessor.Test_Run_Negative" "--gtest_also_run_disabled_tests" "--gtest_output=xml:C:/diplomna/TPMS/build/report.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyVUlFrwjAQfs+vuEeFWRU2GAUfRKsIrpXUsQeREutZA2nSJalu/35NFdGOQXdPR+67u+/7LrSUkssMcsZlpwsHrXKY+P09L4TKJeuvV29xP1MqE2jR2PvU6LSfuSxxzV6aklBZ9GFeQ2BdVeDAhUUNI4h5JplYaZWiMUp7rprQUiYhZszyE5LN6BZboFdaQ7D1GEfrmpuSW/TIpneLLcyF2jFxqaM8ca1kjrLCou2VRQN8P7NBi2yAvodQx7YF519O1cakKi+UrPab+tG1GS8tCv/l+dWHGeOi1EiCrwJTi3vAz5IJbr9BHcAe0SCcmCjR+ASaFKbMMi/QumLqKH4ceXoEbnwYOuxiHo6XyYpGkyCOI5qEURJQGtEGdkAqmTAbL5bBtJVM6AwgN93WLl7wYJVlokvaXcoi0729OsvHf/DX/UEz6T3uqTStxnF80TSoscZ7VHqZ8ASCG2f8DoU6+/80g5BqzBW/DuI1+QGZ7w69====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jun 13 02:59 E. Europe Daylight Time</EndDateTime>
+		<EndTestTime>1718236772</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

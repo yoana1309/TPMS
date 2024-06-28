@@ -15,6 +15,7 @@ target_link_libraries(${This} PUBLIC
     SignalProcessor
     Monitor
     E2E
+    Resources
 )
 
 gtest_discover_tests(${This}

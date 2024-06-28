@@ -43,7 +43,6 @@ void SignalProcessor_Run()
             {
                 SignalProcessor_ProcessTemperature();
                 SignalProcessor_EvaluateData();
-                SignalProcessorData.Error = SIGNAL_PROCESSOR_NO_ERROR;
             }
             else
             {
@@ -92,7 +91,7 @@ static void SignalProcessor_ProcessPressure()
 {
     if( E_OK == SignalProcessor_ValidateSensorData( SignalProcessorData.PressureReading, SignalProcessorData.TireID ) )
     {
-        SignalProcessorData.PressureKPa = 100 + (uint8)(SignalProcessorData.PressureReading*((float)400/1024));
+        SignalProcessorData.PressureKPa = 100 + (uint16)(SignalProcessorData.PressureReading*((float)400/1024));
     }
 }
 
@@ -100,7 +99,7 @@ static void SignalProcessor_ProcessTemperature()
 {
     if( E_OK == SignalProcessor_ValidateSensorData( SignalProcessorData.TemperatureReading, SignalProcessorData.TireID ) )
     {
-        SignalProcessorData.TemperatureCelsius = -40 + (uint8)(SignalProcessorData.TemperatureReading*((float)165/1024));
+        SignalProcessorData.TemperatureCelsius = -40 + (uint16)(SignalProcessorData.TemperatureReading*((float)165/1024));
     }
 }
 

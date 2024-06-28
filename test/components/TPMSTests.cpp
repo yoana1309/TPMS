@@ -9,6 +9,7 @@ extern "C"
 #include "C:\diplomna\TPMS\src\MessageSender\MessageSender.h"
 #include "C:\diplomna\TPMS\src\Monitor\Monitor.h"
 #include "C:\diplomna\TPMS\src\SignalProcessor\SignalProcessor.h"
+#include "C:\diplomna\TPMS\test\resources\Resources.h"
 }
 
 #define PRETEST()                         \
@@ -469,7 +470,6 @@ TEST(Monitor, Test_Run_Positive)
     SignalProcessor_Init();
     MessageSender_Init();
 
-    //SignalProcessor_GetError returns E_NOT_OK
     SignalProcessorData.Error = SIGNAL_PROCESSOR_ERR_UNINITIALIZED;
     MessageSenderData.Error = MESSAGE_SENDER_ERR_SEND_MESSAGE_ERROR;
     Monitor_Run();
@@ -568,7 +568,7 @@ TEST(SignalProcessor, Test_Run_Negative)
     EXPECT_EQ(SignalProcessorData.TemperatureCelsius, 0);
     EXPECT_EQ(SignalProcessorData.TemperatureReading, invalidTemperatureReading);
     EXPECT_EQ(SignalProcessorData.TireID, invalidTireId);
-    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_NO_ERROR);
+    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_ERR_INVALID_SENSOR_ID);
     EXPECT_EQ(SignalProcessorData.OutputMessage, SIGNAL_PROCESSOR_TPMS_OK);
 
     POSTTEST();
@@ -677,6 +677,152 @@ TEST(SignalProcessor, Test_GetError_Positive)
     ret = SignalProcessor_GetError( &err );
     EXPECT_EQ(ret, E_OK);
     EXPECT_EQ(err, SIGNAL_PROCESSOR_ERR_INVALID_SENSOR_DATA);
+
+    POSTTEST();
+}
+
+TEST(TPMS, Test_Demo_SendMessage_Negative)
+{
+    PRETEST();
+
+    Monitor_Init();
+    SignalProcessor_Init();
+    MessageSender_Init();
+
+    ON_CALL(*MockPtr, Monitor_SaveErrors( MonitorData.ErrorBuffer )).WillByDefault(Return(E_OK));
+    ON_CALL(*MockPtr, MessageSender_SendMessage).WillByDefault(Return(E_OK));
+    ON_CALL(*MockPtr, E2E_P01Protect).WillByDefault(Return(E_OK));
+
+    {
+        InSequence s;
+
+        //SignalProcessor_Run();
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadPressureSensorData( &SignalProcessorData.PressureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(invalidSensorData),SetArgPointee<1>(validSensorID),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadTemperatureSensorData( &SignalProcessorData.TemperatureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validTemperatureData[2]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+    }
+
+    SignalProcessor_Run();
+    //for the example - the pressure reading will be wrong
+    //fix the actual array and which values we use from it
+    EXPECT_EQ(SignalProcessorData.PressureReading, invalidSensorData); //should be invalid
+    EXPECT_EQ(SignalProcessorData.TireID, validSensorID); // should be ok
+    EXPECT_EQ(SignalProcessorData.TemperatureReading, validTemperatureData[2]); //should be ok -> 1000u
+    EXPECT_EQ(SignalProcessorData.Error, SIGNAL_PROCESSOR_ERR_INVALID_SENSOR_DATA);
+    EXPECT_EQ(SignalProcessorData.PressureKPa, 0); //should be 0
+    EXPECT_EQ(SignalProcessorData.TemperatureCelsius, 49); //should be some valid value depending on the input
+    EXPECT_EQ(SignalProcessorData.OutputMessage, SIGNAL_PROCESSOR_TPMS_WARNING); //because of low pressure
+    
+    Monitor_Run();
+    EXPECT_EQ(MonitorData.ErrorBuffer[ SIGNAL_PROCESSOR_ERROR ], SIGNAL_PROCESSOR_ERR_INVALID_SENSOR_DATA);
+    EXPECT_EQ(MonitorData.ErrorBuffer[ MESSAGE_SENDER_ERROR ], 0);
+    EXPECT_EQ(MessageSenderData.SafeState, TRUE);
+
+    MessageSender_Run();
+    EXPECT_EQ(MessageSenderData.MessageType, MessageSender_Message_SystemError);
+    EXPECT_EQ(MessageSenderData.Data, 66); // 0100 0010 = 66; 0100 = 4; 0010 = 2
+    EXPECT_EQ(MessageSenderData.Error, MESSAGE_SENDER_NO_ERROR);
+
+    Monitor_Run();
+    EXPECT_EQ(MonitorData.ErrorBuffer[ SIGNAL_PROCESSOR_ERROR ], SIGNAL_PROCESSOR_ERR_INVALID_SENSOR_DATA);
+    EXPECT_EQ(MonitorData.ErrorBuffer[ MESSAGE_SENDER_ERROR ], 0);
+    EXPECT_EQ(MessageSenderData.SafeState, TRUE);
+
+    POSTTEST();
+}
+
+TEST(TPMS, Test_Demo_SendMessage_Positive)
+{
+    uint8 iterator = 0;
+    PRETEST();
+
+    ON_CALL(*MockPtr, Monitor_SaveErrors( MonitorData.ErrorBuffer )).WillByDefault(Return(E_OK));
+    ON_CALL(*MockPtr, MessageSender_SendMessage).WillByDefault(Return(E_OK));
+    ON_CALL(*MockPtr, E2E_P01Protect).WillByDefault(Return(E_OK));
+
+    {
+        InSequence s;
+
+        //ITERATION #1
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadPressureSensorData( &SignalProcessorData.PressureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validPressureData[0]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadTemperatureSensorData( &SignalProcessorData.TemperatureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validTemperatureData[2]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+
+        //ITERATION #2
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadPressureSensorData( &SignalProcessorData.PressureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validPressureData[1]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadTemperatureSensorData( &SignalProcessorData.TemperatureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validTemperatureData[2]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+
+        //ITERATION #3
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadPressureSensorData( &SignalProcessorData.PressureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validPressureData[2]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadTemperatureSensorData( &SignalProcessorData.TemperatureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validTemperatureData[2]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+
+        //ITERATION #4
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadPressureSensorData( &SignalProcessorData.PressureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validPressureData[3]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadTemperatureSensorData( &SignalProcessorData.TemperatureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validTemperatureData[2]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+
+        //ITERATION #5
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadPressureSensorData( &SignalProcessorData.PressureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validPressureData[4]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, SignalProcessor_ReadTemperatureSensorData( &SignalProcessorData.TemperatureReading, &SignalProcessorData.TireID )).WillOnce(DoAll(SetArgPointee<0>(validTemperatureData[2]),SetArgPointee<1>(validSensorID),Return(E_OK)));
+    }
+
+    Monitor_Init();
+    SignalProcessor_Init();
+    MessageSender_Init();
+
+    for( iterator; iterator < VALID_SENSOR_DATA_LEN; iterator++ )
+    {
+        SignalProcessor_Run();
+        Monitor_Run();
+        MessageSender_Run();
+        Monitor_Run();   
+        messageBuffer[ iterator ] = MessageSenderData.Data;
+    }
+
+    EXPECT_EQ(messageBuffer[0], 65); //0100 0001 --> TPMS_WARNING
+    EXPECT_EQ(messageBuffer[1], 65); //0100 0001 --> TPMS_WARNING
+    EXPECT_EQ(messageBuffer[2], 64); //0100 0000 --> TPMS_OK
+    EXPECT_EQ(messageBuffer[3], 65); //0100 0001 --> TPMS_WARNING
+    EXPECT_EQ(messageBuffer[4], 65); //0100 0001 --> TPMS_WARNING
+
+    POSTTEST();
+}
+
+TEST(TPMS, Test_Demo_ReceiveMessage_Positive)
+{
+    uint8 iterator = 0;
+
+    PRETEST();
+
+    ON_CALL(*MockPtr, E2E_P01Check).WillByDefault(Return(E_OK));
+
+    {
+        InSequence s;
+
+        //ITERATION #1
+        EXPECT_CALL(*MockPtr, MessageReceiver_ReadMessage(&MessageReceiverData.Data)).WillOnce(DoAll(SetArgPointee<0>(messageBuffer[0]),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSWarning(MESSAGE_RECEIVER_TIRE_REAR_RIGHT)).WillOnce(Return(E_OK));
+        
+        //ITERATION #2
+        EXPECT_CALL(*MockPtr, MessageReceiver_ReadMessage(&MessageReceiverData.Data)).WillOnce(DoAll(SetArgPointee<0>(messageBuffer[1]),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSWarning(MESSAGE_RECEIVER_TIRE_REAR_RIGHT)).WillOnce(Return(E_OK));
+        
+        //ITERATION #3
+        EXPECT_CALL(*MockPtr, MessageReceiver_ReadMessage(&MessageReceiverData.Data)).WillOnce(DoAll(SetArgPointee<0>(messageBuffer[2]),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSOK(MESSAGE_RECEIVER_TIRE_REAR_RIGHT)).WillOnce(Return(E_OK));
+        
+        //ITERATION #4
+        EXPECT_CALL(*MockPtr, MessageReceiver_ReadMessage(&MessageReceiverData.Data)).WillOnce(DoAll(SetArgPointee<0>(messageBuffer[3]),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSWarning(MESSAGE_RECEIVER_TIRE_REAR_RIGHT)).WillOnce(Return(E_OK));
+        
+        //ITERATION #5
+        EXPECT_CALL(*MockPtr, MessageReceiver_ReadMessage(&MessageReceiverData.Data)).WillOnce(DoAll(SetArgPointee<0>(messageBuffer[4]),Return(E_OK)));
+        EXPECT_CALL(*MockPtr, MessageReceiver_AlertTPMSWarning(MESSAGE_RECEIVER_TIRE_REAR_RIGHT)).WillOnce(Return(E_OK));    
+    }
+
+    MessageReceiver_Init();
+
+    for( iterator; iterator < VALID_SENSOR_DATA_LEN; iterator++ )
+    {
+        MessageReceiver_Run();  
+    }
 
     POSTTEST();
 }

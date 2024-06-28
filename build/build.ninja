@@ -221,8 +221,6 @@ build googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPI
   INCLUDES = -IC:/diplomna/TPMS/googletest/googlemock/include -IC:/diplomna/TPMS/googletest/googlemock -isystem C:/diplomna/TPMS/googletest/googletest/include -isystem C:/diplomna/TPMS/googletest/googletest
   OBJECT_DIR = googletest\googlemock\CMakeFiles\gmock.dir
   OBJECT_FILE_DIR = googletest\googlemock\CMakeFiles\gmock.dir\src
-  TARGET_COMPILE_PDB = lib\libgmockpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\libgmockpdb_debug_postfix-NOTFOUND.pdb
 
 
 # =============================================================================
@@ -237,9 +235,8 @@ build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug googletest/googlemo
   OBJECT_DIR = googletest\googlemock\CMakeFiles\gmock.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = lib\libgmockpdb_debug_postfix-NOTFOUND.pdb
   TARGET_FILE = lib\libgmock.a
-  TARGET_PDB = bin\libgmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = gmock.a.dbg
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target gmock_main
@@ -256,8 +253,6 @@ build googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX
   INCLUDES = -isystem C:/diplomna/TPMS/googletest/googlemock/include -isystem C:/diplomna/TPMS/googletest/googlemock -isystem C:/diplomna/TPMS/googletest/googletest/include -isystem C:/diplomna/TPMS/googletest/googletest
   OBJECT_DIR = googletest\googlemock\CMakeFiles\gmock_main.dir
   OBJECT_FILE_DIR = googletest\googlemock\CMakeFiles\gmock_main.dir\src
-  TARGET_COMPILE_PDB = lib\libgmock_mainpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\libgmock_mainpdb_debug_postfix-NOTFOUND.pdb
 
 
 # =============================================================================
@@ -272,9 +267,8 @@ build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug googletes
   OBJECT_DIR = googletest\googlemock\CMakeFiles\gmock_main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = lib\libgmock_mainpdb_debug_postfix-NOTFOUND.pdb
   TARGET_FILE = lib\libgmock_main.a
-  TARGET_PDB = bin\libgmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = gmock_main.a.dbg
 
 
 #############################################
@@ -374,8 +368,6 @@ build googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPI
   INCLUDES = -IC:/diplomna/TPMS/googletest/googletest/include -IC:/diplomna/TPMS/googletest/googletest
   OBJECT_DIR = googletest\googletest\CMakeFiles\gtest.dir
   OBJECT_FILE_DIR = googletest\googletest\CMakeFiles\gtest.dir\src
-  TARGET_COMPILE_PDB = lib\libgtestpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\libgtestpdb_debug_postfix-NOTFOUND.pdb
 
 
 # =============================================================================
@@ -390,9 +382,8 @@ build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug googletest/googlete
   OBJECT_DIR = googletest\googletest\CMakeFiles\gtest.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = lib\libgtestpdb_debug_postfix-NOTFOUND.pdb
   TARGET_FILE = lib\libgtest.a
-  TARGET_PDB = bin\libgtestpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = gtest.a.dbg
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target gtest_main
@@ -409,8 +400,6 @@ build googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX
   INCLUDES = -isystem C:/diplomna/TPMS/googletest/googletest/include -isystem C:/diplomna/TPMS/googletest/googletest
   OBJECT_DIR = googletest\googletest\CMakeFiles\gtest_main.dir
   OBJECT_FILE_DIR = googletest\googletest\CMakeFiles\gtest_main.dir\src
-  TARGET_COMPILE_PDB = lib\libgtest_mainpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\libgtest_mainpdb_debug_postfix-NOTFOUND.pdb
 
 
 # =============================================================================
@@ -425,9 +414,8 @@ build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug googletes
   OBJECT_DIR = googletest\googletest\CMakeFiles\gtest_main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = lib\libgtest_mainpdb_debug_postfix-NOTFOUND.pdb
   TARGET_FILE = lib\libgtest_main.a
-  TARGET_PDB = bin\libgtest_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = gtest_main.a.dbg
 
 
 #############################################
@@ -698,8 +686,6 @@ build src/SignalProcessor/CMakeFiles/SignalProcessor.dir/SignalProcessor.c.obj: 
   FLAGS = -g -std=gnu99 -fprofile-abs-path
   OBJECT_DIR = src\SignalProcessor\CMakeFiles\SignalProcessor.dir
   OBJECT_FILE_DIR = src\SignalProcessor\CMakeFiles\SignalProcessor.dir
-  TARGET_COMPILE_PDB = src\SignalProcessor\CMakeFiles\SignalProcessor.dir\SignalProcessor.pdb
-  TARGET_PDB = src\SignalProcessor\libSignalProcessor.pdb
 
 
 # =============================================================================
@@ -714,9 +700,8 @@ build src/SignalProcessor/libSignalProcessor.a: C_STATIC_LIBRARY_LINKER__SignalP
   OBJECT_DIR = src\SignalProcessor\CMakeFiles\SignalProcessor.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\SignalProcessor\CMakeFiles\SignalProcessor.dir\SignalProcessor.pdb
   TARGET_FILE = src\SignalProcessor\libSignalProcessor.a
-  TARGET_PDB = src\SignalProcessor\libSignalProcessor.pdb
+  TARGET_PDB = SignalProcessor.a.dbg
 
 
 #############################################
@@ -815,8 +800,6 @@ build src/MessageSender/CMakeFiles/MessageSender.dir/MessageSender.c.obj: C_COMP
   FLAGS = -g -std=gnu99 -fprofile-abs-path
   OBJECT_DIR = src\MessageSender\CMakeFiles\MessageSender.dir
   OBJECT_FILE_DIR = src\MessageSender\CMakeFiles\MessageSender.dir
-  TARGET_COMPILE_PDB = src\MessageSender\CMakeFiles\MessageSender.dir\MessageSender.pdb
-  TARGET_PDB = src\MessageSender\libMessageSender.pdb
 
 
 # =============================================================================
@@ -831,9 +814,8 @@ build src/MessageSender/libMessageSender.a: C_STATIC_LIBRARY_LINKER__MessageSend
   OBJECT_DIR = src\MessageSender\CMakeFiles\MessageSender.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\MessageSender\CMakeFiles\MessageSender.dir\MessageSender.pdb
   TARGET_FILE = src\MessageSender\libMessageSender.a
-  TARGET_PDB = src\MessageSender\libMessageSender.pdb
+  TARGET_PDB = MessageSender.a.dbg
 
 
 #############################################
@@ -932,8 +914,6 @@ build src/MessageReceiver/CMakeFiles/MessageReceiver.dir/MessageReceiver.c.obj: 
   FLAGS = -g -std=gnu99 -fprofile-abs-path
   OBJECT_DIR = src\MessageReceiver\CMakeFiles\MessageReceiver.dir
   OBJECT_FILE_DIR = src\MessageReceiver\CMakeFiles\MessageReceiver.dir
-  TARGET_COMPILE_PDB = src\MessageReceiver\CMakeFiles\MessageReceiver.dir\MessageReceiver.pdb
-  TARGET_PDB = src\MessageReceiver\libMessageReceiver.pdb
 
 
 # =============================================================================
@@ -948,9 +928,8 @@ build src/MessageReceiver/libMessageReceiver.a: C_STATIC_LIBRARY_LINKER__Message
   OBJECT_DIR = src\MessageReceiver\CMakeFiles\MessageReceiver.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\MessageReceiver\CMakeFiles\MessageReceiver.dir\MessageReceiver.pdb
   TARGET_FILE = src\MessageReceiver\libMessageReceiver.a
-  TARGET_PDB = src\MessageReceiver\libMessageReceiver.pdb
+  TARGET_PDB = MessageReceiver.a.dbg
 
 
 #############################################
@@ -1049,8 +1028,6 @@ build src/Monitor/CMakeFiles/Monitor.dir/Monitor.c.obj: C_COMPILER__Monitor_unsc
   FLAGS = -g -std=gnu99 -fprofile-abs-path
   OBJECT_DIR = src\Monitor\CMakeFiles\Monitor.dir
   OBJECT_FILE_DIR = src\Monitor\CMakeFiles\Monitor.dir
-  TARGET_COMPILE_PDB = src\Monitor\CMakeFiles\Monitor.dir\Monitor.pdb
-  TARGET_PDB = src\Monitor\libMonitor.pdb
 
 
 # =============================================================================
@@ -1065,9 +1042,8 @@ build src/Monitor/libMonitor.a: C_STATIC_LIBRARY_LINKER__Monitor_Debug src/Monit
   OBJECT_DIR = src\Monitor\CMakeFiles\Monitor.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = src\Monitor\CMakeFiles\Monitor.dir\Monitor.pdb
   TARGET_FILE = src\Monitor\libMonitor.a
-  TARGET_PDB = src\Monitor\libMonitor.pdb
+  TARGET_PDB = Monitor.a.dbg
 
 
 #############################################
@@ -1331,7 +1307,7 @@ build test/install/strip: phony test/CMakeFiles/install/strip.util
 #############################################
 # Order-only phony target for TPMSTest
 
-build cmake_object_order_depends_target_TPMSTest: phony || cmake_object_order_depends_target_MessageReceiver cmake_object_order_depends_target_MessageSender cmake_object_order_depends_target_Monitor cmake_object_order_depends_target_SignalProcessor cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gmock_main cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main src/E2E/E2E
+build cmake_object_order_depends_target_TPMSTest: phony || cmake_object_order_depends_target_MessageReceiver cmake_object_order_depends_target_MessageSender cmake_object_order_depends_target_Monitor cmake_object_order_depends_target_Resources cmake_object_order_depends_target_SignalProcessor cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gmock_main cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main src/E2E/E2E
 
 build test/components/CMakeFiles/TPMSTest.dir/TPMSTests.cpp.obj: CXX_COMPILER__TPMSTest_unscanned_Debug C$:/diplomna/TPMS/test/components/TPMSTests.cpp || cmake_object_order_depends_target_TPMSTest
   DEP_FILE = test\components\CMakeFiles\TPMSTest.dir\TPMSTests.cpp.obj.d
@@ -1339,8 +1315,6 @@ build test/components/CMakeFiles/TPMSTest.dir/TPMSTests.cpp.obj: CXX_COMPILER__T
   INCLUDES = -isystem C:/diplomna/TPMS/googletest/googletest/include -isystem C:/diplomna/TPMS/googletest/googletest -isystem C:/diplomna/TPMS/googletest/googlemock/include -isystem C:/diplomna/TPMS/googletest/googlemock
   OBJECT_DIR = test\components\CMakeFiles\TPMSTest.dir
   OBJECT_FILE_DIR = test\components\CMakeFiles\TPMSTest.dir
-  TARGET_COMPILE_PDB = test\components\CMakeFiles\TPMSTest.dir\
-  TARGET_PDB = test\components\TPMSTest.pdb
 
 
 # =============================================================================
@@ -1350,16 +1324,15 @@ build test/components/CMakeFiles/TPMSTest.dir/TPMSTests.cpp.obj: CXX_COMPILER__T
 #############################################
 # Link the executable test\components\TPMSTest.exe
 
-build test/components/TPMSTest.exe: CXX_EXECUTABLE_LINKER__TPMSTest_Debug test/components/CMakeFiles/TPMSTest.dir/TPMSTests.cpp.obj | lib/libgtest_main.a lib/libgmock_main.a src/MessageReceiver/libMessageReceiver.a src/MessageSender/libMessageSender.a src/SignalProcessor/libSignalProcessor.a src/Monitor/libMonitor.a lib/libgmock.a lib/libgtest.a || lib/libgmock.a lib/libgmock_main.a lib/libgtest.a lib/libgtest_main.a src/E2E/E2E src/MessageReceiver/libMessageReceiver.a src/MessageSender/libMessageSender.a src/Monitor/libMonitor.a src/SignalProcessor/libSignalProcessor.a
+build test/components/TPMSTest.exe: CXX_EXECUTABLE_LINKER__TPMSTest_Debug test/components/CMakeFiles/TPMSTest.dir/TPMSTests.cpp.obj | lib/libgtest_main.a lib/libgmock_main.a src/MessageReceiver/libMessageReceiver.a src/MessageSender/libMessageSender.a src/SignalProcessor/libSignalProcessor.a src/Monitor/libMonitor.a test/resources/libResources.a lib/libgmock.a lib/libgtest.a || lib/libgmock.a lib/libgmock_main.a lib/libgtest.a lib/libgtest_main.a src/E2E/E2E src/MessageReceiver/libMessageReceiver.a src/MessageSender/libMessageSender.a src/Monitor/libMonitor.a src/SignalProcessor/libSignalProcessor.a test/resources/libResources.a
   FLAGS = -g
-  LINK_LIBRARIES = lib/libgtest_main.a  lib/libgmock_main.a  src/MessageReceiver/libMessageReceiver.a  src/MessageSender/libMessageSender.a  src/SignalProcessor/libSignalProcessor.a  src/Monitor/libMonitor.a  lib/libgmock.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = lib/libgtest_main.a  lib/libgmock_main.a  src/MessageReceiver/libMessageReceiver.a  src/MessageSender/libMessageSender.a  src/SignalProcessor/libSignalProcessor.a  src/Monitor/libMonitor.a  test/resources/libResources.a  lib/libgmock.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = test\components\CMakeFiles\TPMSTest.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = test\components\CMakeFiles\TPMSTest.dir\
   TARGET_FILE = test\components\TPMSTest.exe
   TARGET_IMPLIB = test\components\libTPMSTest.dll.a
-  TARGET_PDB = test\components\TPMSTest.pdb
+  TARGET_PDB = TPMSTest.exe.dbg
 
 
 #############################################
@@ -1458,8 +1431,6 @@ build test/resources/CMakeFiles/Resources.dir/Resources.c.obj: C_COMPILER__Resou
   FLAGS = -g -std=gnu99 -fprofile-abs-path
   OBJECT_DIR = test\resources\CMakeFiles\Resources.dir
   OBJECT_FILE_DIR = test\resources\CMakeFiles\Resources.dir
-  TARGET_COMPILE_PDB = test\resources\CMakeFiles\Resources.dir\Resources.pdb
-  TARGET_PDB = test\resources\libResources.pdb
 
 
 # =============================================================================
@@ -1474,9 +1445,8 @@ build test/resources/libResources.a: C_STATIC_LIBRARY_LINKER__Resources_Debug te
   OBJECT_DIR = test\resources\CMakeFiles\Resources.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = test\resources\CMakeFiles\Resources.dir\Resources.pdb
   TARGET_FILE = test\resources\libResources.a
-  TARGET_PDB = test\resources\libResources.pdb
+  TARGET_PDB = Resources.a.dbg
 
 
 #############################################
@@ -1711,14 +1681,14 @@ build test/resources/all: phony test/resources/libResources.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.29/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GoogleTest.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake C$:/diplomna/TPMS/CMakeLists.txt C$:/diplomna/TPMS/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock.pc.in C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock_main.pc.in C$:/diplomna/TPMS/googletest/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googletest/cmake/Config.cmake.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest_main.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/internal_utils.cmake C$:/diplomna/TPMS/src/CMakeLists.txt C$:/diplomna/TPMS/src/E2E/CMakeLists.txt C$:/diplomna/TPMS/src/MessageReceiver/CMakeLists.txt C$:/diplomna/TPMS/src/MessageSender/CMakeLists.txt C$:/diplomna/TPMS/src/Monitor/CMakeLists.txt C$:/diplomna/TPMS/src/SignalProcessor/CMakeLists.txt C$:/diplomna/TPMS/src/common/CMakeLists.txt C$:/diplomna/TPMS/test/CMakeLists.txt C$:/diplomna/TPMS/test/components/CMakeLists.txt C$:/diplomna/TPMS/test/resources/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.3/CMakeCCompiler.cmake CMakeFiles/3.29.3/CMakeCXXCompiler.cmake CMakeFiles/3.29.3/CMakeRCCompiler.cmake CMakeFiles/3.29.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.29/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GoogleTest.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake C$:/diplomna/TPMS/CMakeLists.txt C$:/diplomna/TPMS/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock.pc.in C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock_main.pc.in C$:/diplomna/TPMS/googletest/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googletest/cmake/Config.cmake.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest_main.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/internal_utils.cmake C$:/diplomna/TPMS/src/CMakeLists.txt C$:/diplomna/TPMS/src/E2E/CMakeLists.txt C$:/diplomna/TPMS/src/MessageReceiver/CMakeLists.txt C$:/diplomna/TPMS/src/MessageSender/CMakeLists.txt C$:/diplomna/TPMS/src/Monitor/CMakeLists.txt C$:/diplomna/TPMS/src/SignalProcessor/CMakeLists.txt C$:/diplomna/TPMS/src/common/CMakeLists.txt C$:/diplomna/TPMS/test/CMakeLists.txt C$:/diplomna/TPMS/test/components/CMakeLists.txt C$:/diplomna/TPMS/test/resources/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.3/CMakeCCompiler.cmake CMakeFiles/3.29.3/CMakeCXXCompiler.cmake CMakeFiles/3.29.3/CMakeRCCompiler.cmake CMakeFiles/3.29.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-3.29/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GoogleTest.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake C$:/diplomna/TPMS/CMakeLists.txt C$:/diplomna/TPMS/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock.pc.in C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock_main.pc.in C$:/diplomna/TPMS/googletest/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googletest/cmake/Config.cmake.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest_main.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/internal_utils.cmake C$:/diplomna/TPMS/src/CMakeLists.txt C$:/diplomna/TPMS/src/E2E/CMakeLists.txt C$:/diplomna/TPMS/src/MessageReceiver/CMakeLists.txt C$:/diplomna/TPMS/src/MessageSender/CMakeLists.txt C$:/diplomna/TPMS/src/Monitor/CMakeLists.txt C$:/diplomna/TPMS/src/SignalProcessor/CMakeLists.txt C$:/diplomna/TPMS/src/common/CMakeLists.txt C$:/diplomna/TPMS/test/CMakeLists.txt C$:/diplomna/TPMS/test/components/CMakeLists.txt C$:/diplomna/TPMS/test/resources/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.3/CMakeCCompiler.cmake CMakeFiles/3.29.3/CMakeCXXCompiler.cmake CMakeFiles/3.29.3/CMakeRCCompiler.cmake CMakeFiles/3.29.3/CMakeSystem.cmake: phony
+build C$:/Program$ Files/CMake/share/cmake-3.29/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/GoogleTest.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake C$:/diplomna/TPMS/CMakeLists.txt C$:/diplomna/TPMS/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/CMakeLists.txt C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock.pc.in C$:/diplomna/TPMS/googletest/googlemock/cmake/gmock_main.pc.in C$:/diplomna/TPMS/googletest/googletest/CMakeLists.txt C$:/diplomna/TPMS/googletest/googletest/cmake/Config.cmake.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/gtest_main.pc.in C$:/diplomna/TPMS/googletest/googletest/cmake/internal_utils.cmake C$:/diplomna/TPMS/src/CMakeLists.txt C$:/diplomna/TPMS/src/E2E/CMakeLists.txt C$:/diplomna/TPMS/src/MessageReceiver/CMakeLists.txt C$:/diplomna/TPMS/src/MessageSender/CMakeLists.txt C$:/diplomna/TPMS/src/Monitor/CMakeLists.txt C$:/diplomna/TPMS/src/SignalProcessor/CMakeLists.txt C$:/diplomna/TPMS/src/common/CMakeLists.txt C$:/diplomna/TPMS/test/CMakeLists.txt C$:/diplomna/TPMS/test/components/CMakeLists.txt C$:/diplomna/TPMS/test/resources/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.3/CMakeCCompiler.cmake CMakeFiles/3.29.3/CMakeCXXCompiler.cmake CMakeFiles/3.29.3/CMakeRCCompiler.cmake CMakeFiles/3.29.3/CMakeSystem.cmake: phony
 
 
 #############################################
